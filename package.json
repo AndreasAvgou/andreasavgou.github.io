@@ -2,7 +2,6 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://andreasavgou.github.io/",
   "dependencies": {
     "@react-pdf/renderer": "^3.1.12",
     "@testing-library/jest-dom": "^5.16.5",
@@ -22,6 +21,7 @@
     "typewriter-effect": "^2.20.1",
     "web-vitals": "^3.3.2"
   },
+  "homepage": "https://andreasavgou.github.io/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
