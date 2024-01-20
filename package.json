@@ -21,7 +21,7 @@
     "typewriter-effect": "^2.20.1",
     "web-vitals": "^3.3.2"
   },
-  "homepage": "https://andreasavgou.github.io/",
+  "homepage": "https://andreasavgou.github.io/andreasavgou.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
