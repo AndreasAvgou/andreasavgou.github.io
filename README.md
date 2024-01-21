@@ -1,5 +1,5 @@
 <h2 align="center">
-  Andreas Avgoustis | Portfolio Website<br/>
+  Portfolio Website<br/>
   <a href="(https://andreasavgou.github.io/" target="_blank">Andreas Avgoustis</a>
 </h2>
 <div align="center">
