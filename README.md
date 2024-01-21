@@ -3,7 +3,7 @@
   <a href="(https://andreasavgou.github.io/" target="_blank"></a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="https://github.com/AndreasAvgou/andreasavgou.github.io/blob/main/public/Andreasavgoustis.png" />
+  <img alt="Demo" src="https://github.com/AndreasAvgou/andreasavgou.github.io/blob/gh-pages/public/Andreasavgoustis.png?raw=true" />
 </div>
 
 <br/>
