@@ -8,7 +8,7 @@
 
 <br/>
 
-You can fork this repo to modify and make changes according to your need. Please give me proper credit by linking back to [AndreasAvgoustis](https://github.com/AndreasAvgou/andreasavgou.github.io). 
+You can fork this repo to modify and make changes according to your need. Please give me proper credit by linking back to [Andreas Avgoustis](https://github.com/AndreasAvgou/andreasavgou.github.io). 
 Thanks in Advance😍!
 
 ## Built With
