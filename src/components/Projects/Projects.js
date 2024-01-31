@@ -9,6 +9,7 @@ import Covid19 from "../../Assets/Projects/Covid-19.png";
 import Performance from "../../Assets/Projects/Performance.png";
 import SalesAnalysis from "../../Assets/Projects/SalesAnalysis.jpg";
 import Melanoma from "../../Assets/Projects/Melanoma.png";
+import Signal from "../../Assets/Projects/Signal Analysis and Processing.png";
 
 
 
@@ -77,6 +78,15 @@ function Projects() {
               description="This project objective was to create a new deep learning approach, based on convolutional neural networks, to classify dermoscopic images in one out of 32 categories "
               ghLink="#"
               demoLink="https://github.com/AndreasAvgou/Dermoscopic-Melanoma-Image-Classification"
+            />
+          </Col>
+          <Col md={2} lg={4} className="project-card">
+            <ProjectCard
+              imgPath={Signal}
+              title="Signal Analysis and Processing"
+              description="This project objective was to create a end to end Stochastic Project, based on signal analysis and processing, to minimize noise signal"
+              ghLink="https://github.com/AndreasAvgou/Stochastic-Analysis-Process/tree/main/Full%20Project"
+              demoLink="https://github.com/AndreasAvgou/Stochastic-Analysis-Process/blob/main/Full%20Project/FullProject.ipynb"
             />
           </Col>
 
