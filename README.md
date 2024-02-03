@@ -56,5 +56,3 @@ You will find all the components used and you can edit your information accordin
 <p align="center">
 Give a ⭐ if you like this website!
 </p>
-
-
