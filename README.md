@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 <h2 align="center">
   Portfolio Website<br/>
   <a href="(https://andreasavgou.github.io/" target="_blank"></a>
