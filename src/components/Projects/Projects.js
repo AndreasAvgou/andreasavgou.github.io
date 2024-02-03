@@ -84,7 +84,7 @@ function Projects() {
             <ProjectCard
               imgPath={Signal}
               title="Signal Analysis and Processing"
-              description="This project objective was to create a end to end Stochastic Project, based on signal analysis and processing, to minimize noise signal"
+              description="This project objective was to create a end to end Stochastic Project, based on signal analysis and processing, in order to minimize noise signal"
               ghLink="https://github.com/AndreasAvgou/Stochastic-Analysis-Process/tree/main/Full%20Project"
               demoLink="https://github.com/AndreasAvgou/Stochastic-Analysis-Process/blob/main/Full%20Project/FullProject.ipynb"
             />
