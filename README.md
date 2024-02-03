@@ -56,4 +56,4 @@ You will find all the components used and you can edit your information accordin
 <p align="center">
 Give a ⭐ if you like this website!
 </p>
->>>>>>> 4f6bad78a6a7a50650270a6dedbdde0a263bcbf3
+
