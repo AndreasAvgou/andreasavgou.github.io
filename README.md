@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 <h2 align="center">
   Portfolio Website<br/>
   <a href="(https://andreasavgou.github.io/" target="_blank"></a>
@@ -59,4 +57,3 @@ You will find all the components used and you can edit your information accordin
 Give a ⭐ if you like this website!
 </p>
 
->>>>>>> 47b88b38d48101bf1229ce411b5f58311d77e141
