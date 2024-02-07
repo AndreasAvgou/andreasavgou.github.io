@@ -10,6 +10,7 @@ import Performance from "../../Assets/Projects/Performance.png";
 import SalesAnalysis from "../../Assets/Projects/SalesAnalysis.jpg";
 import Melanoma from "../../Assets/Projects/Melanoma.png";
 import Signal from "../../Assets/Projects/Signal Analysis and Processing.png";
+import Healthcare from "../../Assets/Projects/Healthcare.png";
 
 
 
@@ -87,6 +88,15 @@ function Projects() {
               description="This project objective was to create a end to end Stochastic Project, based on signal analysis and processing, in order to minimize noise signal"
               ghLink="https://github.com/AndreasAvgou/Stochastic-Analysis-Process/tree/main/Full%20Project"
               demoLink="https://github.com/AndreasAvgou/Stochastic-Analysis-Process/blob/main/Full%20Project/FullProject.ipynb"
+            />
+          </Col>
+          <Col md={2} lg={4} className="project-card">
+            <ProjectCard
+              imgPath={Healthcare}
+              title="Optimization of healthcare process management using machine learning"
+              description="This project was to delve into the multifaceted nature of healthcare management, highlighting the expertise required to optimize processes within dynamic healthcare environments."
+              ghLink="https://github.com/AndreasAvgou/Optimization-of-healthcare-process-management-using-machine-learning"
+              demoLink="https://github.com/AndreasAvgou/Optimization-of-healthcare-process-management-using-machine-learning/blob/main/Wait.ipynb"
             />
           </Col>
 
