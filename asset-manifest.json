@@ -1,27 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.d9202c67.css",
-    "main.js": "/static/js/main.c95df975.js",
-    "static/js/496.1811ca5a.chunk.js": "/static/js/496.1811ca5a.chunk.js",
+    "main.css": "/static/css/main.54c18526.css",
+    "main.js": "/static/js/main.1bf415bb.js",
+    "static/js/496.80e3e4ae.chunk.js": "/static/js/496.80e3e4ae.chunk.js",
+    "static/media/Healthcare.png": "/static/media/Healthcare.30c34c1e47c4e00e5fb8.png",
     "static/media/Covid-19.png": "/static/media/Covid-19.b3ab1e90c2c24d1fe0aa.png",
     "static/media/Performance.png": "/static/media/Performance.1533e66330154a26be83.png",
-    "static/media/logoDark.png": "/static/media/logoDark.12e7620f6cab41466ffc.png",
-    "static/media/logoLight.png": "/static/media/logoLight.12e7620f6cab41466ffc.png",
     "static/media/Melanoma.png": "/static/media/Melanoma.224c3c12adf359efdfee.png",
     "static/media/Avatar.png": "/static/media/Avatar.af86df948a0a1b651687.png",
     "static/media/homeicons.svg": "/static/media/homeicons.635077bdda0ab43ae14208bcfda93699.svg",
     "static/media/about.png": "/static/media/about.37f3f0ecfb7c8a8d0adf.png",
     "static/media/profit-graph.jpg": "/static/media/profit-graph.bc9db74fefaf2585293c.jpg",
+    "static/media/Signal Analysis and Processing.png": "/static/media/Signal Analysis and Processing.aa3903fbc823319df9a4.png",
+    "static/media/logoLight.png": "/static/media/logoLight.e7ac5f2a058a23edc37e.png",
+    "static/media/logoDark.png": "/static/media/logoDark.56d124090df4f50a3750.png",
     "static/media/dev-survey-2023.png": "/static/media/dev-survey-2023.8261afde7de965f61c4b.png",
     "static/media/SalesAnalysis.jpg": "/static/media/SalesAnalysis.3f47c270ffe8aee5fc59.jpg",
     "index.html": "/index.html",
     "static/media/pre.svg": "/static/media/pre.74b00c043f4cea5fb393.svg",
-    "main.d9202c67.css.map": "/static/css/main.d9202c67.css.map",
-    "main.c95df975.js.map": "/static/js/main.c95df975.js.map",
-    "496.1811ca5a.chunk.js.map": "/static/js/496.1811ca5a.chunk.js.map"
+    "main.54c18526.css.map": "/static/css/main.54c18526.css.map",
+    "main.1bf415bb.js.map": "/static/js/main.1bf415bb.js.map",
+    "496.80e3e4ae.chunk.js.map": "/static/js/496.80e3e4ae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9202c67.css",
-    "static/js/main.c95df975.js"
+    "static/css/main.54c18526.css",
+    "static/js/main.1bf415bb.js"
   ]
 }
