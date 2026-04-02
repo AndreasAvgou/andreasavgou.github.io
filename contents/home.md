@@ -16,8 +16,9 @@ pipelines, optimizing performance, and translating research innovations into pro
 Email: andavgoustis[at]ionio.gr
 
 #### Education
-M.E., Computer Science and Technology, China University of Mining and Technology, 2022—2025.\
-B.E., Data Science and Big Data Technology, China University of Mining and Technology, 2018—2022.
+Phd Candidate in Informatics, Ionian University, Department of Informatics, 2024 - Present\
+Master Degree (MSc) in Βig Data Driven Networked Systems, Computer Science and Technology, Ionian University, Department of Informatics, 2022—2024.\
+Bachelor Degree (BSc) in Informatics, Ionian University, Department of Informatics, 2015 - 2021.
 
 #### Research Interests
 Machine Learning for Seismology; Foundation Model; Observational Seismology; Microseismic Monitoring
