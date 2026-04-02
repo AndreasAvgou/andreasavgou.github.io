@@ -20,7 +20,7 @@ Personal Email : andreas_ker@outlook.com.gr
 
 #### Education
 Phd Candidate in Informatics, Ionian University, Department of Informatics, 2024 - Present\
-Master Degree (MSc) in Βig Data Driven Networked Systems, Computer Science and Technology, Ionian University, Department of Informatics, 2022 - 2024.\
+Master Degree (MSc) in Βig Data Driven Networked Systems, Ionian University, Department of Informatics, 2022 - 2024.\
 Bachelor Degree (BSc) in Informatics, Ionian University, Department of Informatics, 2015 - 2021.
 
 #### Research Interests
