@@ -1,12 +1,19 @@
 
 
-[![senli1073](https://img.shields.io/badge/senli1073-github-blue?logo=github)](https://github.com/senli1073)
+[![AndreasAvgou](https://img.shields.io/badge/AndreasAvgou-github-blue?logo=github)](https://github.com/AndreasAvgou)
 
-He is currently a Fellow in the Department of Earth and Planetary Sciences (EPS) at Harvard University.
+AI/ML Engineer & PhD Researcher with strong academic foundations including an MSc in Big Data Driven
+Networked Systems and ongoing PhD studies in Informatics. Specializing in Deep Learning, Computer Vision,
+and large-scale data processing. Experienced in designing, training, and deploying advanced neural
+architectures (CNNs, LSTMs, Transformers) for real-time and healthcare-focused applications. Strong
+engineering background with hands-on expertise in Python, PyTorch, TensorFlow, SQL, Spark, Docker, and
+cloud platforms (GCP, Azure). Published researcher with contributions in multimodal learning, text
+simplification, seismology signal processing, and medical image analysis. Adept at building end-to-end ML
+pipelines, optimizing performance, and translating research innovations into production-grade systems..
 
 #### Contact
 
-Email: user[at]fas.harvard.edu
+Email: andavgoustis[at]ionio.gr
 
 #### Education
 M.E., Computer Science and Technology, China University of Mining and Technology, 2022—2025.\
