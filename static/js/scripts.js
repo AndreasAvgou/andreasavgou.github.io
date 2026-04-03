@@ -7,28 +7,31 @@ const section_names = ['home', 'publications', 'projects']
 
 window.addEventListener('DOMContentLoaded', event => {
     const toggleButton = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-const htmlElement = document.documentElement;
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlElement = document.documentElement;
 
-// Συνάρτηση για αλλαγή εικονιδίου
-const updateIcon = (theme) => {
-    themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-};
+    // Συνάρτηση για την ενημέρωση του εικονιδίου
+    const updateIcon = (theme) => {
+        if (themeIcon) {
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+    };
 
-// Έλεγχος αν υπάρχει αποθηκευμένη προτίμηση
-const savedTheme = localStorage.getItem('theme') || 'light';
-htmlElement.setAttribute('data-theme', savedTheme);
-if (themeIcon) updateIcon(savedTheme);
+    // Αρχικός έλεγχος (Προεπιλογή: light)
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-theme', currentTheme);
+    updateIcon(currentTheme);
 
-if (toggleButton) {
-    toggleButton.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateIcon(newTheme);
-    });
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            const theme = htmlElement.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+    }
 }
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
