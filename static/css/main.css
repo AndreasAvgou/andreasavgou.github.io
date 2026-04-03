@@ -108,117 +108,8 @@ section .main-body{
         margin: 0;
     }
 }
-/* --- Automatic Dark Mode Support --- */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bs-body-bg: #121212;
-        --bs-body-color: #e0e0e0;
-        --h-title-color: #7d8aff; 
-        --bs-primary: #7d8aff;
-    }
-
-    body {
-        background-color: #121212 !important;
-        color: #e0e0e0 !important;
-    }
-
-    
-    #mainNav {
-        background-color: #1a1a1a !important;
-        border-bottom: solid 1px #333 !important;
-    }
-
-    #mainNav .navbar-brand, 
-    #mainNav .navbar-nav .nav-item .nav-link {
-        color: #ffffff !important;
-    }
-
-    
-    .bg-gradient-primary-to-secondary-light {
-        background: linear-gradient(45deg, #1a1a1a, #121212) !important;
-    }
-
-    .bg-gradient-primary-to-secondary-gray {
-        background: linear-gradient(45deg, #252525, #1a1a1a) !important;
-    }
-
-    
-    section header h2, h1, h2, h3, h4, h5, h6 {
-        color: #ffffff !important;
-    }
-
-    .text-muted {
-        color: #aaaaaa !important;
-    }
-
-    
-    footer.bg-black {
-        background-color: #000000 !important;
-    }
-
-    
-    .top-section:before {
-        background: rgba(0, 0, 0, 0.7) !important;
-    }
-}
-/* --- Dark Mode Styles --- */
-[data-theme="dark"] {
-    --bs-body-bg: #121212;
-    --bs-body-color: #e0e0e0;
-    --h-title-color: #82aaff;
-    --bs-primary: #82aaff;
-}
-
-[data-theme="dark"] body {
-    background-color: #121212 !important;
-    color: #e0e0e0 !important;
-}
-
-[data-theme="dark"] #mainNav {
-    background-color: #1a1a1a !important;
-    border-bottom: solid 1px #333 !important;
-}
-
-[data-theme="dark"] #mainNav .navbar-brand, 
-[data-theme="dark"] #mainNav .navbar-nav .nav-item .nav-link {
-    color: #ffffff !important;
-}
-
-[data-theme="dark"] .bg-gradient-primary-to-secondary-light {
-    background: linear-gradient(45deg, #1a1a1a, #121212) !important;
-}
-
-[data-theme="dark"] .bg-gradient-primary-to-secondary-gray {
-    background: linear-gradient(45deg, #252525, #1a1a1a) !important;
-}
-
-[data-theme="dark"] section header h2 {
-    color: #ffffff !important;
-}
-
-[data-theme="dark"] .text-muted {
-    color: #aaaaaa !important;
-}
-
-#theme-toggle {
-    transition: transform 0.2s ease;
-}
-#theme-toggle:hover {
-    transform: scale(1.2);
-}
-/* Ρυθμίσεις για όταν είναι ενεργό το Dark Mode */
-[data-theme="dark"] {
-    --bs-body-bg: #121212;
-    --bs-body-color: #e0e0e0;
-    --h-title-color: #82aaff;
-}
-
-[data-theme="dark"] body {
-    background-color: #121212 !important;
-    color: #e0e0e0 !important;
-}
-
-/* Εξουδετέρωση των λευκών gradients που εμποδίζουν την αλλαγή */
+/* Ρυθμίσεις για Dark Mode - Ενεργοποιούνται ΜΟΝΟ όταν το data-theme είναι "dark" */
+[data-theme="dark"] body, 
 [data-theme="dark"] section,
 [data-theme="dark"] .bg-gradient-primary-to-secondary-light,
 [data-theme="dark"] .bg-gradient-primary-to-secondary-gray {
@@ -242,9 +133,6 @@ section .main-body{
     color: #ffffff !important;
 }
 
-/* Footer προσαρμογή */
 [data-theme="dark"] .bg-bottom {
     background-color: #000000 !important;
 }
-
-
