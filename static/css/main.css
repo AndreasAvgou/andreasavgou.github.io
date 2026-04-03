@@ -108,5 +108,58 @@ section .main-body{
         margin: 0;
     }
 }
+/* --- Automatic Dark Mode Support --- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bs-body-bg: #121212;
+        --bs-body-color: #e0e0e0;
+        --h-title-color: #7d8aff; 
+        --bs-primary: #7d8aff;
+    }
+
+    body {
+        background-color: #121212 !important;
+        color: #e0e0e0 !important;
+    }
+
+    
+    #mainNav {
+        background-color: #1a1a1a !important;
+        border-bottom: solid 1px #333 !important;
+    }
+
+    #mainNav .navbar-brand, 
+    #mainNav .navbar-nav .nav-item .nav-link {
+        color: #ffffff !important;
+    }
+
+    
+    .bg-gradient-primary-to-secondary-light {
+        background: linear-gradient(45deg, #1a1a1a, #121212) !important;
+    }
+
+    .bg-gradient-primary-to-secondary-gray {
+        background: linear-gradient(45deg, #252525, #1a1a1a) !important;
+    }
+
+    
+    section header h2, h1, h2, h3, h4, h5, h6 {
+        color: #ffffff !important;
+    }
+
+    .text-muted {
+        color: #aaaaaa !important;
+    }
+
+    
+    footer.bg-black {
+        background-color: #000000 !important;
+    }
+
+    
+    .top-section:before {
+        background: rgba(0, 0, 0, 0.7) !important;
+    }
+}
 
 
