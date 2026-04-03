@@ -6,20 +6,19 @@ const section_names = ['home', 'publications', 'projects']
 
 
 window.addEventListener('DOMContentLoaded', event => {
-    // Theme Toggle Logic
-const toggleButton = document.getElementById('theme-toggle');
+    const toggleButton = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 const htmlElement = document.documentElement;
 
-// Ενημέρωση του εικονιδίου βάσει του τρέχοντος θέματος
+// Συνάρτηση για αλλαγή εικονιδίου
 const updateIcon = (theme) => {
-    if (themeIcon) {
-        themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-    }
+    themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
 };
 
-// Αρχική ρύθμιση εικονιδίου
-updateIcon(htmlElement.getAttribute('data-theme'));
+// Έλεγχος αν υπάρχει αποθηκευμένη προτίμηση
+const savedTheme = localStorage.getItem('theme') || 'light';
+htmlElement.setAttribute('data-theme', savedTheme);
+if (themeIcon) updateIcon(savedTheme);
 
 if (toggleButton) {
     toggleButton.addEventListener('click', () => {
@@ -27,7 +26,7 @@ if (toggleButton) {
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         
         htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme); // Αποθήκευση επιλογής
+        localStorage.setItem('theme', newTheme);
         updateIcon(newTheme);
     });
 }
