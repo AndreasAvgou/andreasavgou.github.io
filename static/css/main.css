@@ -108,7 +108,7 @@ section .main-body{
         margin: 0;
     }
 }
-/* Ρυθμίσεις για Dark Mode - Ενεργοποιούνται ΜΟΝΟ όταν το data-theme είναι "dark" */
+/* --- Fix Dark Mode Colors --- */
 [data-theme="dark"] body, 
 [data-theme="dark"] section,
 [data-theme="dark"] .bg-gradient-primary-to-secondary-light,
@@ -119,12 +119,6 @@ section .main-body{
 
 [data-theme="dark"] #mainNav {
     background-color: #1a1a1a !important;
-    border-bottom: solid 1px #333 !important;
-}
-
-[data-theme="dark"] #mainNav .navbar-brand, 
-[data-theme="dark"] #mainNav .navbar-nav .nav-item .nav-link {
-    color: #ffffff !important;
 }
 
 [data-theme="dark"] section header h2, 
@@ -133,6 +127,11 @@ section .main-body{
     color: #ffffff !important;
 }
 
-[data-theme="dark"] .bg-bottom {
-    background-color: #000000 !important;
+/* Style για το κουμπί στο Navbar */
+#theme-toggle {
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    padding: 10px;
+    cursor: pointer;
 }
