@@ -75,12 +75,12 @@
     <script type="text/javascript" src="static/js/scripts.js"></script>
     <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
     <script>
-    // Άμεση εφαρμογή του θέματος πριν φορτώσει η σελίδα
-    (function() {
-        const theme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', theme);
-    })();
-</script>
+        (function() {
+        // Αν δεν υπάρχει αποθηκευμένη προτίμηση, βάλε 'light' ως προεπιλογή
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
 
 </head>
 
