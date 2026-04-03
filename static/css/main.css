@@ -108,30 +108,37 @@ section .main-body{
         margin: 0;
     }
 }
-/* --- Fix Dark Mode Colors --- */
-[data-theme="dark"] body, 
+/* --- Διορθωμένο Dark Mode --- */
+[data-theme="dark"] body {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+/* Αλλάζουμε το φόντο μόνο στα sections που έχουν gradients, ΟΧΙ στο header */
 [data-theme="dark"] section,
 [data-theme="dark"] .bg-gradient-primary-to-secondary-light,
 [data-theme="dark"] .bg-gradient-primary-to-secondary-gray {
-    background: #121212 !important; 
-    color: #ffffff !important;
+    background-image: none !important; /* Σβήνει μόνο τα λευκά gradients */
+    background-color: #121212 !important;
 }
 
-[data-theme="dark"] #mainNav {
-    background-color: #1a1a1a !important;
+/* Εξασφαλίζουμε ότι το Header κρατάει την εικόνα του */
+[data-theme="dark"] .top-section {
+    background-color: transparent !important;
 }
 
+/* Προαιρετικά: Σκουραίνουμε λίγο το overlay της εικόνας για να δένει με το dark mode */
+[data-theme="dark"] .top-section:before {
+    background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Διόρθωση κειμένων */
 [data-theme="dark"] section header h2, 
 [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
 [data-theme="dark"] .main-body {
     color: #ffffff !important;
 }
 
-/* Style για το κουμπί στο Navbar */
-#theme-toggle {
-    border: none;
-    background: transparent;
-    font-size: 1.2rem;
-    padding: 10px;
-    cursor: pointer;
+[data-theme="dark"] #mainNav {
+    background-color: #1a1a1a !important;
 }
