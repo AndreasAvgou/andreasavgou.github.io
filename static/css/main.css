@@ -161,5 +161,50 @@ section .main-body{
         background: rgba(0, 0, 0, 0.7) !important;
     }
 }
+/* --- Dark Mode Styles --- */
+[data-theme="dark"] {
+    --bs-body-bg: #121212;
+    --bs-body-color: #e0e0e0;
+    --h-title-color: #82aaff;
+    --bs-primary: #82aaff;
+}
+
+[data-theme="dark"] body {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] #mainNav {
+    background-color: #1a1a1a !important;
+    border-bottom: solid 1px #333 !important;
+}
+
+[data-theme="dark"] #mainNav .navbar-brand, 
+[data-theme="dark"] #mainNav .navbar-nav .nav-item .nav-link {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-gradient-primary-to-secondary-light {
+    background: linear-gradient(45deg, #1a1a1a, #121212) !important;
+}
+
+[data-theme="dark"] .bg-gradient-primary-to-secondary-gray {
+    background: linear-gradient(45deg, #252525, #1a1a1a) !important;
+}
+
+[data-theme="dark"] section header h2 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .text-muted {
+    color: #aaaaaa !important;
+}
+
+#theme-toggle {
+    transition: transform 0.2s ease;
+}
+#theme-toggle:hover {
+    transform: scale(1.2);
+}
 
 
