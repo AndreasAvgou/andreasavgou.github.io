@@ -6,7 +6,31 @@ const section_names = ['home', 'publications', 'projects']
 
 
 window.addEventListener('DOMContentLoaded', event => {
+    // Theme Toggle Logic
+const toggleButton = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const htmlElement = document.documentElement;
 
+// Ενημέρωση του εικονιδίου βάσει του τρέχοντος θέματος
+const updateIcon = (theme) => {
+    if (themeIcon) {
+        themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+};
+
+// Αρχική ρύθμιση εικονιδίου
+updateIcon(htmlElement.getAttribute('data-theme'));
+
+if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme); // Αποθήκευση επιλογής
+        updateIcon(newTheme);
+    });
+}
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
