@@ -8,7 +8,7 @@ and large-scale data processing.
 Experienced in designing, training, and deploying advanced neural
 architectures (CNNs, LSTMs, Transformers) for real-time and healthcare-focused applications. Strong
 engineering background with hands-on expertise in Python, PyTorch, TensorFlow, SQL, Spark, Docker, and
-cloud platforms (GCP). Published researcher with contributions in multimodal learning, text
+cloud platforms. Published researcher with contributions in multimodal learning, text
 simplification, seismology signal processing, and medical image analysis. Adept at building end-to-end ML
 pipelines, optimizing performance, and translating research innovations into production-grade systems..
 
