@@ -14,9 +14,7 @@ pipelines, optimizing performance, and translating research innovations into pro
 
 #### Contact
 
-Academic Email: andavgoustis@ionio.gr
-
-Personal Email : andreas_ker@outlook.com.gr
+Email : andreas_ker@outlook.com.gr
 
 #### Education
 Phd Candidate in Informatics, Ionian University, Department of Informatics, 2024 - Present\
