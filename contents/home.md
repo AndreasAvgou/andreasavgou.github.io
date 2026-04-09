@@ -6,7 +6,7 @@ AI/ML Engineer & PhD Researcher with strong academic foundations including an MS
 
 #### Contact
 
-Email : andreas_ker@outlook.com.gr
+Email : andavgoustis@ionio.gr
 
 #### Education
 Phd Candidate in Informatics, Ionian University, Department of Informatics, 2024 - Present\
