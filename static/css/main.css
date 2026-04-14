@@ -175,3 +175,23 @@ section .main-body{
     background-color: #ffffff !important; /* Ή το χρώμα που θέλεις */
     z-index: 1050;
 }
+/* Διόρθωση εμφάνισης Toggler (Hamburger Menu) */
+#mainNav .navbar-toggler {
+    color: var(--bs-body-color) !important; /* Παίρνει αυτόματα το χρώμα του κειμένου */
+    border-color: var(--bs-body-color) !important;
+    opacity: 1 !important;
+    display: block; /* Σιγουρεύουμε ότι δεν είναι hidden */
+}
+
+/* Αν είμαστε σε Dark Mode, το κάνουμε λευκό/ανοιχτό */
+[data-theme="dark"] #mainNav .navbar-toggler {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Σιγουρεύουμε ότι το εικονίδιο μέσα στο κουμπί είναι ορατό */
+#mainNav .navbar-toggler i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    color: inherit !important;
+}
