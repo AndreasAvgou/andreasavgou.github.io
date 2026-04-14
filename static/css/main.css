@@ -108,6 +108,12 @@ section .main-body{
         margin: 0;
     }
 }
+/* Για να φαίνεται το κουμπί MENU στο κινητό */
+.navbar-toggler {
+    border-color: rgba(0,0,0,0.1) !important;
+    background-color: #fff !important; /* Λευκό φόντο για να ξεχωρίζει */
+    z-index: 9999;
+}
 /* --- Διορθωμένο Dark Mode --- */
 [data-theme="dark"] body {
     background-color: #121212 !important;
