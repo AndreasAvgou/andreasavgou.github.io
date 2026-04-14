@@ -1,4 +1,4 @@
-# Personal Academic website
+# Personal website
 [Visit here](https://andreasavgou.github.io)
 
 
