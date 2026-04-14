@@ -108,6 +108,32 @@ section .main-body{
         margin: 0;
     }
 }
+/* Αναγκαστική εμφάνιση του Toggler στο κινητό */
+@media (max-width: 991.98px) {
+    .navbar-toggler {
+        display: block !important; /* Σιγουρεύουμε ότι υπάρχει */
+        background-color: #007bff !important; /* Έντονο μπλε φόντο για να το βρεις */
+        color: white !important; /* Λευκά γράμματα */
+        border: 2px solid white !important;
+        padding: 5px 10px !important;
+        position: relative;
+        z-index: 9999;
+    }
+
+    /* Σιγουρεύουμε ότι το εικονίδιο και το κείμενο MENU είναι ορατά */
+    .navbar-toggler span, 
+    .navbar-toggler i, 
+    .navbar-toggler {
+        color: #ffffff !important;
+    }
+}
+
+/* Σιγουρεύουμε ότι η μπάρα (nav) έχει ύψος και δεν είναι διάφανη */
+#mainNav {
+    min-height: 70px;
+    background-color: #ffffff !important; /* Ή το χρώμα που θέλεις */
+    z-index: 1050;
+}
 /* Για να φαίνεται το κουμπί MENU στο κινητό */
 .navbar-toggler {
     border-color: rgba(0,0,0,0.1) !important;
