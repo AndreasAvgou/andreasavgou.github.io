@@ -12,7 +12,6 @@ window.addEventListener('DOMContentLoaded', event => {
         if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
     };
 
-    // Φόρτωση προτίμησης (Προεπιλογή light)
     const currentTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', currentTheme);
     updateIcon(currentTheme);
@@ -28,7 +27,7 @@ window.addEventListener('DOMContentLoaded', event => {
         };
     }
 
-    // --- 2. YAML LOADING ---
+    // --- 2. YAML LOADING (Για κοινά στοιχεία όπως τίτλοι & footer) ---
     fetch(content_dir + config_file)
         .then(response => response.text())
         .then(text => {
@@ -39,25 +38,29 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         }).catch(err => console.error("Config load error:", err));
 
-    // --- 3. MARKDOWN LOADING ---
+    // --- 3. SMART MARKDOWN LOADING ---
     if (typeof marked !== 'undefined') {
         marked.use({ mangle: false, headerIds: false });
-        section_names.forEach(name => {
-            fetch(content_dir + name + '.md')
-                .then(response => response.text())
-                .then(markdown => {
-                    const html = marked.parse(markdown);
-                    const el = document.getElementById(name + '-md');
-                    if (el) el.innerHTML = html;
-                }).then(() => {
-                    if (window.MathJax) MathJax.typeset();
-                }).catch(err => console.error("Markdown load error:", err));
-        });
-    }
 
-    // --- 4. NAVBAR & SCROLLSPY ---
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, { target: '#mainNav', offset: 74 });
+        section_names.forEach(name => {
+            const el = document.getElementById(name + '-md');
+            
+            // Φορτώνει το Markdown ΜΟΝΟ αν το αντίστοιχο div υπάρχει στη σελίδα
+            if (el) {
+                fetch(content_dir + name + '.md')
+                    .then(response => {
+                        if (!response.ok) throw new Error(name + ".md not found");
+                        return response.text();
+                    })
+                    .then(markdown => {
+                        el.innerHTML = marked.parse(markdown);
+                        // Αν υπάρχει MathJax στη σελίδα, κάνε re-render τους τύπους
+                        if (window.MathJax && window.MathJax.typeset) {
+                            window.MathJax.typeset();
+                        }
+                    })
+                    .catch(err => console.error("Markdown load error:", err));
+            }
+        });
     }
 });
