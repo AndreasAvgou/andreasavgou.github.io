@@ -10,8 +10,6 @@
 
 #### Programming
 
-- Crypto Analytics & Prediction Platform
-
 - Real time Monitoring System & Feature Engineering [[Code]](https://github.com/AndreasAvgou/Real-time-Monitoring-System-and-Feature-Engineering)
 
 - Tutoring System [[Code]](https://github.com/AndreasAvgou/Tutoring-System)
