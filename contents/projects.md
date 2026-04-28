@@ -10,6 +10,8 @@
 
 #### Programming
 
+- Crypto Analytics & Prediction Platform
+
 - Single-Cell RNA-Seq Classification [[Code]](https://github.com/AndreasAvgou/Single-Cell-RNA-Seq-Classification/tree/main)
 
 - Real time Monitoring System & Feature Engineering [[Code]](https://github.com/AndreasAvgou/Real-time-Monitoring-System-and-Feature-Engineering)
