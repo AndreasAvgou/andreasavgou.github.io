@@ -10,7 +10,7 @@
 
 #### Programming
 
-- Crypto Analytics & Prediction Platform
+- Crypto Analytics & Prediction Platform [[Code]](https://github.com/AndreasAvgou/Crypto-Analytics-Prediction-Platform)
 
 - Single-Cell RNA-Seq Classification [[Code]](https://github.com/AndreasAvgou/Single-Cell-RNA-Seq-Classification/tree/main)
 
