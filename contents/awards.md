@@ -1,12 +1,8 @@
 
-- Outstanding Graduate Award (CUMT), 2025.
+- Awarded for achieving a 9.47/10 GPA, ranking in the top tier of the 2024 graduating class.
 
-- National Scholarship for Graduate Students (Ministry of Education, China), 2024.
+- Received a Perfect Score (10/10) for both Master's and Bachelor's theses in Applied Machine Learning and Healthcare AI.
 
-- First-Prize Graduate Academic Scholarship (CUMT), 2023 & 2024.
+- Nomination for 2026 Google PhD Fellowship: Formally nominated by the Department Chair as the top candidate for the Europe & Middle East fellowship program
 
-- Outstanding Undergraduate Thesis Award (Jiangsu, China), 2022.
-
-- First-Prize Corporate Scholarship (CUMT), 2020.
-
-- First-Prize Undergraduate Academic Scholarship (CUMT), 2019.
+- Completed advanced training in Data Engineering and Full-Stack Python Development.
