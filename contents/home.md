@@ -14,6 +14,6 @@ MSc in Βig Data Driven Networked Systems, Ionian University, Department of Info
 BSc in Informatics, Ionian University, Department of Informatics, 2015 - 2021.
 
 #### Research Interests
-Machine learning and Deep Learning in Healthcare; Bioinformatics; Natural Language Processing; Information Retrieval; Data Mining; Big Data; Visual Language Models; Retrieval-Augmented Generation;
+Machine learning and Deep Learning in Healthcare; Bioinformatics; Natural Language Processing; Information Retrieval; Data Mining; Big Data; Visual Language Models; Retrieval-Augmented Generation; Bioinformatics
 
 
