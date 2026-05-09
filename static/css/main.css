@@ -195,3 +195,22 @@ section .main-body{
     vertical-align: middle;
     color: inherit !important;
 }
+/* Hover effect για τα project links */
+#projects-md a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+#projects-md a:hover {
+    color: var(--h-title-color);
+    border-bottom: 1px solid var(--h-title-color);
+    padding-left: 5px;
+}
+
+/* Βελτίωση της γραμματοσειράς στο σώμα */
+section .main-body {
+    font-weight: 300;
+    color: #444;
+    text-align: justify;
+}
