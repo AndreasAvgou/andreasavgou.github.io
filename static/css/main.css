@@ -383,8 +383,17 @@ section .main-body {
     display: flex;
     align-items: center;
     gap: 15px;
+    text-align: left !important;
+}
+/* Εξασφαλίζουμε ότι το κείμενο μέσα στην κάρτα δεν θα "ανοίγει" */
+.award-card div {
+    text-align: left !important;
+    display: block;
 }
 
+.award-card strong {
+    display: inline; /* Για να μην αλλάζει γραμμή ο τίτλος από το υπόλοιπο κείμενο */
+}
 [data-theme="dark"] .award-card {
     background: linear-gradient(135deg, #2c2401 0%, #1a1a1a 100%);
     border-color: #ffd70033;
