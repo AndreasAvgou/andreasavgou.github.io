@@ -2,7 +2,7 @@
 
 - **Models and Applications for Lip Reading and Voice Reproduction**
 
-- - **Single-Cell RNA-Seq Classification** [[Code]](https://github.com/AndreasAvgou/Single-Cell-RNA-Seq-Classification/tree/main)
+- **Single-Cell RNA-Seq Classification** [[Code]](https://github.com/AndreasAvgou/Single-Cell-RNA-Seq-Classification/tree/main)
 
 - **Optimization of healthcare process management using machine learning** [[Paper]](https://link.springer.com/chapter/10.1007/978-3-031-63211-2_15) [[Code]](https://github.com/AndreasAvgou/Optimization-of-healthcare-process-management-using-machine-learning)
 
