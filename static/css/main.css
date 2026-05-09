@@ -399,10 +399,34 @@ section .main-body {
     border-color: #ffd70033;
 }
 
-/* Skill Badges Wrapper */
+/* --- SKILLS FIX --- */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    justify-content: center; /* Κεντράρισμα για να μην υπάρχουν τρύπες δεξιά-αριστερά */
+    gap: 8px; /* Σταθερό μικρό κενό ανάμεσα στα badges */
     margin-top: 15px;
+    text-align: center;
+}
+
+/* Αφαίρεση περιθωρίων που προσθέτει αυτόματα ο Markdown parser */
+.skills-container p {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.skills-container img {
+    height: 28px; /* Μικραίνουμε ελάχιστα το ύψος για να χωράνε περισσότερα σε μια γραμμή στο κινητό */
+    width: auto;
+    display: block;
+}
+
+/* Μείωση κενού ανάμεσα στις ενότητες (About Me, Skills, κλπ) */
+section .main-body hr {
+    margin: 1.5rem 0;
+    opacity: 0.1;
 }
