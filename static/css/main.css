@@ -347,3 +347,48 @@ section .main-body {
 [data-theme="dark"] #publications-md li:hover {
     background: #252525;
 }
+/* --- HOME PAGE ENHANCEMENTS --- */
+
+/* Timeline style για την εκπαίδευση */
+.education-item {
+    border-left: 2px solid #e9ecef;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.education-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--h-title-color);
+    border-radius: 50%;
+}
+
+/* Award Highlight Box */
+.award-card {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+[data-theme="dark"] .award-card {
+    background: linear-gradient(135deg, #2c2401 0%, #1a1a1a 100%);
+    border-color: #ffd70033;
+}
+
+/* Skill Badges Wrapper */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
