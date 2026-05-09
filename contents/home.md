@@ -13,7 +13,9 @@ Phd Candidate in Informatics, Ionian University, Department of Informatics, 2024
 MSc in Βig Data Driven Networked Systems, Ionian University, Department of Informatics, 2022 - 2024.\
 BSc in Informatics, Ionian University, Department of Informatics, 2015 - 2021.
 
-#### Research Interests
-Machine learning and Deep Learning in Healthcare; Bioinformatics; Natural Language Processing; Information Retrieval; Data Mining; Big Data; Visual Language Models; Retrieval-Augmented Generation; Bioinformatics
+#### 🔬 Research Interests
+- **Medical AI:** Deep Learning for healthcare applications and medical imaging.
+- **NLP:** Text simplification and large-scale language processing.
+- **Data Mining:** Extracting insights from big data networked systems.
 
 
