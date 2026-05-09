@@ -63,4 +63,16 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     }
+    // Κλείσιμο του μενού όταν πατηθεί ένα link (χρήσιμο για κινητά)
+const navLinks = document.querySelectorAll('.nav-link');
+const menuToggle = document.getElementById('navbarResponsive');
+const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false});
+
+navLinks.forEach((l) => {
+    l.addEventListener('click', () => { 
+        if (window.innerWidth < 992) { // Μόνο σε κινητά/τάμπλετ
+            bsCollapse.hide(); 
+        }
+    });
+});
 });
