@@ -109,27 +109,11 @@ section .main-body{
     }
 }
 /* Εξασφάλιση ότι το μενού καλύπτει το περιεχόμενο σωστά */
-/* Διόρθωση εμφάνισης Toggler */
-.navbar-toggler {
-    z-index: 1051 !important;
-}
-
-/* Εξασφάλιση ότι το μενού καλύπτει το περιεχόμενο σωστά */
-.navbar-collapse {
-    background-color: inherit; /* Παίρνει το χρώμα του Navbar */
-    padding: 1rem;
-    border-radius: 8px;
-}
 
 [data-theme="dark"] .navbar-collapse {
     background-color: #1a1a1a;
 }
 /* Για να φαίνεται το κουμπί MENU στο κινητό */
-.navbar-toggler {
-    border-color: rgba(0,0,0,0.1) !important;
-    background-color: #fff !important; /* Λευκό φόντο για να ξεχωρίζει */
-    z-index: 9999;
-}
 /* --- Διορθωμένο Dark Mode --- */
 [data-theme="dark"] body {
     background-color: #121212 !important;
@@ -173,7 +157,7 @@ section .main-body{
         border: 2px solid white !important;
         padding: 5px 10px !important;
         position: relative;
-        z-index: 9999;
+        z-index: 1051 !important;
     }
 
     /* Σιγουρεύουμε ότι το εικονίδιο και το κείμενο MENU είναι ορατά */
@@ -182,6 +166,12 @@ section .main-body{
     .navbar-toggler {
         color: #ffffff !important;
     }
+}
+
+.navbar-collapse {
+    background-color: inherit; /* Παίρνει το χρώμα του Navbar */
+    padding: 1rem;
+    border-radius: 8px;
 }
 
 /* Σιγουρεύουμε ότι η μπάρα (nav) έχει ύψος και δεν είναι διάφανη */
