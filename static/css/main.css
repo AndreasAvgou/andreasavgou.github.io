@@ -108,7 +108,12 @@ section .main-body{
         margin: 0;
     }
 }
-
+/* Εξασφάλιση ότι το μενού καλύπτει το περιεχόμενο σωστά */
+.navbar-collapse {
+    background-color: inherit; /* Παίρνει το χρώμα του Navbar */
+    padding: 1rem;
+    border-radius: 8px;
+}
 /* Για να φαίνεται το κουμπί MENU στο κινητό */
 .navbar-toggler {
     border-color: rgba(0,0,0,0.1) !important;
