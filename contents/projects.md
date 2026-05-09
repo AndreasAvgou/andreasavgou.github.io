@@ -10,9 +10,6 @@
 
 -  **Melanoma Image Classification** [Code](https://github.com/AndreasAvgou/Dermoscopic-Melanoma-Image-Classification)
 
-
-
-
 ### 💻 Programming & Systems
 
 -  **Crypto Analytics & Prediction Platform** [Code](https://github.com/AndreasAvgou/Crypto-Analytics-Prediction-Platform)
