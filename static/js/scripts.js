@@ -27,7 +27,21 @@ window.addEventListener('DOMContentLoaded', event => {
         };
     }
 
-    // --- 2. YAML LOADING (Για κοινά στοιχεία όπως τίτλοι & footer) ---
+    // --- 2. MENU AUTO-CLOSE & FIX ---
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const responsiveMenu = document.getElementById('navbarResponsive');
+    
+    // Κλείσιμο όταν πατάς ένα link (για κινητά)
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                navbarToggler.click();
+            }
+        });
+    });
+
+    // --- 3. YAML & MARKDOWN LOADING ---
     fetch(content_dir + config_file)
         .then(response => response.text())
         .then(text => {
@@ -36,43 +50,19 @@ window.addEventListener('DOMContentLoaded', event => {
                 const el = document.getElementById(key);
                 if (el) el.innerHTML = yml[key];
             }
-        }).catch(err => console.error("Config load error:", err));
+        });
 
-    // --- 3. SMART MARKDOWN LOADING ---
     if (typeof marked !== 'undefined') {
         marked.use({ mangle: false, headerIds: false });
-
         section_names.forEach(name => {
             const el = document.getElementById(name + '-md');
-            
-            // Φορτώνει το Markdown ΜΟΝΟ αν το αντίστοιχο div υπάρχει στη σελίδα
             if (el) {
                 fetch(content_dir + name + '.md')
-                    .then(response => {
-                        if (!response.ok) throw new Error(name + ".md not found");
-                        return response.text();
-                    })
+                    .then(response => response.text())
                     .then(markdown => {
                         el.innerHTML = marked.parse(markdown);
-                        // Αν υπάρχει MathJax στη σελίδα, κάνε re-render τους τύπους
-                        if (window.MathJax && window.MathJax.typeset) {
-                            window.MathJax.typeset();
-                        }
-                    })
-                    .catch(err => console.error("Markdown load error:", err));
+                    });
             }
         });
     }
-    // Κλείσιμο του μενού όταν πατηθεί ένα link (χρήσιμο για κινητά)
-const navLinks = document.querySelectorAll('.nav-link');
-const menuToggle = document.getElementById('navbarResponsive');
-const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false});
-
-navLinks.forEach((l) => {
-    l.addEventListener('click', () => { 
-        if (window.innerWidth < 992) { // Μόνο σε κινητά/τάμπλετ
-            bsCollapse.hide(); 
-        }
-    });
-});
 });
