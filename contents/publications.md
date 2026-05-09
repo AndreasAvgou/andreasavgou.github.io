@@ -4,14 +4,14 @@
 [Paper](https://doi.org/10.3390/info15080500)
 
 - **Optimization of Healthcare Process Management Using Machine Learning**, **Avgoustis, A.**, Exarchos, T., Vrahatis, A.G., Vlamos, P.  *IFIP AI Applications and Innovations (AIAI)*, 2024.  
-[Paper](https://doi.org/10.1007/978-3-031-63211-2_15) [Code](https://github.com/AndreasAvgou/Optimization-of-healthcare-process-management-using-machine-learning)
+[Paper](https://doi.org/10.1007/978-3-031-63211-2_15)
 
 ### 📄 2023
 
 - **Identifying Earthquakes in Low-Cost Sensor Signals**, Agathos L, **Avgoustis A**, Avgoustis N, Vlachos I, Karydis I, Avlonitis M.  *Applied Sciences*, 2023.  
-[Paper](https://doi.org/10.3390/app131910884) [Code](https://github.com/AndreasAvgou/Identifying-Earthquakes-in-Low-Cost-Sensor-Signals-Contaminated-with-Vehicular-Noise/tree/main)
+[Paper](https://doi.org/10.3390/app131910884)
 
 ### 📄 2021
 
 - **Applied Deep learning for categorizing dermoscopic images**, **A. Avgoustis**, T. Exarchos, K. L. Kermanidis and P. Mylonas.  *16th International Workshop on Semantic and Social Media Adaptation & Personalization (SMAP)*, 2021.
-[Paper](10.1109/SMAP53521.2021.9610798.) [Code](https://github.com/AndreasAvgou/Dermoscopic-Melanoma-Image-Classification)
+[Paper](10.1109/SMAP53521.2021.9610798.)
