@@ -13,5 +13,6 @@
 
 ### 📄 2021
 
-- **Applied Deep learning for categorizing dermoscopic images**, **A. Avgoustis**, T. Exarchos, K. L. Kermanidis and P. Mylonas.  *16th International Workshop on Semantic and Social Media Adaptation & Personalization (SMAP)*, 2021.
+- **Applied Deep learning for categorizing dermoscopic images**, **A. Avgoustis**, T. Exarchos, K. L. Kermanidis and P. Mylonas.
+*16th International Workshop on Semantic and Social Media Adaptation & Personalization (SMAP)*, 2021.
 [Paper](https://ieeexplore.ieee.org/document/9610798)
