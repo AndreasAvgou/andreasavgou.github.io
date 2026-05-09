@@ -8,40 +8,33 @@ window.addEventListener('DOMContentLoaded', event => {
     const toggleButton = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
     
-    const updateIcon = (theme) => {
-        if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-    };
-
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    updateIcon(currentTheme);
-
     if (toggleButton) {
         toggleButton.onclick = (e) => {
             e.preventDefault();
-            const theme = document.documentElement.getAttribute('data-theme');
-            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            updateIcon(newTheme);
+            if (themeIcon) themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
         };
     }
 
-    // --- 2. MENU AUTO-CLOSE & FIX ---
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const responsiveMenu = document.getElementById('navbarResponsive');
-    
-    // Κλείσιμο όταν πατάς ένα link (για κινητά)
+    // --- 2. MOBILE MENU AUTO-CLOSE ---
+    // Κλείνει το μενού αυτόματα όταν πατάς ένα link, χωρίς να χαλάει το toggle
     const navLinks = document.querySelectorAll('.nav-link');
+    const menuCollapse = document.getElementById('navbarResponsive');
+    
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
+            if (window.getComputedStyle(document.querySelector('.navbar-toggler')).display !== 'none') {
+                // Χρησιμοποιούμε το API του Bootstrap για ασφάλεια
+                const bsCollapse = bootstrap.Collapse.getInstance(menuCollapse);
+                if (bsCollapse) bsCollapse.hide();
             }
         });
     });
 
-    // --- 3. YAML & MARKDOWN LOADING ---
+    // --- 3. LOADING CONTENT ---
     fetch(content_dir + config_file)
         .then(response => response.text())
         .then(text => {
@@ -50,7 +43,7 @@ window.addEventListener('DOMContentLoaded', event => {
                 const el = document.getElementById(key);
                 if (el) el.innerHTML = yml[key];
             }
-        });
+        }).catch(err => console.error("Config error:", err));
 
     if (typeof marked !== 'undefined') {
         marked.use({ mangle: false, headerIds: false });
@@ -61,7 +54,7 @@ window.addEventListener('DOMContentLoaded', event => {
                     .then(response => response.text())
                     .then(markdown => {
                         el.innerHTML = marked.parse(markdown);
-                    });
+                    }).catch(err => console.error(name + " error:", err));
             }
         });
     }
