@@ -1,36 +1,229 @@
 @import "./styles.css";
 
-:root {
-    --h-title-color: #3948d2;
+
+:root{
+    --h-title-color:#3948d2;
 }
 
-/* --- NAVBAR & MENU FIXES --- */
 .header {
     border-bottom: solid 2px var(--bs-blue);
     z-index: 10000;
 }
 
+.bg-bottom {
+    background-color: var(--h-title-color);
+}
+
+.top-section {
+    position: relative;
+    padding: 10rem 0;
+    background-position: center;
+    background-size: cover;
+    height: 25rem;
+}
+
+.top-section h2 {
+    font-weight: 400;
+}
+
+.top-section .top-section-content {
+    position: relative;
+    z-index: 1;
+}
+
+.top-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+section header h2{
+    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+    color: var(--h-title-color);
+    font-size: 2.3rem;
+    line-height: 4rem;
+}
+
+section .main-body{
+    font-size: 1.3rem;
+    font-weight: 200;
+    line-height: 2.4rem;
+}
+
+
+.bg-gradient-primary-to-secondary-light {
+    background: linear-gradient(45deg, #fcfcfc, #ffffff) !important;
+}
+
+.bg-gradient-primary-to-secondary-gray {
+    background: linear-gradient(45deg, #f0f0f0, #f1f1f1) !important;
+}
+
+
+
+.on-top {
+    position: relative;
+    z-index: 10000;
+}
+
+.top-bg {
+    background-position: center;
+    background-size: fill;
+    width: 100%;
+    height: 100%;
+}
+
+.top-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+#avatar {
+    position: relative;
+    height: 0;
+    top:min(-65px,max(-100px,calc(-1*100vw/12)));
+    max-width: 55em;
+    margin: 0 1.5rem 0 0;
+    float: right;
+    z-index: 9000;
+}
+
+#avatar img {
+    height: max(130px,min(200px,calc(100vw/6)));
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 991px) {
+    #avatar {
+        margin: 0;
+    }
+}
+/* Εξασφάλιση ότι το μενού καλύπτει το περιεχόμενο σωστά */
+
+[data-theme="dark"] .navbar-collapse {
+    background-color: #1a1a1a;
+}
+/* Για να φαίνεται το κουμπί MENU στο κινητό */
+/* --- Διορθωμένο Dark Mode --- */
+[data-theme="dark"] body {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+/* Αλλάζουμε το φόντο μόνο στα sections που έχουν gradients, ΟΧΙ στο header */
+[data-theme="dark"] section,
+[data-theme="dark"] .bg-gradient-primary-to-secondary-light,
+[data-theme="dark"] .bg-gradient-primary-to-secondary-gray {
+    background-image: none !important; /* Σβήνει μόνο τα λευκά gradients */
+    background-color: #121212 !important;
+}
+
+/* Εξασφαλίζουμε ότι το Header κρατάει την εικόνα του */
+[data-theme="dark"] .top-section {
+    background-color: transparent !important;
+}
+
+/* Προαιρετικά: Σκουραίνουμε λίγο το overlay της εικόνας για να δένει με το dark mode */
+[data-theme="dark"] .top-section:before {
+    background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Διόρθωση κειμένων */
+[data-theme="dark"] section header h2, 
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
+[data-theme="dark"] .main-body {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] #mainNav {
+    background-color: #1a1a1a !important;
+}
+/* Αναγκαστική εμφάνιση του Toggler στο κινητό */
+@media (max-width: 991.98px) {
+    .navbar-toggler {
+        display: block !important; /* Σιγουρεύουμε ότι υπάρχει */
+        background-color: #007bff !important; /* Έντονο μπλε φόντο για να το βρεις */
+        color: white !important; /* Λευκά γράμματα */
+        border: 2px solid white !important;
+        padding: 5px 10px !important;
+        position: relative;
+        z-index: 1051 !important;
+    }
+
+    /* Σιγουρεύουμε ότι το εικονίδιο και το κείμενο MENU είναι ορατά */
+    .navbar-toggler span, 
+    .navbar-toggler i, 
+    .navbar-toggler {
+        color: #ffffff !important;
+    }
+}
+
+.navbar-collapse {
+    background-color: inherit; /* Παίρνει το χρώμα του Navbar */
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Σιγουρεύουμε ότι η μπάρα (nav) έχει ύψος και δεν είναι διάφανη */
 #mainNav {
     min-height: 70px;
-    background-color: #ffffff !important;
+    background-color: #ffffff !important; /* Ή το χρώμα που θέλεις */
     z-index: 1050;
 }
-
-/* Διόρθωση για το Toggler (Hamburger) */
-.navbar-toggler {
-    z-index: 1051 !important;
-    position: relative;
+/* Διόρθωση εμφάνισης Toggler (Hamburger Menu) */
+#mainNav .navbar-toggler {
+    color: var(--bs-body-color) !important; /* Παίρνει αυτόματα το χρώμα του κειμένου */
+    border-color: var(--bs-body-color) !important;
+    opacity: 1 !important;
+    display: block; /* Σιγουρεύουμε ότι δεν είναι hidden */
 }
 
-/* Στοίχιση κειμένου στα μενού (αποφυγή justify) */
-.navbar-nav {
-    text-align: left;
+/* Αν είμαστε σε Dark Mode, το κάνουμε λευκό/ανοιχτό */
+[data-theme="dark"] #mainNav .navbar-toggler {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-/* --- PROJECT CARDS (Grid) --- */
+/* Σιγουρεύουμε ότι το εικονίδιο μέσα στο κουμπί είναι ορατό */
+#mainNav .navbar-toggler i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    color: inherit !important;
+}
+/* Hover effect για τα project links */
+#projects-md a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+#projects-md a:hover {
+    color: var(--h-title-color);
+    border-bottom: 1px solid var(--h-title-color);
+    padding-left: 5px;
+}
+
+/* Βελτίωση της γραμματοσειράς στο σώμα */
+section .main-body {
+    font-weight: 300;
+    color: #444;
+    text-align: justify;
+}
+
+/* --- PROJECT CARDS STYLING --- */
 #projects-md ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
     padding: 0;
     list-style: none;
@@ -45,22 +238,61 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    text-align: left; /* FIX για τα κενά στα γράμματα */
+    justify-content: space-between;
 }
 
 #projects-md li:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: var(--h-title-color);
 }
 
+/* Styling για τους τίτλους των projects μέσα στις κάρτες */
 #projects-md li strong {
     display: block;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--h-title-color);
     margin-bottom: 0.5rem;
 }
 
-/* --- PUBLICATION CARDS (Horizontal) --- */
+/* Styling για τα links/buttons */
+#projects-md a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.4rem 1rem;
+    background-color: var(--h-title-color);
+    color: white !important;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+#projects-md a:hover {
+    opacity: 0.8;
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] #projects-md li {
+    background: #1e1e1e;
+    border-color: #333;
+    color: #e0e0e0;
+}
+/* Διόρθωση για να μην υπάρχουν μεγάλα κενά στους τίτλους */
+#projects-md li strong {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--h-title-color);
+    margin-bottom: 0.5rem;
+    text-align: left; /* Αυτό καταργεί το justify μόνο για τους τίτλους */
+}
+
+/* Αν θέλεις και η περιγραφή μέσα στην κάρτα να μην έχει justify */
+#projects-md li {
+    text-align: left;
+}
+/* --- PUBLICATION CARDS STYLING --- */
 #publications-md ul {
     list-style: none;
     padding: 0;
@@ -68,21 +300,66 @@
 
 #publications-md li {
     background: #ffffff;
-    border-left: 4px solid var(--h-title-color);
-    margin-bottom: 1.2rem;
-    padding: 1.2rem;
+    border-left: 4px solid var(--h-title-color); /* Η χαρακτηριστική μπλε γραμμή */
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
     border-radius: 0 10px 10px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    text-align: left; /* FIX για τα κενά */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    text-align: left; /* Αποφυγή μεγάλων κενών (justify) */
 }
 
-/* --- HOME PAGE UPGRADES --- */
+#publications-md li:hover {
+    transform: translateX(8px); /* Μικρό "πήδημα" προς τα δεξιά στο hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #f8f9ff;
+}
+
+/* Styling για το όνομά σου (επειδή είναι σε strong) */
+#publications-md li strong {
+    color: var(--h-title-color);
+    font-weight: 700;
+}
+
+/* Styling για τα Links (Paper/Code) */
+#publications-md a {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 3px 12px;
+    border: 1px solid var(--h-title-color);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--h-title-color) !important;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+#publications-md a:hover {
+    background: var(--h-title-color);
+    color: white !important;
+}
+
+/* Dark Mode */
+[data-theme="dark"] #publications-md li {
+    background: #1e1e1e;
+    border-color: #4a5af7;
+    color: #d1d1d1;
+}
+
+[data-theme="dark"] #publications-md li:hover {
+    background: #252525;
+}
+/* --- HOME PAGE ENHANCEMENTS --- */
+
+/* Timeline style για την εκπαίδευση */
 .education-item {
     border-left: 2px solid #e9ecef;
     padding-left: 20px;
     margin-bottom: 20px;
     position: relative;
-    text-align: left;
 }
 
 .education-item::before {
@@ -96,31 +373,16 @@
     border-radius: 50%;
 }
 
+/* Award Highlight Box */
 .award-card {
     background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
     border: 1px solid #ffeeba;
-    padding: 12px;
+    padding: 15px;
     border-radius: 8px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 15px;
-    text-align: left;
-}
-
-/* --- DARK MODE --- */
-[data-theme="dark"] body, [data-theme="dark"] section {
-    background-color: #121212 !important;
-    color: #e0e0e0 !important;
-}
-
-[data-theme="dark"] #mainNav {
-    background-color: #1a1a1a !important;
-}
-
-[data-theme="dark"] #projects-md li, [data-theme="dark"] #publications-md li {
-    background: #1e1e1e;
-    border-color: #333;
 }
 
 [data-theme="dark"] .award-card {
@@ -128,7 +390,10 @@
     border-color: #ffd70033;
 }
 
-/* Γενικές διορθώσεις */
-.main-body {
-    text-align: left !important; /* Επιβολή αριστερής στοίχισης παντού */
+/* Skill Badges Wrapper */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
 }
