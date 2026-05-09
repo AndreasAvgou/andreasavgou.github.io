@@ -52,8 +52,8 @@ AI/ML Engineer & Researcher with strong academic foundations including an MSc in
   <span>🥇</span>
   <div><strong>Perfect Thesis Scores (10/10)</strong> – Applied ML & Healthcare AI</div>
 </div>
----
 
+---
 
 ### 🎓 Education
 
