@@ -274,3 +274,16 @@ section .main-body {
     border-color: #333;
     color: #e0e0e0;
 }
+/* Διόρθωση για να μην υπάρχουν μεγάλα κενά στους τίτλους */
+#projects-md li strong {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--h-title-color);
+    margin-bottom: 0.5rem;
+    text-align: left; /* Αυτό καταργεί το justify μόνο για τους τίτλους */
+}
+
+/* Αν θέλεις και η περιγραφή μέσα στην κάρτα να μην έχει justify */
+#projects-md li {
+    text-align: left;
+}
