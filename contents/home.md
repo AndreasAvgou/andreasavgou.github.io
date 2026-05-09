@@ -45,13 +45,13 @@ AI/ML Engineer & Researcher with strong academic foundations including an MSc in
 
 <div class="award-card">
   <span>🎓</span>
-  <strong>Top Tier Graduate (GPA: 9.47/10)</strong> – Class of 2024
-</div>
-<div class="award-card">
-  <span>🥇</span>
-  <strong>Perfect Thesis Scores (10/10)</strong> – Applied ML & Healthcare AI
+  <div><strong>Top Tier Graduate (GPA: 9.47/10)</strong> – Class of 2024</div>
 </div>
 
+<div class="award-card">
+  <span>🥇</span>
+  <div><strong>Perfect Thesis Scores (10/10)</strong> – Applied ML & Healthcare AI</div>
+</div>
 ---
 
 
