@@ -166,12 +166,12 @@ section .main-body{
     .navbar-toggler {
         color: #ffffff !important;
     }
-}
-
-.navbar-collapse {
-    background-color: inherit; /* Παίρνει το χρώμα του Navbar */
-    padding: 1rem;
-    border-radius: 8px;
+    .navbar-collapse {
+        text-align: left !important;
+    }
+    .nav-link {
+        padding: 10px 0;
+    }
 }
 
 /* Σιγουρεύουμε ότι η μπάρα (nav) έχει ύψος και δεν είναι διάφανη */
