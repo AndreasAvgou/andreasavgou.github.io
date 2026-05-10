@@ -80,8 +80,10 @@ As a published researcher, I have contributed to diverse fields such as **medica
 
 ### 🔍 Research Interests
 - **Healthcare AI & Bioinformatics**
-- **Natural Language Processing (NLP)**
-- **Visual Language Models & RAG**
-- **Information Retrieval & Big Data**
+- **Natural Language Processing**
+- **Visual Language Models**
+- **Retrieval-Augmented Generation**
+- **Information Retrieval**
+- **Big Data**
 
 
