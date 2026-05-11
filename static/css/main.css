@@ -663,3 +663,29 @@ footer a:hover {
         display: none !important;
     }
 }
+/* Το section πρέπει να είναι relative για να κλειδώσουν μέσα τα particles */
+.top-section {
+    position: relative;
+    overflow: hidden;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Πάνω από την εικόνα */
+}
+
+/* Το περιεχόμενο (κείμενο) πρέπει να βγει μπροστά */
+.top-section-content {
+    position: relative;
+    z-index: 2; /* Πάνω από τα particles */
+    pointer-events: none; /* Επιτρέπει στο ποντίκι να "περνάει" από κάτω στα particles αν θες interactivity */
+}
+
+/* Επαναφέρουμε τα κλικ μόνο για τον τίτλο/links */
+#top-section-bg-text {
+    pointer-events: auto;
+}
