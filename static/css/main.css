@@ -502,3 +502,35 @@ footer a:hover {
 .mx-1 {
     color: rgba(255, 255, 255, 0.3);
 }
+#avatar img {
+    border: 3px solid white;
+    border-radius: 50%; /* Αν θες να την κάνεις κυκλική */
+    box-shadow: 0 0 20px rgba(57, 72, 210, 0.2); /* Απαλό μπλε glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#avatar img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(57, 72, 210, 0.4);
+}
+/* Styling για Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--h-title-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2a38b1;
+}
