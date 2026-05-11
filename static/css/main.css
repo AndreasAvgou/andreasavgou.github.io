@@ -471,23 +471,28 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 /* Εφέ στα links του Footer και των Social */
+footer {
+    background: #1a1a1a; /* Σκούρο φόντο για αντίθεση */
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
 footer a {
-    position: relative;
+    color: #cbd5e0 !important;
     text-decoration: none;
-    padding-bottom: 2px;
+    font-size: 1.5rem; /* Μεγαλύτερα εικονίδια */
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
-footer a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transition: width 0.3s ease;
+footer a:hover {
+    color: var(--h-title-color) !important;
+    transform: translateY(-5px); /* Μικρό ανασήκωμα */
 }
 
-footer a:hover::after {
-    width: 100%;
+#copyright-text {
+    color: #718096;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
 }
