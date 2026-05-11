@@ -584,3 +584,15 @@ footer a:hover {
 
 @keyframes typing { from { width: 0 } to { width: 100% } }
 @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #fff; } }
+#projects-md li, #publications-md li, .award-card {
+    background: rgba(255, 255, 255, 0.4); /* Ημιδιαφάνεια */
+    backdrop-filter: blur(12px); /* Θόλωμα από πίσω */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+}
+
+[data-theme="dark"] #projects-md li, [data-theme="dark"] #publications-md li, [data-theme="dark"] .award-card {
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
