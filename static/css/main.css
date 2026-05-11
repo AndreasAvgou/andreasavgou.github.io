@@ -479,7 +479,7 @@ footer {
 footer a {
     color: rgba(255, 255, 255, 0.8) !important; /* Λευκό με λίγη διαφάνεια */
     text-decoration: none;
-    font-size: 0.95rem; /* Μικρό και κομψό μέγεθος */
+    font-size: 0.85rem; /* Μικρό και κομψό μέγεθος */
     margin: 0 10px;
     transition: all 0.3s ease;
     font-weight: 400;
