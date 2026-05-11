@@ -653,7 +653,7 @@ footer a:hover {
     }
     
     #top-section-bg-text {
-        font-size: 1.8rem !important; /* Μικραίνουμε λίγο το συνολικό μέγεθος για να χωράει */
+        font-size: 2.2rem !important; /* Μικραίνουμε λίγο το συνολικό μέγεθος για να χωράει */
         line-height: 1.3;
     }
 }
