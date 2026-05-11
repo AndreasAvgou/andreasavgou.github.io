@@ -622,3 +622,24 @@ footer a:hover {
         display: inline-block;
     }
 }
+/* --- HERO/HOME CV BUTTON --- */
+.btn-cv-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--h-title-color);
+    color: white !important;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(57, 72, 210, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-cv-download:hover {
+    background-color: #2a38b1;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(57, 72, 210, 0.4);
+}
