@@ -77,3 +77,10 @@ window.onscroll = function() {
     let scrolled = (winScroll / height) * 100;
     document.getElementById("progress-bar").style.width = scrolled + "%";
 };
+// Η φωτογραφία σου αποκτά 3D κίνηση
+VanillaTilt.init(document.querySelector("#avatar img"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.5,
+});
