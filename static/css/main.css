@@ -663,10 +663,13 @@ footer a:hover {
         display: none !important;
     }
 }
-/* Το section πρέπει να είναι relative για να κλειδώσουν μέσα τα particles */
 .top-section {
     position: relative;
     overflow: hidden;
+    min-height: 500px; /* Εξασφαλίζουμε ότι το section έχει ύψος */
+    /* Χρησιμοποιούμε ένα επαγγελματικό dark theme χρώμα */
+    background-color: #0d1b2a !important; 
+    background-image: none !important; /* Σιγουρεύουμε ότι έφυγε η εικόνα */
 }
 
 #particles-js {
@@ -675,14 +678,14 @@ footer a:hover {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 1; /* Πάνω από την εικόνα */
+    z-index: 1;
 }
 
-/* Το περιεχόμενο (κείμενο) πρέπει να βγει μπροστά */
-.top-section-content {
+/* Ενισχύουμε την εμφάνιση του τίτλου πάνω στο καθαρό background */
+#top-section-bg-text {
     position: relative;
-    z-index: 2; /* Πάνω από τα particles */
-    pointer-events: none; /* Επιτρέπει στο ποντίκι να "περνάει" από κάτω στα particles αν θες interactivity */
+    z-index: 2;
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.5); /* Απαλό μπλε glow */
 }
 
 /* Επαναφέρουμε τα κλικ μόνο για τον τίτλο/links */
