@@ -634,4 +634,23 @@ footer a:hover {
         width: 100%;
     }
 }
+/* Στον υπολογιστή (default) το span παραμένει στην ίδια γραμμή */
+#top-section-bg-text span.mobile-break {
+    display: inline;
+}
 
+/* Στο κινητό (κάτω από 768px) το span αλλάζει γραμμή */
+@media (max-width: 767.98px) {
+    #top-section-bg-text span.mobile-break {
+        display: block; /* Αναγκάζει το κείμενο να ξεκινήσει σε νέα γραμμή */
+        margin-top: 5px; /* Προαιρετικό: λίγο κενό ανάμεσα στις δύο γραμμές */
+        font-size: 0.8em; /* Προαιρετικό: ελαφρώς μικρότερο μέγεθος για να χωράει καλύτερα */
+    }
+    
+    /* Προσαρμογή του κεντρικού τίτλου για να μην "χτυπάει" στις άκρες */
+    #top-section-bg-text {
+        font-size: 2rem !important; /* Ρύθμισε το μέγεθος αν παραμένει πολύ μεγάλο */
+        line-height: 1.2;
+        padding: 0 10px;
+    }
+}
