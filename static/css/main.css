@@ -450,3 +450,12 @@ section .main-body hr {
 [data-theme="dark"] #home-md {
     color: #cbd5e0;
 }
+/* Ομαλή αλλαγή χρωμάτων παντού */
+* {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Εξαίρεση για τα images για να μην "αναβοσβήνουν" */
+img {
+    transition: none !important;
+}
