@@ -634,25 +634,26 @@ footer a:hover {
         width: 100%;
     }
 }
-/* Στον υπολογιστή το span δεν κάνει τίποτα */
+/* --- ΔΙΟΡΘΩΣΗ ΤΙΤΛΟΥ HERO --- */
+
+/* 1. Εξασφαλίζουμε ότι το span στον υπολογιστή είναι ομοιόμορφο */
 #top-section-bg-text span.mobile-break {
-    display: inline;
+    display: inline; /* Μένει στην ίδια σειρά στον υπολογιστή */
+    font-weight: inherit !important; /* Παίρνει το ίδιο πάχος με το AI/ML ENGINEER */
+    font-size: inherit !important;   /* Παίρνει το ίδιο μέγεθος */
+    color: inherit !important;       /* Παίρνει το ίδιο χρώμα/gradient */
+    text-transform: inherit !important;
 }
 
-/* Στο κινητό (κάτω από 768px) */
+/* 2. Ρυθμίσεις μόνο για το κινητό */
 @media (max-width: 767.98px) {
     #top-section-bg-text span.mobile-break {
-        display: block; /* Αναγκάζει το κείμενο να αλλάξει γραμμή */
-        
-        /* Εξασφαλίζουμε ότι κληρονομεί τα πάντα από το γονικό στοιχείο */
-        color: inherit !important;
-        font-size: inherit !important;
-        font-weight: inherit !important;
+        display: block; /* Αλλάζει γραμμή στο κινητό */
+        margin-top: 5px; /* Μικρό κενό ανάμεσα στις γραμμές */
     }
     
     #top-section-bg-text {
-        /* Προσαρμογή μόνο του line-height για να μην κολλάνε οι δύο γραμμές */
-        line-height: 1.2;
-        padding: 0 10px;
+        font-size: 1.8rem !important; /* Μικραίνουμε λίγο το συνολικό μέγεθος για να χωράει */
+        line-height: 1.3;
     }
 }
