@@ -470,29 +470,35 @@ img {
     background: rgba(30, 30, 30, 0.7); /* Ημι-διάφανο μαύρο για dark mode */
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
-/* Εφέ στα links του Footer και των Social */
+/* --- COMPACT & PROFESSIONAL FOOTER --- */
 footer {
-    background: #1a1a1a; /* Σκούρο φόντο για αντίθεση */
-    padding: 3rem 0;
-    margin-top: 4rem;
+    background-color: var(--h-title-color); /* Διατήρηση του μπλε */
+    padding: 2rem 0 !important; /* Μείωση του κενού πάνω-κάτω */
 }
 
 footer a {
-    color: #cbd5e0 !important;
+    color: rgba(255, 255, 255, 0.8) !important; /* Λευκό με λίγη διαφάνεια */
     text-decoration: none;
-    font-size: 1.5rem; /* Μεγαλύτερα εικονίδια */
-    margin: 0 15px;
-    transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
+    font-size: 0.95rem; /* Μικρό και κομψό μέγεθος */
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    font-weight: 400;
 }
 
 footer a:hover {
-    color: var(--h-title-color) !important;
-    transform: translateY(-5px); /* Μικρό ανασήκωμα */
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    display: inline-block;
 }
 
 #copyright-text {
-    color: #718096;
-    margin-bottom: 1.5rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6); /* Πιο διακριτικό copyright */
+    margin-bottom: 0.8rem !important;
+    letter-spacing: 0.5px;
+}
+
+/* Διαχωριστικό τελεία (middot) */
+.mx-1 {
+    color: rgba(255, 255, 255, 0.3);
 }
