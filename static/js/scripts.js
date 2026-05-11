@@ -59,3 +59,15 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 });
+window.onscroll = function() {
+    const btn = document.getElementById("scrollTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
+
+document.getElementById("scrollTop").onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+};
