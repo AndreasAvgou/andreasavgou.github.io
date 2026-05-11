@@ -5,9 +5,6 @@
 ---
 
 ### 📑 About Me
-<a href="https://andreasavgou.github.io/Cv" class="btn-cv-download">
-    <i class="bi bi-file-earmark-pdf"></i> Download Full CV
-</a>
 
 AI/ML Engineer & Researcher with strong academic foundations, currently pursuing a **PhD in Informatics** and holding an **MSc in Big Data Driven Networked Systems**. I am dedicated to translating complex research innovations into production-grade systems that solve real-world challenges.
 
