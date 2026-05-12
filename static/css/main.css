@@ -692,128 +692,101 @@ footer a:hover {
 #top-section-bg-text {
     pointer-events: auto;
 }
-/* --- VIBRANT TIMELINE STYLE --- */
-
-/* Χρώματα για το Glow Effect */
+/* --- SHARP & VIBRANT TIMELINE --- */
 :root {
-    --color-phd: #00e6ff; /* Έντονο Cyan */
-    --color-msc: #cc00ff; /* Έντονο Μοβ */
-    --color-bsc: #ff0055; /* Έντονο Ροζ/Κόκκινο */
-    --tm-line-vibrant: linear-gradient(180deg, var(--color-phd) 0%, var(--color-msc) 50%, var(--color-bsc) 100%);
-    --tm-bg-card-vibrant: #ffffff;
-    --tm-text-vibrant: #1a1a1a;
-    --tm-shadow-vibrant: rgba(0,0,0,0.1);
+    --phd-color: #00d4ff; /* Cyan */
+    --msc-color: #9d00ff; /* Purple */
+    --bsc-color: #ff0077; /* Pink */
+    --line-gradient: linear-gradient(180deg, var(--phd-color), var(--msc-color), var(--bsc-color));
+    --card-bg-tm: #ffffff;
+    --text-tm: #1a1a1a;
 }
 
 [data-theme="dark"] {
-    --tm-bg-card-vibrant: #1a1a1a; /* Βαθύ μαύρο για Contrast */
-    --tm-text-vibrant: #f5f5f5;
-    --tm-shadow-vibrant: rgba(0,0,0,0.5);
+    --card-bg-tm: #112233;
+    --text-tm: #ffffff;
 }
 
-/* Ο Τίτλος */
-.text-vibrant {
-    color: var(--h-title-color);
-    text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
-}
-
-.timeline.vibrant-timeline {
+.vibrant-timeline {
     position: relative;
-    padding: 10px 0;
-    max-width: 800px;
+    padding: 20px 0;
+    max-width: 850px;
     margin: 0 auto;
 }
 
-/* Η Κάθετη Γραμμή - Την κάναμε πιο παχιά και φωτεινή */
-.timeline.vibrant-timeline:before {
+/* Η Γραμμή - Καθαρή και Έντονη */
+.vibrant-timeline:before {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 20px;
-    width: 6px; /* Πιο παχιά */
-    background: var(--tm-line-vibrant);
+    left: 30px; /* Σταθερή θέση */
+    width: 6px;
+    background: var(--line-gradient);
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3); /* Απαλό Glow σε όλη τη γραμμή */
+    z-index: 1;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 50px; /* Περισσότερος χώρος */
-    padding-left: 60px;
+    margin-bottom: 50px;
+    padding-left: 70px; /* Χώρος για να μην κολλάει το κείμενο στη γραμμή */
 }
 
-/* Τα Markers (τα κυκλάκια) - Εδώ είναι η μεγάλη αλλαγή */
+/* Οι Τελείες - Κεντραρισμένες ΑΚΡΙΒΩΣ πάνω στη γραμμή */
 .timeline-marker {
     position: absolute;
-    left: 10px; /* Ευθυγράμμιση με την παχύτερη γραμμή */
-    width: 26px; /* Μεγαλύτερα */
-    height: 26px;
+    left: 33px; /* (Left της γραμμής 30px) + (μισό πλάτος γραμμής 3px) = 33px κέντρο */
+    transform: translateX(-50%); /* Τέλεια ευθυγράμμιση στο κέντρο */
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    border: 4px solid var(--tm-bg-card-vibrant); /* Καθαρό περίγραμμα */
-    z-index: 2;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Ομαλή κίνηση */
+    z-index: 2; /* Πάνω από τη γραμμή */
+    border: 4px solid var(--card-bg-tm); /* Καθαρό "κόψιμο" γύρω από την τελεία */
+    transition: all 0.3s ease;
 }
 
-/* Δυνατό Glow Effect ανάλογα με το πτυχίο */
-.marker-phd_vibrant { 
-    background: var(--color-phd); 
-    box-shadow: 0 0 20px 5px rgba(0, 230, 255, 0.6); 
-}
-.marker-msc_vibrant { 
-    background: var(--color-msc); 
-    box-shadow: 0 0 20px 5px rgba(204, 0, 255, 0.6); 
-}
-.marker-bsc_vibrant { 
-    background: var(--color-bsc); 
-    box-shadow: 0 0 20px 5px rgba(255, 0, 85, 0.6); 
-}
+/* Χρώματα χωρίς να είναι αχνά */
+.marker-phd { background-color: var(--phd-color) !important; box-shadow: 0 0 12px var(--phd-color); }
+.marker-msc { background-color: var(--msc-color) !important; box-shadow: 0 0 12px var(--msc-color); }
+.marker-bsc { background-color: var(--bsc-color) !important; box-shadow: 0 0 12px var(--bsc-color); }
 
-/* Hover effect στα markers */
 .timeline-item:hover .timeline-marker {
-    transform: scale(1.3);
-    box-shadow: 0 0 30px 8px inherit; /* Εντατικοποίηση του glow */
+    transform: translateX(-50%) scale(1.3);
+    box-shadow: 0 0 20px inherit;
 }
 
-/* Οι Κάρτες Content */
+/* Το Περιεχόμενο */
 .timeline-content {
-    background: var(--tm-bg-card-vibrant);
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px var(--tm-shadow-vibrant);
-    color: var(--tm-text-vibrant);
-    border: 1px solid rgba(255,255,255,0.03); /* Σχεδόν αόρατο border για βάθος */
+    background: var(--card-bg-tm);
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    color: var(--text-tm);
+    border-left: 5px solid transparent; /* Θα πάρει χρώμα παρακάτω */
     transition: transform 0.3s ease;
 }
 
+/* Χρωματιστό border στα πλάγια της κάρτας για να δείχνει ποιο πτυχίο είναι */
+.timeline-item:nth-child(1) .timeline-content { border-left-color: var(--phd-color); }
+.timeline-item:nth-child(2) .timeline-content { border-left-color: var(--msc-color); }
+.timeline-item:nth-child(3) .timeline-content { border-left-color: var(--bsc-color); }
+
 .timeline-item:hover .timeline-content {
-    transform: translateY(-5px); /* Μικρό ανασήκωμα */
+    transform: translateX(10px);
 }
 
-/* Στο Dark mode δίνουμε ένα λεπτό χρωματιστό border στις κάρτες */
-[data-theme="dark"] .timeline-item:nth-child(1) .timeline-content { border-top: 3px solid var(--color-phd); }
-[data-theme="dark"] .timeline-item:nth-child(2) .timeline-content { border-top: 3px solid var(--color-msc); }
-[data-theme="dark"] .timeline-item:nth-child(3) .timeline-content { border-top: 3px solid var(--color-bsc); }
-
 .timeline-date {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 800;
-    text-transform: uppercase;
     color: #888;
-    margin-bottom: 8px;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.timeline-content h4 {
-    margin-bottom: 10px;
-    font-weight: 800;
-    font-size: 1.4rem;
-}
-
-/* Responsive για κινητά */
+/* Mobile Διορθώσεις */
 @media (max-width: 576px) {
-    .timeline.vibrant-timeline:before { left: 15px; width: 4px; }
-    .timeline-marker { left: 5px; width: 22px; height: 22px; }
-    .timeline-item { padding-left: 45px; margin-bottom: 40px; }
-    .timeline-content { padding: 18px; }
+    .vibrant-timeline:before { left: 20px; }
+    .timeline-marker { left: 23px; width: 20px; height: 20px; }
+    .timeline-item { padding-left: 50px; }
 }
