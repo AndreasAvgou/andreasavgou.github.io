@@ -84,3 +84,18 @@ VanillaTilt.init(document.querySelector("#avatar img"), {
     glare: true,
     "max-glare": 0.5,
 });
+const themeToggle = document.getElementById('theme-toggle');
+const ghStats = document.getElementById('gh-stats');
+const ghLangs = document.getElementById('gh-langs');
+
+themeToggle.addEventListener('click', () => {
+    const isDark = document.body.getAttribute('data-theme') === 'dark';
+    
+    // Επιλογή θέματος για τις κάρτες GitHub
+    const ghTheme = isDark ? 'tokyonight' : 'radical';
+    const bgColor = isDark ? '0d1b2a' : 'ffffff';
+
+    // Ενημέρωση των URLs
+    ghStats.src = `https://github-readme-stats.vercel.app/api?username=AndreasAvgou&show_icons=true&theme=${ghTheme}&hide_border=true&bg_color=${bgColor}`;
+    ghLangs.src = `https://github-readme-stats.vercel.app/api/top-langs/?username=AndreasAvgou&layout=compact&theme=${ghTheme}&hide_border=true&bg_color=${bgColor}`;
+});
