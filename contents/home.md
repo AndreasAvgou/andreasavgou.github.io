@@ -69,7 +69,7 @@ As a published researcher, I have contributed to diverse fields such as **medica
                 <div class="timeline-content">
                     <div class="timeline-date">2024 - Present</div>
                     <h4>PhD Candidate in Informatics</h4>
-                    <p>Ionian University.</p>
+                    <p>Ionian University</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -77,7 +77,7 @@ As a published researcher, I have contributed to diverse fields such as **medica
                 <div class="timeline-content">
                     <div class="timeline-date">2022 - 2024</div>
                     <h4>MSc in Big Data Driven Networked Systems</h4>
-                    <p>Ionian University.</p>
+                    <p>Ionian University</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -85,7 +85,7 @@ As a published researcher, I have contributed to diverse fields such as **medica
                 <div class="timeline-content">
                     <div class="timeline-date">2015 - 2021</div>
                     <h4>BSc in Informatics</h4>
-                    <p>Ionian University.</p>
+                    <p>Ionian University</p>
                 </div>
             </div>
         </div>
