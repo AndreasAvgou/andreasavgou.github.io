@@ -843,3 +843,38 @@ footer a:hover {
     margin-right: 5px;
     text-transform: uppercase;
 }
+/* --- VIBRANT DYNAMIC PROJECTS --- */
+
+/* Στοχεύουμε τα div που δημιουργούνται αυτόματα μέσα στο projects-md */
+#projects-md > div, .project-card { 
+    background: var(--card-bg-tm);
+    color: var(--text-tm);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-left: 6px solid transparent;
+    position: relative;
+}
+
+/* Αυτόματη εναλλαγή χρωμάτων στα projects */
+#projects-md > div:nth-child(3n+1) { border-left-color: var(--phd-color); }
+#projects-md > div:nth-child(3n+2) { border-left-color: var(--msc-color); }
+#projects-md > div:nth-child(3n+3) { border-left-color: var(--bsc-color); }
+
+/* Hover Effect */
+#projects-md > div:hover {
+    transform: translateY(-5px) translateX(5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Styling για τους τίτλους μέσα στα projects */
+#projects-md h3, #projects-md h4 {
+    font-weight: 800;
+    margin-top: 0;
+}
+
+#projects-md > div:nth-child(3n+1) h3 { color: var(--phd-color); }
+#projects-md > div:nth-child(3n+2) h3 { color: var(--msc-color); }
+#projects-md > div:nth-child(3n+3) h3 { color: var(--bsc-color); }
