@@ -790,3 +790,56 @@ footer a:hover {
     .timeline-marker { left: 23px; width: 20px; height: 20px; }
     .timeline-item { padding-left: 50px; }
 }
+/* --- VIBRANT PROJECTS & PUBLICATIONS --- */
+
+.vibrant-card {
+    background: var(--card-bg-tm);
+    color: var(--text-tm);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: none;
+    border-left: 6px solid transparent; /* Η βάση για το χρώμα */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Αυτόματη εναλλαγή χρωμάτων στις κάρτες */
+.vibrant-card:nth-child(3n+1) { border-left-color: var(--phd-color); } /* Cyan */
+.vibrant-card:nth-child(3n+2) { border-left-color: var(--msc-color); } /* Purple */
+.vibrant-card:nth-child(3n+3) { border-left-color: var(--bsc-color); } /* Pink */
+
+/* Hover Effect: "Pop" και Glow */
+.vibrant-card:hover {
+    transform: translateY(-5px) translateX(5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+[data-theme="dark"] .vibrant-card {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    background: var(--card-bg-tm);
+}
+
+/* Στυλ για τους τίτλους μέσα στις κάρτες */
+.vibrant-card h3, .vibrant-card h4 {
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.vibrant-card:nth-child(3n+1) h3, .vibrant-card:nth-child(3n+1) h4 { color: var(--phd-color); }
+.vibrant-card:nth-child(3n+2) h3, .vibrant-card:nth-child(3n+2) h4 { color: var(--msc-color); }
+.vibrant-card:nth-child(3n+3) h3, .vibrant-card:nth-child(3n+3) h4 { color: var(--bsc-color); }
+
+/* Badge/Tag στυλ μέσα στις κάρτες */
+.vibrant-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: rgba(128, 128, 128, 0.1);
+    margin-right: 5px;
+    text-transform: uppercase;
+}
