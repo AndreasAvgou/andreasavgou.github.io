@@ -8,13 +8,9 @@
 
 <section class="github-section py-5">
     <div class="container px-5 text-center">
-        <h2 class="display-6 fw-bolder mb-4">Development Activity</h2>
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-6 mb-4">
-                <img class="img-fluid" src="https://github-readme-stats.vercel.app/api?username=AndreasAvgou&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1b2a" alt="Andreas GitHub Stats" />
-            </div>
-            <div class="col-lg-6 mb-4">
-                <img class="img-fluid" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreasAvgou&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1b2a" alt="Top Languages" />
+                <img class="img-fluid" src="https://github-readme-stats-andreasavgou.vercel.app//api?username=AndreasAvgou&show_icons=false&theme=vision-friendly-dark&include_all_commits=false" alt="Andreas GitHub Stats" />
             </div>
         </div>
     </div>
