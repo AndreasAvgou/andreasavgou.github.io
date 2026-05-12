@@ -80,45 +80,30 @@ As a published researcher, I have contributed to diverse fields such as **medica
             <div class="timeline-item">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
-                    <div class="timeline-date">Current</div>
+                    <div class="timeline-date">2024 - Current</div>
                     <h4>PhD Candidate in Informatics</h4>
-                    <p>Ionian University. Research focused on AI/ML and Deep Learning.</p>
+                    <p>Ionian University.</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
-                    <div class="timeline-date">2021 - 2023</div>
+                    <div class="timeline-date">2022 - 2024</div>
                     <h4>MSc in Big Data Driven Networked Systems</h4>
-                    <p>Focus on data-driven infrastructures and networking solutions.</p>
+                    <p>Ionian University.</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
-                    <div class="timeline-date">Previous</div>
+                    <div class="timeline-date">2015 - 2021</div>
                     <h4>BSc in Informatics</h4>
-                    <p>Foundation in computer science and software engineering.</p>
+                    <p>Ionian University.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<div class="education-item">
-  <strong>PhD Candidate in Informatics</strong> | 2024 - Present
-  <br><em>Ionian University</em>
-</div>
-
-<div class="education-item">
-  <strong>MSc in Big Data Driven Networked Systems</strong> | 2022 - 2024
-  <br><em>Ionian University</em>
-</div>
-
-<div class="education-item">
-  <strong>BSc in Informatics</strong> | 2015 - 2021
-  <br><em>Ionian University</em>
-</div>
 
 ---
 
