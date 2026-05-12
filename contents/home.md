@@ -74,6 +74,37 @@ As a published researcher, I have contributed to diverse fields such as **medica
 
 ### 🎓 Education
 
+<section class="timeline-section py-5 bg-light-dark">
+    <div class="container px-5">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Current</div>
+                    <h4>PhD Candidate in Informatics</h4>
+                    <p>Ionian University. Research focused on AI/ML and Deep Learning.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2021 - 2023</div>
+                    <h4>MSc in Big Data Driven Networked Systems</h4>
+                    <p>Focus on data-driven infrastructures and networking solutions.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Previous</div>
+                    <h4>BSc in Informatics</h4>
+                    <p>Foundation in computer science and software engineering.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <div class="education-item">
   <strong>PhD Candidate in Informatics</strong> | 2024 - Present
   <br><em>Ionian University</em>
