@@ -80,7 +80,7 @@ As a published researcher, I have contributed to diverse fields such as **medica
             <div class="timeline-item">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
-                    <div class="timeline-date">2024 - Current</div>
+                    <div class="timeline-date">2024 - Present</div>
                     <h4>PhD Candidate in Informatics</h4>
                     <p>Ionian University.</p>
                 </div>
