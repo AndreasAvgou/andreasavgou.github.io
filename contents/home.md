@@ -6,19 +6,6 @@
 
 ### 📑 About Me
 
-<section class="github-section py-5">
-    <div class="container px-5 text-center">
-        <div class="row gx-5 justify-content-center">
-            <div class="col-lg-6 mb-4">
-                <img img id="gh-stats" class="img-fluid" src="https://github-readme-stats-andreasavgou.vercel.app//api?username=AndreasAvgou&show_icons=false&theme=vision-friendly-dark&include_all_commits=false" alt="Andreas GitHub Stats" />
-            </div>
-            <div class="col-lg-6 mb-4">
-                <img img id="gh-langs" class="img-fluid" src="https://github-readme-stats-andreasavgou.vercel.app/api/top-langs/?username=AndreasAvgou&layout=compact&theme=vision-friendly-dark&show_icons=false" alt="Top Languages" />
-            </div>
-        </div>
-    </div>
-</section>
-
 AI/ML Engineer & Researcher with strong academic foundations, currently pursuing a **PhD in Informatics** and holding an **MSc in Big Data Driven Networked Systems**. I am dedicated to translating complex research innovations into production-grade systems that solve real-world challenges.
 
 My expertise lies in **Deep Learning** and **Computer Vision**, with extensive experience in designing, training, and deploying advanced neural architectures like **CNNs, LSTMs, and Transformers**. I specialize in building end-to-end ML pipelines and optimizing performance for real-time applications, leveraging a technical stack that includes Python, PyTorch, TensorFlow, Docker, and cloud platforms.
