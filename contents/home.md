@@ -6,7 +6,7 @@
 
 ### 📑 About Me
 
-AI/ML Engineer & Researcher with strong academic foundations, currently pursuing a **PhD in Informatics** and holding an **MSc in Big Data Driven Networked Systems**. I am dedicated to translating complex research innovations into production-grade systems that solve real-world challenges.
+AI/ML Engineer & Researcher with strong academic foundations, currently pursuing a **PhD in Informatics** and holding **MSc in Big Data Driven Networked Systems**. I am dedicated to translating complex research innovations into production-grade systems that solve real-world challenges.
 
 My expertise lies in **Deep Learning** and **Computer Vision**, with extensive experience in designing, training, and deploying advanced neural architectures like **CNNs, LSTMs, and Transformers**. I specialize in building end-to-end ML pipelines and optimizing performance for real-time applications, leveraging a technical stack that includes Python, PyTorch, TensorFlow, Docker, and cloud platforms.
 
