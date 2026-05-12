@@ -10,10 +10,10 @@
     <div class="container px-5 text-center">
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-6 mb-4">
-                <img class="img-fluid" src="https://github-readme-stats-andreasavgou.vercel.app//api?username=AndreasAvgou&show_icons=false&theme=vision-friendly-dark&include_all_commits=false" alt="Andreas GitHub Stats" />
+                <img img id="gh-stats" class="img-fluid" src="https://github-readme-stats-andreasavgou.vercel.app//api?username=AndreasAvgou&show_icons=false&theme=vision-friendly-dark&include_all_commits=false" alt="Andreas GitHub Stats" />
             </div>
             <div class="col-lg-6 mb-4">
-                <img class="img-fluid" src="https://github-readme-stats-andreasavgou.vercel.app/api/top-langs/?username=AndreasAvgou&layout=compact&theme=vision-friendly-dark&show_icons=false" alt="Top Languages" />
+                <img img id="gh-langs" class="img-fluid" src="https://github-readme-stats-andreasavgou.vercel.app/api/top-langs/?username=AndreasAvgou&layout=compact&theme=vision-friendly-dark&show_icons=false" alt="Top Languages" />
             </div>
         </div>
     </div>
