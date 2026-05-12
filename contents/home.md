@@ -12,6 +12,9 @@
             <div class="col-lg-6 mb-4">
                 <img class="img-fluid" src="https://github-readme-stats-andreasavgou.vercel.app//api?username=AndreasAvgou&show_icons=false&theme=vision-friendly-dark&include_all_commits=false" alt="Andreas GitHub Stats" />
             </div>
+            <div class="col-lg-6 mb-4">
+                <img class="img-fluid" src="https://github-readme-stats-andreasavgou.vercel.app/api/top-langs/?username=AndreasAvgou&layout=compact&theme=vision-friendly-dark&show_icons=false" alt="Top Languages" />
+            </div>
         </div>
     </div>
 </section>
