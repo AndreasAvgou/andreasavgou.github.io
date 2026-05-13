@@ -1,4 +1,4 @@
-
+[![AndreasAvgou](https://img.shields.io/badge/AndreasAvgou-github-blue?logo=github)](https://github.com/AndreasAvgou)
 ---
 
 ### 📑 About Me
