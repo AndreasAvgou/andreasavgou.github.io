@@ -1,8 +1,4 @@
 
-\
-[![AndreasAvgou](https://img.shields.io/badge/AndreasAvgou-github-blue?logo=github)](https://github.com/AndreasAvgou)
----
-
 ### 📑 About Me
 
 AI/ML Engineer & Researcher with strong academic foundations, currently pursuing a **PhD in Informatics** and holding **MSc in Big Data Driven Networked Systems**. I am dedicated to translating complex research innovations into production-grade systems that solve real-world challenges.
