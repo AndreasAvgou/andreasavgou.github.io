@@ -432,7 +432,7 @@ section .main-body hr {
 }
 /* Ομοιομορφία σε όλες τις παραγράφους του About Me */
 #home-md p {
-    font-size: 1.1rem !important;   /* Ίδιο μέγεθος για όλους */
+    font-size: 1.3rem !important;   /* Ίδιο μέγεθος για όλους */
     font-weight: 300 !important;   /* Ίδιο "ελαφρύ" βάρος για όλους */
     color: inherit !important;      /* Ίδιο χρώμα */
     line-height: 1.7;
@@ -440,9 +440,9 @@ section .main-body hr {
 
 /* Κατάργηση των ειδικών ρυθμίσεων για την πρώτη παράγραφο */
 #home-md p:first-of-type {
-    font-size: 1.1rem !important;
+    font-size: 1.3rem !important;
     font-weight: 300 !important;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.7rem;
 }
 
 /* Dark Mode προσαρμογή */
