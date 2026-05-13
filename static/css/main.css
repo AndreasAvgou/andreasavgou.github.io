@@ -885,3 +885,25 @@ footer a:hover {
     margin-right: 5px;
     text-transform: uppercase;
 }
+/* Διόρθωση χρώματος στο About Me */
+#about-me p, 
+#about-me p strong, 
+#about-me p b,
+#about-me .lead {
+    /* Χρησιμοποιούμε τη μεταβλητή που ορίσαμε για το κανονικό κείμενο */
+    color: var(--text-tm) !important; 
+    
+    /* Αν δεν έχεις ορίσει τη μεταβλητή --text-tm παντού, 
+       μπορείς να χρησιμοποιήσεις το παρακάτω: */
+}
+
+/* Συγκεκριμένα για το "About Me" αν είναι μέσα σε κάποιο container */
+.about-section p {
+    color: inherit !important;
+}
+
+/* Αν θέλεις οι έντονοι χαρακτήρες (bold) να παραμείνουν έντονοι αλλά με το σωστό χρώμα */
+#about-me strong, #about-me b {
+    font-weight: 700;
+    color: var(--text-tm) !important;
+}
