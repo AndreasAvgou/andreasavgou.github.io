@@ -430,21 +430,19 @@ section .main-body hr {
     margin: 1.5rem 0;
     opacity: 0.1;
 }
-/* --- ABOUT ME ENHANCEMENTS --- */
-#home-md {
-    text-align: left !important; /* Καταργεί το justify που προκαλεί τα κενά */
-    line-height: 1.7; /* Μεγαλύτερη απόσταση ανάμεσα στις σειρές για ευκολότερη ανάγνωση */
-    font-size: 1.1rem;
-    color: inherit !important;
-    color: #444;
+/* Ομοιομορφία σε όλες τις παραγράφους του About Me */
+#home-md p {
+    font-size: 1.1rem !important;   /* Ίδιο μέγεθος για όλους */
+    font-weight: 300 !important;   /* Ίδιο "ελαφρύ" βάρος για όλους */
+    color: inherit !important;      /* Ίδιο χρώμα */
+    line-height: 1.7;
 }
 
-/* Στυλ για την πρώτη παράγραφο (Lead sentence) */
+/* Κατάργηση των ειδικών ρυθμίσεων για την πρώτη παράγραφο */
 #home-md p:first-of-type {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: inherit !important;
-    margin-bottom: 1.7rem;
+    font-size: 1.1rem !important;
+    font-weight: 300 !important;
+    margin-bottom: 1.5rem;
 }
 
 /* Dark Mode προσαρμογή */
