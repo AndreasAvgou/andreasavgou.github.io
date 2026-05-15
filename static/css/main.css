@@ -28,7 +28,6 @@
     background-repeat: no-repeat !important;
 }
 
-/* Σκούρο πέπλο (Overlay) για να φαίνεται το κείμενο και τα particles */
 .top-section::before {
     content: "";
     position: absolute;
@@ -36,7 +35,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6) !important; /* Σκουραίνει την εικόνα κατά 60% */
+    background: rgba(0, 0, 0, 0.6) !important; /* Σκούρο φίλτρο */
     z-index: 1;
 }
 
