@@ -18,16 +18,14 @@
 .top-section {
     position: relative;
     overflow: hidden;
-    min-height: 550px; /* Αυξήσαμε λίγο το ύψος */
+    min-height: 550px;
     display: flex;
     align-items: center;
-    
-    /* Επαναφορά εικόνας - Χρησιμοποιούμε !important για να "νικήσουμε" τυχόν προηγούμενους κανόνες */
-    background-image: url('static/assets/img/background.jpeg') !important;
+    /* Επαναφορά της εικόνας */
+    background-image: url('../assets/img/background.jpeg') !important; 
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    background-color: #0d1b2a; /* Fallback χρώμα */
 }
 
 /* Σκούρο πέπλο (Overlay) για να φαίνεται το κείμενο και τα particles */
@@ -144,7 +142,7 @@ section .main-body{
 }
 
 /* Αλλάζουμε το φόντο μόνο στα sections που έχουν gradients, ΟΧΙ στο header */
-[data-theme="dark"] section,
+[data-theme="dark"] section:not(.top-section),
 [data-theme="dark"] .bg-gradient-primary-to-secondary-light,
 [data-theme="dark"] .bg-gradient-primary-to-secondary-gray {
     background-image: none !important; /* Σβήνει μόνο τα λευκά gradients */
