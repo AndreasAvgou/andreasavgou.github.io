@@ -1,6 +1,6 @@
 ## 🤖 Machine & Deep Learning
 
-- **Lip Reading & Voice Reproduction**
+- **Lip Reading & Visual Speech Recognition**
 
 - **Single-Cell RNA-Seq Classification** [Code](https://github.com/AndreasAvgou/Single-Cell-RNA-Seq-Classification/tree/main)
 
