@@ -1,4 +1,4 @@
-### 🤖 Machine & Deep Learning
+## 🤖 Machine & Deep Learning
 
 - **Lip Reading & Voice Reproduction**
 
@@ -10,7 +10,7 @@
 
 - **Melanoma Image Classification** [Code](https://github.com/AndreasAvgou/Dermoscopic-Melanoma-Image-Classification)
 
-### 💻 Programming & Systems
+## 💻 Programming & Systems
 
 -  **Crypto Analytics & Prediction Platform** [Code](https://github.com/AndreasAvgou/Crypto-Analytics-Prediction-Platform)
 
