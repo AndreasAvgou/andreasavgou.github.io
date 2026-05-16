@@ -4,9 +4,14 @@ const section_names = ['home', 'publications', 'projects']
 
 window.addEventListener('DOMContentLoaded', event => {
     
-    // --- 1. DARK MODE TOGGLE ---
     const toggleButton = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
+    
+    // --- 1. ΑΡΧΙΚΟΠΟΙΗΣΗ ΚΑΙ ΣΤΑΘΕΡΟΠΟΙΗΣΗ DARK MODE ---
+    // Διαβάζει το αποθηκευμένο theme με το που φορτώνει η σελίδα
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    if (themeIcon) themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
     
     if (toggleButton) {
         toggleButton.onclick = (e) => {
@@ -20,14 +25,12 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
     // --- 2. MOBILE MENU AUTO-CLOSE ---
-    // Κλείνει το μενού αυτόματα όταν πατάς ένα link, χωρίς να χαλάει το toggle
     const navLinks = document.querySelectorAll('.nav-link');
     const menuCollapse = document.getElementById('navbarResponsive');
     
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (window.getComputedStyle(document.querySelector('.navbar-toggler')).display !== 'none') {
-                // Χρησιμοποιούμε το API του Bootstrap για ασφάλεια
                 const bsCollapse = bootstrap.Collapse.getInstance(menuCollapse);
                 if (bsCollapse) bsCollapse.hide();
             }
@@ -59,37 +62,40 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 });
-window.onscroll = function() {
-    const btn = document.getElementById("scrollTop");
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        btn.style.display = "block";
-    } else {
-        btn.style.display = "none";
-    }
-};
 
-document.getElementById("scrollTop").onclick = function() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-};
-window.onscroll = function() {
+// --- 4. ΕΝΙΑΙΟ SCROLL EVENT (Για Scroll Top & Progress Bar) ---
+window.addEventListener('scroll', () => {
+    const btn = document.getElementById("scrollTop");
     let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrolled = (winScroll / height) * 100;
-    document.getElementById("progress-bar").style.width = scrolled + "%";
-};
-// Η φωτογραφία σου αποκτά 3D κίνηση
-VanillaTilt.init(document.querySelector("#avatar img"), {
-    max: 15,
-    speed: 400,
-    glare: true,
-    "max-glare": 0.5,
-});
-const themeToggle = document.getElementById('theme-toggle');
-const ghStats = document.getElementById('gh-stats');
-const ghLangs = document.getElementById('gh-langs');
-
-themeToggle.addEventListener('click', () => {
-    const isDark = document.body.getAttribute('data-theme') === 'dark';
     
-
+    // Έλεγχος για το κουμπί Scroll Top
+    if (winScroll > 300) {
+        if (btn) btn.style.display = "block";
+    } else {
+        if (btn) btn.style.display = "none";
+    }
+    
+    // Υπολογισμός Progress Bar
+    let scrolled = (winScroll / height) * 100;
+    const progressBar = document.getElementById("progress-bar");
+    if (progressBar) progressBar.style.width = scrolled + "%";
 });
+
+// Scroll to Top κλικ
+const scrollTopBtn = document.getElementById("scrollTop");
+if (scrollTopBtn) {
+    scrollTopBtn.onclick = function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+}
+
+// --- 5. 3D AVATAR TILT ---
+if (document.querySelector("#avatar img")) {
+    VanillaTilt.init(document.querySelector("#avatar img"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.5,
+    });
+}
