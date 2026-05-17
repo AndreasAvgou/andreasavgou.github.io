@@ -35,19 +35,19 @@
 - **Crypto Analytics & Prediction Platform**
   * **The Challenge:** Orchestrating real-time data streaming architectures with strict low-latency ingestion barriers.
   * **Architecture:** Designed a distributed streaming node engine linked to concurrent analytical workers executing rapid time-series predictive modeling.
-  * **Tech Stack:** Java, Node.js, Python API Layers, WebSockets.
+  * **Tech Stack:** Java, Spring Boot, Python, FastAPI, TimescaleDB, React, Recharts, Tailwind CSS.
   <a href="https://github.com/AndreasAvgou/Crypto-Analytics-Prediction-Platform">Code</a>
 
 - **Real time Monitoring System & Feature Engineering**
   * **The Challenge:** Executing intensive on-the-fly mathematical operations on telemetry data streams without impacting pipeline throughput.
   * **Architecture:** Architected a modular parallel data ingestion engine featuring dynamic windowing configurations for custom feature calculation.
-  * **Tech Stack:** Java, Spring Boot, Distributed Systems.
+  * **Tech Stack:** Python, FastAPI, NGINX, Grafana, SQLite.
   <a href="https://github.com/AndreasAvgou/Real-time-Monitoring-System-and-Feature-Engineering">Code</a>
 
 - **Tutoring System**
   * **The Challenge:** Architecting an intelligent, personalized data relationship structure mapping real-time learning curves.
   * **Architecture:** Formulated a clean object-oriented data access engine deploying strict relational entity mappings for instant performance scoring.
-  * **Tech Stack:** Java 25, Spring Boot 4, Hibernate, PostgreSql, Docker.
+  * **Tech Stack:** Java 25, Spring Boot 4, Hibernate, PostgreSql, React, Tailwind CSS, Shadcn UI, Docker.
   <a href="https://github.com/AndreasAvgou/Tutoring-System">Code</a>
 
 - **Intelligent Tax Filing**
