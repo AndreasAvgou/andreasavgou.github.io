@@ -48,7 +48,7 @@
   * **The Challenge:** Architecting an intelligent, personalized data relationship structure mapping real-time learning curves.
   * **Architecture:** Formulated a clean object-oriented data access engine deploying strict relational entity mappings for instant performance scoring.
   * **Tech Stack:** Java 25, Spring Boot 4, Hibernate, PostgreSql, Docker.
-  <a href="https://github.com/AndreasAvgou/Tutoring-System">Source Code</a>
+  <a href="https://github.com/AndreasAvgou/Tutoring-System">Code</a>
 
 - **Intelligent Tax Filing**
   * **The Challenge:** Parsing intricate legal constraint trees into deterministic software rule sets safely.
