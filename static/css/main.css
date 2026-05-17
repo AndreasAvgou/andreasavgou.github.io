@@ -44,6 +44,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Custom Minimal Scrollbar */
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -56,7 +57,7 @@ body {
 }
 
 /* ==========================================================================
-   2. NAVBAR & NAVIGATION (THE MINIMALIST APPROACH)
+   2. NAVBAR & NAVIGATION
    ========================================================================== */
 #mainNav {
     min-height: 65px;
@@ -108,7 +109,7 @@ body {
 }
 
 /* ==========================================================================
-   3. HERO SECTION (SOLID DEEP TECH CONTEXT)
+   3. HERO SECTION
    ========================================================================== */
 .top-section {
     position: relative;
@@ -162,7 +163,7 @@ body {
 }
 
 /* ==========================================================================
-   4. AVATAR CONCEPT (SQUIRCLE GEOMETRY)
+   4. AVATAR CONCEPT
    ========================================================================== */
 #avatar {
     position: relative;
@@ -183,59 +184,71 @@ body {
 }
 
 /* ==========================================================================
-   5. SOLID RAZOR CARDS (PROJECTS & PUBLICATIONS)
+   5. UNIFIED GRID CARDS (PROJECTS & PUBLICATIONS)
    ========================================================================== */
-#projects-md ul {
+#projects-md ul, #publications-md ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 0;
     list-style: none;
 }
 
-#projects-md li, 
-#publications-md li, 
-.vibrant-card, 
-.award-card {
+#projects-md li, #publications-md li {
     background-color: var(--bg-card) !important;
     background-image: none !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     border: 1px solid var(--border-main) !important;
-    border-radius: 12px !important;
-    padding: 1.5rem;
+    border-radius: 14px !important;
+    padding: 1.75rem;
     box-shadow: none !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: left !important;
+    text-align: left !important; /* Αυστηρά αριστερά για αποφυγή mobile gaps */
 }
 
-#projects-md li:hover, 
-#publications-md li:hover, 
-.vibrant-card:hover {
+#projects-md li:hover, #publications-md li:hover {
     transform: none !important;
     border-color: var(--accent) !important;
     box-shadow: 0 0 0 3px var(--accent-glow) !important;
 }
 
-#projects-md li strong {
-    display: block;
-    font-size: 1.15rem;
+/* 🧱 Δομή Τίτλων μέσα στις κάρτες */
+#projects-md li strong, #publications-md li strong {
+    display: block; 
+    font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: -0.02em;
     color: var(--text-main);
     margin-bottom: 0.5rem;
+    text-align: left !important;
 }
 
-#projects-md a, 
-#publications-md a {
+/* 🧬 Ειδική εξαίρεση: Στα Publications οι συγγραφείς είναι inline κείμενο */
+#publications-md li p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+#publications-md li p strong {
+    display: inline !important; /* Το δικό σου όνομα μένει inline στη ροή */
+    font-size: inherit !important;
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+}
+
+/* 💎 Premium Clean SaaS Buttons */
+#projects-md a, #publications-md a {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
     width: max-content !important;
-    margin-top: 1.2rem;
-    padding: 6px 14px !important;
+    margin-top: auto; /* Σπρώχνει τα κουμπιά πάντα στον πάτο της κάρτας */
+    padding: 7px 16px !important;
     background-color: var(--text-main) !important;
     color: var(--bg-main) !important;
     border-radius: 6px !important;
@@ -245,39 +258,25 @@ body {
     text-decoration: none;
 }
 
-#projects-md a:hover, 
-#publications-md a:hover {
+#projects-md a:hover, #publications-md a:hover {
     opacity: 0.85;
 }
 
-/* ==========================================================================
-   6. PUBLICATIONS FLOW REPAIR
-   ========================================================================== */
-#publications-md ul {
-    list-style: none;
-    padding: 0;
-}
-#publications-md li {
-    margin-bottom: 1rem;
-    display: block;
-}
-
-#publications-md li strong {
-    display: inline !important; 
-    font-size: inherit;
-    color: var(--accent);
+/* 🏷️ Tags Σύνταξης / Περιοδικών */
+.vibrant-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
     font-weight: 600;
-}
-
-#publications-md a {
-    margin-top: 0.8rem;
-    padding: 4px 12px !important;
-    border-radius: 6px !important;
-    font-size: 0.8rem;
+    background: rgba(128, 128, 128, 0.08);
+    color: var(--accent);
+    margin: 0.5rem 0;
+    width: max-content;
 }
 
 /* ==========================================================================
-   7. INDUSTRIAL TIMELINE
+   6. MINIMALIST TIMELINE SYSTEM
    ========================================================================== */
 .vibrant-timeline {
     position: relative;
@@ -306,7 +305,6 @@ body {
     border-radius: 50%;
     border: none !important;
     background-color: var(--text-muted) !important;
-    box-shadow: none !important;
 }
 
 .timeline-item:first-child .timeline-marker {
@@ -318,7 +316,6 @@ body {
 .timeline-content {
     background: transparent !important;
     padding: 0;
-    box-shadow: none !important;
     border: none !important;
     color: var(--text-muted);
 }
@@ -360,7 +357,7 @@ body {
 }
 
 /* ==========================================================================
-   8. CORE TYPOGRAPHY & ALIGN
+   7. CORE TYPOGRAPHY & LAYOUT REPAIRS
    ========================================================================== */
 section header h2 {
     font-size: 1.6rem;
@@ -378,14 +375,16 @@ section .main-body {
     text-align: left;
 }
 
-.vibrant-card:nth-child(3n+1), 
-.vibrant-card:nth-child(3n+2), 
-.vibrant-card:nth-child(3n+3) { 
-    border-top: 1px solid var(--border-main) !important; 
+.vibrant-card, .award-card {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-main) !important;
+    border-radius: 12px !important;
+    padding: 1.5rem;
+    text-align: left;
 }
 
 /* ==========================================================================
-   9. MOBILE RESPONSIVENESS
+   8. MOBILE MECHANICS
    ========================================================================== */
 @media (max-width: 991.98px) {
     .navbar-toggler {
@@ -419,11 +418,10 @@ section .main-body {
     .vibrant-timeline:before { left: 10px !important; }
     .timeline-marker { left: 10px !important; }
     .timeline-item { padding-left: 28px !important; }
-    .timeline-content { width: 100% !important; }
 }
 
 /* ==========================================================================
-   10. FOOTER
+   9. FOOTER
    ========================================================================== */
 footer {
     background-color: var(--bg-main) !important;
