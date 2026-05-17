@@ -61,13 +61,28 @@ async function loadAllContent() {
         const [configText, ...sectionsData] = await Promise.all([configPromise, ...sectionPromises]);
 
         // Inject Config Data
-        if (typeof jsyaml !== 'undefined') {
-            const yml = jsyaml.load(configText);
-            Object.keys(yml).forEach(key => {
-                const el = document.getElementById(key);
-                if (el) el.innerHTML = yml[key];
-            });
-        }
+        // Inject Config Data (Explicit Structured Binding)
+if (typeof jsyaml !== 'undefined') {
+    const yml = jsyaml.load(configText);
+    
+    // Ρητή σύνδεση των δεδομένων με το DOM (Senior Approach)
+    if (yml.hero) {
+        const headlineEl = document.getElementById('top-section-bg-text');
+        if (headlineEl) headlineEl.innerHTML = yml.hero.headline;
+        
+        const subtitleEl = document.getElementById('home-subtitle');
+        if (subtitleEl) subtitleEl.innerHTML = yml.hero.subtitle;
+    }
+    
+    if (yml.system && yml.system.copyright) {
+        const copyrightEl = document.getElementById('copyright-text');
+        if (copyrightEl) copyrightEl.innerHTML = yml.system.copyright;
+    }
+    
+    if (yml.metadata && yml.metadata.title) {
+        document.title = yml.metadata.title;
+    }
+}
 
         // Inject Markdown Sections
         if (typeof marked !== 'undefined') {
