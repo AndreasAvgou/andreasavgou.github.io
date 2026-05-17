@@ -44,6 +44,7 @@ body {
     color: var(--text-main) !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; /* Απαγόρευση οριζόντιου scroll στην πηγή */
 }
 
 /* Custom Minimal Scrollbar */
@@ -188,7 +189,6 @@ body {
 /* ==========================================================================
    5. AUTOMATED SAAS GRID LAYOUT (FOR MARKDOWN LISTS)
    ========================================================================== */
-/* Μετατροπή των Markdown Subsections σε καθαρούς SaaS Τίτλους */
 #projects-md h2, #publications-md h3 {
     font-size: 1.4rem;
     font-weight: 700;
@@ -197,12 +197,8 @@ body {
     margin-top: 2.5rem;
     margin-bottom: 1.25rem;
     width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
-/* Αυτόματη μετατροπή των Markdown <ul> σε Responsive Grid */
 #projects-md ul, #publications-md ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -213,7 +209,6 @@ body {
     width: 100%;
 }
 
-/* Μετατροπή των Markdown <li> σε Solid SaaS Κάρτες */
 #projects-md li, #publications-md li {
     background-color: var(--bg-card) !important;
     border: 1px solid var(--border-main) !important;
@@ -225,16 +220,14 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     text-align: left !important;
-    box-shadow: none !important;
+    overflow: hidden; /* Ασφάλεια για να μην βγαίνει τίποτα εκτός κάρτας */
 }
 
-/* Hover Interaction: Border Activation & Soft Glow Rings */
 #projects-md li:hover, #publications-md li:hover {
     border-color: var(--accent) !important;
     box-shadow: 0 0 0 3px var(--accent-glow) !important;
 }
 
-/* Styling των Τίτλων των Projects/Papers (που είναι σε strong) */
 #projects-md li > strong:first-child, 
 #publications-md li > strong:first-child {
     display: block;
@@ -246,7 +239,6 @@ body {
     line-height: 1.4;
 }
 
-/* Εσωτερικά Markdown sub-lists (Προκλήσεις, Stack κλπ) */
 #projects-md li ul {
     display: flex;
     flex-direction: column;
@@ -263,10 +255,9 @@ body {
     font-size: 0.95rem;
     color: var(--text-muted);
     display: block;
-    box-shadow: none !important;
 }
 
-/* 🧬 ΔΙΟΡΘΩΣΗ AUTHORS FLOW (PUBLICATIONS): Όλα μένουν inline, καμία ορφανή κόμμα */
+/* 🧬 ΔΙΟΡΘΩΣΗ AUTHORS FLOW (PUBLICATIONS): inline ροή */
 #publications-md li p, #publications-md li em {
     font-size: 0.95rem;
     color: var(--text-muted);
@@ -276,19 +267,17 @@ body {
 }
 
 #publications-md li strong {
-    display: inline !important; /* Αναγκαστικά inline για να μην σπάει η ροή */
+    display: inline !important; 
     font-size: inherit !important;
     color: var(--accent) !important;
     font-weight: 600 !important;
 }
 
-/* 💎 Premium Universal SaaS Buttons */
-#projects-md a, #publications-md a {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
+/* 💎 ΔΙΟΡΘΩΣΗ ΚΟΥΜΠΙΩΝ: Εξαναγκασμός drop σε νέα γραμμή ακόμα κι αν είναι inline στο MD */
+#projects-md li a, #publications-md li a {
+    display: block !important; /* Μετατροπή σε block για να αλλάζει πάντα γραμμή */
     width: max-content !important;
-    margin-top: auto !important; /* Κλειδώνουν πάντα στον πάτο της κάρτας */
+    margin-top: 1rem !important;
     padding: 6px 14px !important;
     background-color: var(--text-main) !important;
     color: var(--bg-main) !important;
@@ -303,17 +292,20 @@ body {
     opacity: 0.85;
 }
 
-/* 🏷️ Ακαδημαϊκά / Τεχνικά Tags */
+/* 🏷️ ΔΙΟΡΘΩΣΗ TAG OVERFLOW: Επιτρέπουμε το σπάσιμο κειμένου στο κινητό */
 .vibrant-tag {
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    background: rgba(128, 128, 128, 0.08);
-    color: var(--accent);
-    margin: 0.5rem 0;
-    width: max-content;
+    display: inline-block !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    background: rgba(128, 128, 128, 0.08) !important;
+    color: var(--accent) !important;
+    margin: 0.5rem 0 !important;
+    white-space: normal !important; /* Κατάργηση του nowrap - επιτρέπει αλλαγή σειράς */
+    word-break: break-word !important; /* Σπάσιμο μεγάλων λέξεων αν χρειαστεί */
+    max-width: 100% !important; /* Περιορισμός στα όρια της κάρτας */
+    width: auto !important;
 }
 
 /* ==========================================================================
