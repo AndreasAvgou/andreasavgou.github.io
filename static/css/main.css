@@ -141,10 +141,13 @@ body {
     width: 100%;
 }
 
+/* ΔΙΟΡΘΩΣΗ: Προσθήκη line-height και padding για να μην κόβεται το 'g' στον υπολογιστή */
 #top-section-bg-text {
     font-size: 3.2rem;
     font-weight: 800;
     letter-spacing: -0.04em;
+    line-height: 1.25 !important; /* Δίνει αέρα κατακόρυφα */
+    padding-bottom: 10px !important; /* Αποτρέπει το ψαλίδισμα του gradient */
     background: linear-gradient(to bottom right, #ffffff 40%, #94a3b8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -220,7 +223,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     text-align: left !important;
-    overflow: hidden; /* Ασφάλεια για να μην βγαίνει τίποτα εκτός κάρτας */
+    overflow: hidden; /* Ασφάλεια για οριζόντιο overflow */
 }
 
 #projects-md li:hover, #publications-md li:hover {
@@ -257,7 +260,7 @@ body {
     display: block;
 }
 
-/* 🧬 ΔΙΟΡΘΩΣΗ AUTHORS FLOW (PUBLICATIONS): inline ροή */
+/* 🧬 AUTHORS FLOW (PUBLICATIONS) */
 #publications-md li p, #publications-md li em {
     font-size: 0.95rem;
     color: var(--text-muted);
@@ -273,9 +276,9 @@ body {
     font-weight: 600 !important;
 }
 
-/* 💎 ΔΙΟΡΘΩΣΗ ΚΟΥΜΠΙΩΝ: Εξαναγκασμός drop σε νέα γραμμή ακόμα κι αν είναι inline στο MD */
+/* 💎 Premium Universal SaaS Buttons */
 #projects-md li a, #publications-md li a {
-    display: block !important; /* Μετατροπή σε block για να αλλάζει πάντα γραμμή */
+    display: block !important; /* Μετατροπή σε block για αλλαγή σειράς στο κινητό */
     width: max-content !important;
     margin-top: 1rem !important;
     padding: 6px 14px !important;
@@ -292,7 +295,7 @@ body {
     opacity: 0.85;
 }
 
-/* 🏷️ ΔΙΟΡΘΩΣΗ TAG OVERFLOW: Επιτρέπουμε το σπάσιμο κειμένου στο κινητό */
+/* 🏷️ TAG OVERFLOW FIX */
 .vibrant-tag {
     display: inline-block !important;
     padding: 4px 10px !important;
@@ -302,9 +305,9 @@ body {
     background: rgba(128, 128, 128, 0.08) !important;
     color: var(--accent) !important;
     margin: 0.5rem 0 !important;
-    white-space: normal !important; /* Κατάργηση του nowrap - επιτρέπει αλλαγή σειράς */
-    word-break: break-word !important; /* Σπάσιμο μεγάλων λέξεων αν χρειαστεί */
-    max-width: 100% !important; /* Περιορισμός στα όρια της κάρτας */
+    white-space: normal !important; /* Επιτρέπει αλλαγή σειράς */
+    word-break: break-word !important; /* Ασφαλές σπάσιμο */
+    max-width: 100% !important;
     width: auto !important;
 }
 
