@@ -1,9 +1,10 @@
 @import "./styles.css";
 
 /* ==========================================================================
-   1. PREMIUM SAAS DESIGN SYSTEM (STRIPE / LINEAR SPEC)
+   1. PREMIUM SAAS DESIGN SYSTEM (ZINC / INK SPEC)
    ========================================================================== */
 :root {
+    /* Light Theme Base */
     --bg-main: #f8fafc;
     --bg-card: #ffffff;
     --border-main: #e2e8f0;
@@ -11,7 +12,7 @@
     --text-muted: #475569;
     
     --accent: #4f46e5;
-    --accent-glow: rgba(79, 70, 229, 0.15);
+    --accent-glow: rgba(79, 70, 229, 0.12);
     
     --phd-color: #6366f1;
     --msc-color: #a855f7;
@@ -19,6 +20,7 @@
 }
 
 [data-theme="dark"] {
+    /* Dark Theme Base (Deep Tech Ink) */
     --bg-main: #0b0f19;
     --bg-card: #111827;
     --border-main: #1f2937;
@@ -26,15 +28,15 @@
     --text-muted: #9ca3af;
     
     --accent: #6366f1;
-    --accent-glow: rgba(99, 102, 241, 0.25);
+    --accent-glow: rgba(99, 102, 241, 0.2);
 }
 
 * {
     box-sizing: border-box;
-    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
-                border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
-                box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-                color 0.2s ease;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.15s ease;
 }
 
 body {
@@ -184,85 +186,124 @@ body {
 }
 
 /* ==========================================================================
-   5. UNIFIED GRID CARDS (PROJECTS & PUBLICATIONS)
+   5. AUTOMATED SAAS GRID LAYOUT (FOR MARKDOWN LISTS)
    ========================================================================== */
+/* Μετατροπή των Markdown Subsections σε καθαρούς SaaS Τίτλους */
+#projects-md h2, #publications-md h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-main);
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Αυτόματη μετατροπή των Markdown <ul> σε Responsive Grid */
 #projects-md ul, #publications-md ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 1.5rem;
-    padding: 0;
-    list-style: none;
+    padding: 0 !important;
+    margin: 0 0 2rem 0 !important;
+    list-style: none !important;
+    width: 100%;
 }
 
+/* Μετατροπή των Markdown <li> σε Solid SaaS Κάρτες */
 #projects-md li, #publications-md li {
     background-color: var(--bg-card) !important;
-    background-image: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
     border: 1px solid var(--border-main) !important;
-    border-radius: 14px !important;
-    padding: 1.75rem;
-    box-shadow: none !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    margin: 0 !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: left !important; /* Αυστηρά αριστερά για αποφυγή mobile gaps */
+    align-items: flex-start;
+    text-align: left !important;
+    box-shadow: none !important;
 }
 
+/* Hover Interaction: Border Activation & Soft Glow Rings */
 #projects-md li:hover, #publications-md li:hover {
-    transform: none !important;
     border-color: var(--accent) !important;
     box-shadow: 0 0 0 3px var(--accent-glow) !important;
 }
 
-/* 🧱 Δομή Τίτλων μέσα στις κάρτες */
-#projects-md li strong, #publications-md li strong {
-    display: block; 
-    font-size: 1.25rem;
+/* Styling των Τίτλων των Projects/Papers (που είναι σε strong) */
+#projects-md li > strong:first-child, 
+#publications-md li > strong:first-child {
+    display: block;
+    font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: -0.02em;
     color: var(--text-main);
     margin-bottom: 0.5rem;
-    text-align: left !important;
+    line-height: 1.4;
 }
 
-/* 🧬 Ειδική εξαίρεση: Στα Publications οι συγγραφείς είναι inline κείμενο */
-#publications-md li p {
-    margin: 0.5rem 0;
+/* Εσωτερικά Markdown sub-lists (Προκλήσεις, Stack κλπ) */
+#projects-md li ul {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    gap: 0.4rem;
+    margin: 0.5rem 0 1.2rem 0 !important;
+    padding-left: 0 !important;
+}
+
+#projects-md li ul li {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    display: block;
+    box-shadow: none !important;
+}
+
+/* 🧬 ΔΙΟΡΘΩΣΗ AUTHORS FLOW (PUBLICATIONS): Όλα μένουν inline, καμία ορφανή κόμμα */
+#publications-md li p, #publications-md li em {
     font-size: 0.95rem;
     color: var(--text-muted);
     line-height: 1.5;
+    margin: 0.25rem 0;
+    text-align: left !important;
 }
 
-#publications-md li p strong {
-    display: inline !important; /* Το δικό σου όνομα μένει inline στη ροή */
+#publications-md li strong {
+    display: inline !important; /* Αναγκαστικά inline για να μην σπάει η ροή */
     font-size: inherit !important;
     color: var(--accent) !important;
     font-weight: 600 !important;
 }
 
-/* 💎 Premium Clean SaaS Buttons */
+/* 💎 Premium Universal SaaS Buttons */
 #projects-md a, #publications-md a {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
     width: max-content !important;
-    margin-top: auto; /* Σπρώχνει τα κουμπιά πάντα στον πάτο της κάρτας */
-    padding: 7px 16px !important;
+    margin-top: auto !important; /* Κλειδώνουν πάντα στον πάτο της κάρτας */
+    padding: 6px 14px !important;
     background-color: var(--text-main) !important;
     color: var(--bg-main) !important;
     border-radius: 6px !important;
     font-size: 0.85rem;
     font-weight: 500;
     border: 1px solid var(--text-main) !important;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 #projects-md a:hover, #publications-md a:hover {
     opacity: 0.85;
 }
 
-/* 🏷️ Tags Σύνταξης / Περιοδικών */
+/* 🏷️ Ακαδημαϊκά / Τεχνικά Tags */
 .vibrant-tag {
     display: inline-block;
     padding: 3px 10px;
@@ -384,7 +425,32 @@ section .main-body {
 }
 
 /* ==========================================================================
-   8. MOBILE MECHANICS
+   8. DARK MODE OVERRIDES
+   ========================================================================== */
+[data-theme="dark"] body {
+    background-color: #0b0f19 !important;
+    color: #f9fafb !important;
+}
+
+[data-theme="dark"] section:not(.top-section) {
+    background-image: none !important;
+    background-color: #0b0f19 !important;
+}
+
+[data-theme="dark"] #mainNav, [data-theme="dark"] .navbar-collapse {
+    background-color: #111827 !important;
+}
+
+[data-theme="dark"] section header h2, 
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
+[data-theme="dark"] .main-body {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .top-section { background-color: transparent !important; }
+
+/* ==========================================================================
+   9. MOBILE RESPONSIVENESS
    ========================================================================== */
 @media (max-width: 991.98px) {
     .navbar-toggler {
@@ -401,6 +467,13 @@ section .main-body {
         border-radius: 8px;
         padding: 10px;
         margin-top: 10px;
+    }
+    #avatar {
+        float: none;
+        margin: 2rem auto 0 auto;
+        text-align: center;
+        height: auto;
+        top: 0;
     }
 }
 
@@ -421,7 +494,7 @@ section .main-body {
 }
 
 /* ==========================================================================
-   9. FOOTER
+   10. FOOTER
    ========================================================================== */
 footer {
     background-color: var(--bg-main) !important;
