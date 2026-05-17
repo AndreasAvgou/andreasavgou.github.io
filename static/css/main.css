@@ -58,7 +58,6 @@ img {
     z-index: 10000;
 }
 
-/* Μετατροπή των κουμπιών σε καθαρά links με Underline Hover Εφέ */
 .nav-item .nav-link {
     background-color: transparent !important;
     color: var(--bs-body-color) !important;
@@ -133,7 +132,7 @@ img {
     content: "";
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(10, 15, 30, 0.7) !important; /* Φίλτρο που δένει με το tech look */
+    background: rgba(10, 15, 30, 0.7) !important;
     z-index: 1;
 }
 
@@ -149,7 +148,6 @@ img {
     width: 100%;
 }
 
-/* Κατάργηση Typing Animation & Εφαρμογή Modern Text Gradient */
 #top-section-bg-text {
     font-size: 3.5rem;
     font-weight: 800;
@@ -192,7 +190,6 @@ section .main-body {
     text-align: justify;
 }
 
-/* Ομοιομορφία στο About Me */
 #home-md p {
     font-size: 1.2rem !important;
     font-weight: 300 !important;
@@ -237,7 +234,7 @@ section .main-body {
 #avatar img {
     height: max(130px, min(200px, calc(100vw / 6)));
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 24px !important; /* Μετατροπή από κύκλο σε Squircle */
+    border-radius: 24px !important;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
 }
 
@@ -246,7 +243,7 @@ section .main-body {
 }
 
 /* ==========================================================================
-   6. PROJECTS, PUBLICATIONS & VIBRANT CARDS (GLASSMORPHISM)
+   6. PROJECTS STYLING (GRID & CARDS)
    ========================================================================== */
 #projects-md ul {
     display: grid;
@@ -256,16 +253,7 @@ section .main-body {
     list-style: none;
 }
 
-#publications-md ul {
-    list-style: none;
-    padding: 0;
-}
-
-/* Ενοποιημένο Premium Glassmorphism χωρίς σκληρά μονόπλευρα borders */
-#projects-md li, 
-#publications-md li, 
-.vibrant-card, 
-.award-card {
+#projects-md li {
     background: rgba(255, 255, 255, 0.4) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -280,26 +268,21 @@ section .main-body {
     text-align: left;
 }
 
-/* Ήπια Hover Glow εφέ */
-#projects-md li:hover, 
-#publications-md li:hover, 
-.vibrant-card:hover {
+#projects-md li:hover {
     transform: translateY(-5px) translateX(2px) !important;
     border-color: rgba(57, 72, 210, 0.3) !important;
     box-shadow: 0 15px 35px rgba(57, 72, 210, 0.08) !important;
 }
 
-#projects-md li strong, 
-#publications-md li strong {
-    display: block;
+#projects-md li strong {
+    display: block; /* Ο τίτλος του project αλλάζει γραμμή */
     font-size: 1.3rem;
     color: var(--h-title-color);
     margin-bottom: 0.5rem;
     text-align: left;
 }
 
-#projects-md a, 
-#publications-md a {
+#projects-md a {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1.2rem;
@@ -310,15 +293,85 @@ section .main-body {
     font-size: 0.9rem;
     font-weight: 500;
     border: 1px solid var(--h-title-color);
+    text-align: center;
 }
-#projects-md a:hover, 
-#publications-md a:hover {
-    opacity: 0.9;
+
+#projects-md a:hover {
     background-color: transparent;
     color: var(--h-title-color) !important;
 }
 
-/* Διακριτικά border indicators για τη σειρά των καρτών */
+/* ==========================================================================
+   7. PUBLICATIONS STYLING (TEXT FLOW REPAIR)
+   ========================================================================== */
+#publications-md ul {
+    list-style: none;
+    padding: 0;
+}
+
+#publications-md li {
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-radius: 16px !important;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02) !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    text-align: left;
+    display: block; /* Όχι πια flex για να ρέει το κείμενο φυσικά */
+}
+
+#publications-md li:hover {
+    transform: translateY(-3px) translateX(4px) !important;
+    border-color: rgba(57, 72, 210, 0.3) !important;
+    box-shadow: 0 15px 35px rgba(57, 72, 210, 0.08) !important;
+}
+
+/* ΔΙΟΡΘΩΣΗ: Το όνομά σου μένει inline για να μην σπάνε οι κόμμες */
+#publications-md li strong {
+    display: inline !important; 
+    font-size: inherit;
+    color: var(--h-title-color);
+    font-weight: 700;
+}
+
+/* ΔΙΟΡΘΩΣΗ: Το κουμπί Paper γίνεται κομψό, αυτόνομο ακαδημαϊκό badge */
+#publications-md a {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: auto !important; /* Απαγόρευση ξεχειλώματος */
+    margin-top: 1rem;
+    padding: 5px 16px !important;
+    background-color: var(--h-title-color);
+    color: white !important;
+    border-radius: 20px !important; /* Elegant στρογγυλεμένο pill */
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--h-title-color);
+}
+
+#publications-md a:hover {
+    background-color: transparent;
+    color: var(--h-title-color) !important;
+}
+
+/* ==========================================================================
+   8. VIBRANT TIMELINE & ACCENTS
+   ========================================================================== */
+.vibrant-card, .award-card {
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-radius: 16px !important;
+    padding: 1.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02) !important;
+    text-align: left;
+}
+
 .vibrant-card:nth-child(3n+1) { border-top: 3px solid var(--phd-color) !important; }
 .vibrant-card:nth-child(3n+2) { border-top: 3px solid var(--msc-color) !important; }
 .vibrant-card:nth-child(3n+3) { border-top: 3px solid var(--bsc-color) !important; }
@@ -334,9 +387,6 @@ section .main-body {
     text-transform: uppercase;
 }
 
-/* ==========================================================================
-   7. VIBRANT TIMELINE SYSTEM
-   ========================================================================== */
 .vibrant-timeline {
     position: relative;
     padding: 20px 0;
@@ -377,15 +427,12 @@ section .main-body {
     box-shadow: 0 8px 25px rgba(0,0,0,0.05);
     color: var(--text-tm);
     border-left: 5px solid transparent;
-    transition: transform 0.3s ease;
 }
 .timeline-item:nth-child(1) .timeline-content { border-left-color: var(--phd-color); }
 .timeline-item:nth-child(2) .timeline-content { border-left-color: var(--msc-color); }
 .timeline-item:nth-child(3) .timeline-content { border-left-color: var(--bsc-color); }
 
-.timeline-item:hover .timeline-content {
-    transform: translateX(10px);
-}
+.timeline-item:hover .timeline-content { transform: translateX(10px); }
 .timeline-date {
     font-size: 0.85rem;
     font-weight: 800;
@@ -394,8 +441,38 @@ section .main-body {
     letter-spacing: 1px;
 }
 
+.education-item {
+    border-left: 2px solid #e9ecef;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.education-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    width: 12px; height: 12px;
+    background-color: var(--h-title-color);
+    border-radius: 50%;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+.skills-container p {
+    margin: 0 !important; padding: 0 !important;
+    display: inline-flex; flex-wrap: wrap;
+    justify-content: center; gap: 8px;
+}
+.skills-container img { height: 28px; width: auto; display: block; }
+
 /* ==========================================================================
-   8. CLEAN & CLEANSED DARK MODE LOGIC
+   9. DARK MODE LOGIC
    ========================================================================== */
 [data-theme="dark"] body {
     background-color: #121212 !important;
@@ -407,12 +484,8 @@ section .main-body {
     background-color: #121212 !important;
 }
 
-[data-theme="dark"] #mainNav {
+[data-theme="dark"] #mainNav, [data-theme="dark"] .navbar-collapse {
     background-color: #1a1a1a !important;
-}
-
-[data-theme="dark"] .navbar-collapse {
-    background-color: #1a1a1a;
 }
 
 [data-theme="dark"] #projects-md li, 
@@ -430,15 +503,11 @@ section .main-body {
     color: #ffffff !important;
 }
 
-[data-theme="dark"] .top-section {
-    background-color: transparent !important;
-}
-[data-theme="dark"] .top-section:before {
-    background: rgba(10, 12, 18, 0.85) !important;
-}
+[data-theme="dark"] .top-section { background-color: transparent !important; }
+[data-theme="dark"] .top-section:before { background: rgba(10, 12, 18, 0.85) !important; }
 
 /* ==========================================================================
-   9. MOBILE RESPONSIVENESS & TEXT REPAIR (NO MORE HOLES)
+   10. MOBILE RESPONSIVENESS & TEXT REPAIR
    ========================================================================== */
 @media (max-width: 991.98px) {
     .navbar-toggler {
@@ -458,7 +527,6 @@ section .main-body {
 }
 
 @media (max-width: 767.98px) {
-    /* Διόρθωση για τον Τίτλο του Hero ώστε να μην βγαίνει εκτός οθόνης */
     #top-section-bg-text {
         font-size: 2.1rem !important;
         white-space: normal !important;
@@ -473,7 +541,7 @@ section .main-body {
         margin-top: 4px;
     }
 
-    /* Κατάργηση της πλήρους στοίχισης (justify) στο κινητό για την εξάλειψη των κενών */
+    /* Κατάργηση του justify ΜΟΝΟ στο κινητό για να κολλήσουν οι λέξεις φυσικά */
     section .main-body, 
     #home-md p,
     .timeline-content,
@@ -496,7 +564,7 @@ section .main-body {
 }
 
 /* ==========================================================================
-   10. FOOTER & COMPACT BOTTOM
+   11. FOOTER
    ========================================================================== */
 footer {
     background-color: var(--h-title-color);
@@ -509,15 +577,11 @@ footer a {
     margin: 0 10px;
     font-weight: 400;
 }
-footer a:hover {
-    color: #ffffff !important;
-}
+footer a:hover { color: #ffffff !important; }
 #copyright-text {
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 0.8rem !important;
     letter-spacing: 0.5px;
 }
-.mx-1 {
-    color: rgba(255, 255, 255, 0.3);
-}
+.mx-1 { color: rgba(255, 255, 255, 0.3); }
