@@ -1,5 +1,10 @@
-title: Andreas Avgoustis | AI/ML Researcher
+metadata:
+  title: "Andreas Avgoustis | AI/ML Researcher"
+  charset: "UTF-8"
 
-top-section-bg-text: "AI/ML Engineer & Researcher"
-home-subtitle: "Andreas Avgoustis"
-copyright-text: "&copy; 2026 Andreas Avgoustis &middot; All rights reserved"
+hero:
+  headline: "AI/ML Engineer & Researcher"
+  subtitle: "Andreas Avgoustis"
+
+system:
+  copyright: "&copy; 2026 Andreas Avgoustis &middot; All rights reserved"
