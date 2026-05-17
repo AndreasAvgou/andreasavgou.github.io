@@ -1,6 +1,6 @@
 
 
-### 📑 About Me
+### About Me
 \
 AI/ML Engineer & Researcher with strong academic foundations, currently pursuing a **PhD in Informatics** and holding **MSc in Big Data Driven Networked Systems**. I am dedicated to translating complex research innovations into production-grade systems that solve real-world challenges.
 
@@ -16,7 +16,7 @@ As a published researcher, I have contributed to diverse fields such as **medica
 
 ---
 
-### 🛠️ Skills & Tools
+### Skills & Tools
 
 <div class="skills-container">
 
@@ -41,21 +41,19 @@ As a published researcher, I have contributed to diverse fields such as **medica
 
 ---
 
-### 🌟 Recognition & Awards
+### Recognition & Awards
 
 <div class="award-card">
-  <span>🎓</span>
   <div><strong>Top Tier Graduate (GPA: 9.47/10)</strong> – Class of 2024</div>
 </div>
 
 <div class="award-card">
-  <span>🥇</span>
   <div><strong>Perfect Thesis Scores (10/10)</strong> – Applied ML & Healthcare AI</div>
 </div>
 
 ---
 
-### 🎓 Education
+### Education
 
 <section class="timeline-section py-5 bg-light-dark">
     <div class="container px-5">
@@ -90,7 +88,7 @@ As a published researcher, I have contributed to diverse fields such as **medica
 
 ---
 
-### 🔍 Research Interests
+### Research Interests
 - **Healthcare Artificial Intelligence**
 - **Bioinformatics**
 - **Natural Language Processing**
