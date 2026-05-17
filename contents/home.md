@@ -10,7 +10,7 @@ As a published researcher, I have contributed to diverse fields such as **medica
 
 ---
 
-### 📑 Contact
+### Contact
 
 **Email** : andavgoustis@ionio.gr
 
