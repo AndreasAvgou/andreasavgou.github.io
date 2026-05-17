@@ -91,11 +91,11 @@ As a published researcher, I have contributed to diverse fields such as **medica
 ---
 
 ### 🔍 Research Interests
-- **Healthcare AI**
+- **Healthcare Artificial Intelligence**
 - **Bioinformatics**
 - **Natural Language Processing**
 - **Visual Language Models**
-- **Retrieval-Augmented Generation**
+- **Retrieval Augmented Generation**
 - **Information Retrieval**
 - **Big Data**
 
