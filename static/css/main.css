@@ -4,25 +4,21 @@
    1. PREMIUM SAAS DESIGN SYSTEM (STRIPE / LINEAR SPEC)
    ========================================================================== */
 :root {
-    /* Light Mode: Clean Slate White */
     --bg-main: #f8fafc;
     --bg-card: #ffffff;
     --border-main: #e2e8f0;
     --text-main: #0f172a;
     --text-muted: #475569;
     
-    /* Brand Accent: Electric Tech Indigo */
     --accent: #4f46e5;
     --accent-glow: rgba(79, 70, 229, 0.15);
     
-    /* Timeline Colors */
     --phd-color: #6366f1;
     --msc-color: #a855f7;
     --bsc-color: #ec4899;
 }
 
 [data-theme="dark"] {
-    /* Dark Mode: Deep Tech Ink & Navy */
     --bg-main: #0b0f19;
     --bg-card: #111827;
     --border-main: #1f2937;
@@ -44,11 +40,10 @@
 body {
     background-color: var(--bg-main) !important;
     color: var(--text-main) !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Sharp Scrollbar */
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -113,7 +108,7 @@ body {
 }
 
 /* ==========================================================================
-   3. HERO SECTION (DEEP INDUSTRIAL SOLID CONTEXT)
+   3. HERO SECTION (SOLID DEEP TECH CONTEXT)
    ========================================================================== */
 .top-section {
     position: relative;
@@ -121,18 +116,18 @@ body {
     min-height: 480px;
     display: flex;
     align-items: center;
-    background-color: #030712 !important; /* Στιβαρό, σκοτεινό φόντο */
-    background-image: none !important;    /* Διαγραφή της template εικόνας */
+    background-color: #030712 !important;
+    background-image: none !important;    
     border-bottom: 1px solid var(--border-main);
 }
 .top-section::before {
-    display: none; /* Αφαίρεση του παλιού AI overlay */
+    display: none;
 }
 
 #particles-js {
     position: absolute;
     width: 100%; height: 100%; top: 0; left: 0;
-    opacity: 0.15; /* Εξαιρετικά υποτονικό και premium */
+    opacity: 0.15;
     z-index: 1;
 }
 
@@ -145,7 +140,7 @@ body {
 #top-section-bg-text {
     font-size: 3.2rem;
     font-weight: 800;
-    letter-spacing: -0.04em; /* Tight tracking όπως η Apple και η Stripe */
+    letter-spacing: -0.04em;
     background: linear-gradient(to bottom right, #ffffff 40%, #94a3b8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -180,7 +175,7 @@ body {
 #avatar img {
     height: max(135px, min(185px, calc(100vw / 6)));
     border: 1px solid var(--border-main);
-    border-radius: 20px !important; /* Καθαρό Squircle αντί για generic κύκλο */
+    border-radius: 20px !important;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
 }
 [data-theme="dark"] #avatar img {
@@ -204,7 +199,7 @@ body {
 .award-card {
     background-color: var(--bg-card) !important;
     background-image: none !important;
-    backdrop-filter: none !important; /* Κατάργηση του AI blur εφέ */
+    backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     border: 1px solid var(--border-main) !important;
     border-radius: 12px !important;
@@ -216,13 +211,12 @@ body {
     text-align: left !important;
 }
 
-/* Premium SaaS Hover Interaction: Μόνο Border & Glow, Όχι κίνηση */
 #projects-md li:hover, 
 #publications-md li:hover, 
 .vibrant-card:hover {
     transform: none !important;
     border-color: var(--accent) !important;
-    box-shadow: 0 0 0 3px var(--accent-glow) !important; /* Crisp, sharp δακτύλιος */
+    box-shadow: 0 0 0 3px var(--accent-glow) !important;
 }
 
 #projects-md li strong {
@@ -234,7 +228,6 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Καθαρά, Επαγγελματικά SaaS Buttons */
 #projects-md a, 
 #publications-md a {
     display: inline-flex !important;
@@ -243,7 +236,7 @@ body {
     width: max-content !important;
     margin-top: 1.2rem;
     padding: 6px 14px !important;
-    background-color: var(--text-main) !important; /* Αντίστροφη αντίθεση */
+    background-color: var(--text-main) !important;
     color: var(--bg-main) !important;
     border-radius: 6px !important;
     font-size: 0.85rem;
@@ -255,11 +248,10 @@ body {
 #projects-md a:hover, 
 #publications-md a:hover {
     opacity: 0.85;
-    transform: none !important;
 }
 
 /* ==========================================================================
-   6. PUBLICATIONS FLOW REPAIR (NO MORE BROKEN COMMAS)
+   6. PUBLICATIONS FLOW REPAIR
    ========================================================================== */
 #publications-md ul {
     list-style: none;
@@ -267,10 +259,9 @@ body {
 }
 #publications-md li {
     margin-bottom: 1rem;
-    display: block; /* Αλλαγή σε block για σωστή ροή κειμένου */
+    display: block;
 }
 
-/* ΔΙΟΡΘΩΣΗ: Το όνομά σου ρέει inline για να μην σπάνε οι συγγραφείς */
 #publications-md li strong {
     display: inline !important; 
     font-size: inherit;
@@ -278,7 +269,6 @@ body {
     font-weight: 600;
 }
 
-/* Clean, Minimal Badge για το Paper Link */
 #publications-md a {
     margin-top: 0.8rem;
     padding: 4px 12px !important;
@@ -287,21 +277,19 @@ body {
 }
 
 /* ==========================================================================
-   7. INDUSTRIAL TIMELINE (ENGINEERING LOG SYSTEM)
+   7. INDUSTRIAL TIMELINE
    ========================================================================== */
 .vibrant-timeline {
     position: relative;
     padding: 10px 0;
     max-width: 100%;
 }
-/* Μια απλή, αυστηρή γραμμή 1px */
 .vibrant-timeline:before {
     content: '';
     position: absolute;
     top: 0; bottom: 0; left: 20px;
     width: 1px;
     background: var(--border-main);
-    border-radius: 0;
 }
 
 .timeline-item {
@@ -310,7 +298,6 @@ body {
     padding-left: 45px;
 }
 
-/* Μικροί, κομψοί δείκτες */
 .timeline-marker {
     position: absolute;
     left: 20px;
@@ -322,7 +309,6 @@ body {
     box-shadow: none !important;
 }
 
-/* Φωτισμός μόνο στο τρέχον PhD για status notification */
 .timeline-item:first-child .timeline-marker {
     background-color: var(--accent) !important;
     width: 10px; height: 10px;
@@ -349,11 +335,8 @@ body {
     font-size: 0.8rem;
     font-weight: 500;
     color: var(--text-muted);
-    text-transform: none;
-    letter-spacing: 0;
 }
 
-/* Skills Badges Grayscale Implementation */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -368,7 +351,7 @@ body {
 .skills-container img {
     height: 22px;
     width: auto;
-    filter: grayscale(100%); /* Κατάργηση της πολυχρωμίας για Pro Look */
+    filter: grayscale(100%);
     opacity: 0.6;
 }
 .skills-container img:hover {
@@ -377,7 +360,7 @@ body {
 }
 
 /* ==========================================================================
-   8. CORE TYPOGRAPHY & TEXT ALIGN REPAIR
+   8. CORE TYPOGRAPHY & ALIGN
    ========================================================================== */
 section header h2 {
     font-size: 1.6rem;
@@ -392,10 +375,9 @@ section .main-body {
     font-weight: 400;
     line-height: 1.65;
     color: var(--text-muted);
-    text-align: left; /* Κατάργηση του justify παντού για εξάλειψη των κενών */
+    text-align: left;
 }
 
-/* Αφαίρεση των χρωματιστών indicators από τα βραβεία */
 .vibrant-card:nth-child(3n+1), 
 .vibrant-card:nth-child(3n+2), 
 .vibrant-card:nth-child(3n+3) { 
@@ -403,7 +385,7 @@ section .main-body {
 }
 
 /* ==========================================================================
-   9. STRICT MOBILE RESPONSIVENESS (ZERO HOLES MECHANISM)
+   9. MOBILE RESPONSIVENESS
    ========================================================================== */
 @media (max-width: 991.98px) {
     .navbar-toggler {
@@ -428,15 +410,7 @@ section .main-body {
         font-size: 2.1rem !important;
         letter-spacing: -0.03em;
     }
-    
-    /* Αναγκαστική αριστερή στοίχιση στο κινητό για να κολλήσουν οι λέξεις σωστά */
-    section .main-body, 
-    #home-md p,
-    .timeline-content,
-    #projects-md li,
-    #publications-md li,
-    .award-card,
-    ul, li {
+    section .main-body, #home-md p, .timeline-content, #projects-md li, #publications-md li, .award-card, ul, li {
         text-align: left !important;
     }
 }
@@ -449,7 +423,7 @@ section .main-body {
 }
 
 /* ==========================================================================
-   10. FOOTER (CLEAN & AUTONOMOUS)
+   10. FOOTER
    ========================================================================== */
 footer {
     background-color: var(--bg-main) !important;
