@@ -141,13 +141,12 @@ body {
     width: 100%;
 }
 
-/* ΔΙΟΡΘΩΣΗ: Προσθήκη line-height και padding για να μην κόβεται το 'g' στον υπολογιστή */
 #top-section-bg-text {
     font-size: 3.2rem;
     font-weight: 800;
     letter-spacing: -0.04em;
-    line-height: 1.25 !important; /* Δίνει αέρα κατακόρυφα */
-    padding-bottom: 10px !important; /* Αποτρέπει το ψαλίδισμα του gradient */
+    line-height: 1.25 !important;
+    padding-bottom: 10px !important;
     background: linear-gradient(to bottom right, #ffffff 40%, #94a3b8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -223,7 +222,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     text-align: left !important;
-    overflow: hidden; /* Ασφάλεια για οριζόντιο overflow */
+    overflow: hidden; 
 }
 
 #projects-md li:hover, #publications-md li:hover {
@@ -278,9 +277,9 @@ body {
 
 /* 💎 Premium Universal SaaS Buttons */
 #projects-md li a, #publications-md li a {
-    display: block !important; /* Μετατροπή σε block για αλλαγή σειράς στο κινητό */
+    display: block !important; 
     width: max-content !important;
-    margin-top: 1rem !important;
+    margin-top: 1.25rem !important;
     padding: 6px 14px !important;
     background-color: var(--text-main) !important;
     color: var(--bg-main) !important;
@@ -295,20 +294,22 @@ body {
     opacity: 0.85;
 }
 
-/* 🏷️ TAG OVERFLOW FIX */
+/* 🏷️ ΔΙΟΡΘΩΣΗ: Πλήρης αντιγραφή του στυλ των Skills (For-The-Badge) */
 .vibrant-tag {
-    display: inline-block !important;
-    padding: 4px 10px !important;
-    border-radius: 6px !important;
-    font-size: 0.75rem !important;
-    font-weight: 600 !important;
-    background: rgba(128, 128, 128, 0.08) !important;
-    color: var(--accent) !important;
-    margin: 0.5rem 0 !important;
-    white-space: normal !important; /* Επιτρέπει αλλαγή σειράς */
-    word-break: break-word !important; /* Ασφαλές σπάσιμο */
-    max-width: 100% !important;
-    width: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    background-color: #52525b !important; /* Σκούρο γκρίζο/slate φόντο όπως τα Skills */
+    color: #ffffff !important; /* Λευκά γράμματα */
+    text-transform: uppercase !important; /* Αναγκαστικά ΚΕΦΑΛΑΙΑ */
+    font-weight: 700 !important; /* Έντονα γράμματα */
+    font-size: 0.7rem !important; /* Μικρό, clean μέγεθος badge */
+    letter-spacing: 0.05em !important;
+    padding: 3px 8px !important; /* Συμπαγές padding */
+    border-radius: 2px !important; /* Σχεδόν τετράγωνες γωνίες όπως τα Skills */
+    margin: 0.4rem 6px 0.4rem 0 !important;
+    line-height: 1 !important;
+    border: none !important;
+    white-space: nowrap !important;
 }
 
 /* ==========================================================================
