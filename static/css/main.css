@@ -664,16 +664,33 @@ footer a:hover {
     text-transform: inherit !important;
 }
 
-/* 2. Ρυθμίσεις μόνο για το κινητό */
+/* --- ΡΥΘΜΙΣΕΙΣ ΚΑΙ ΔΙΟΡΘΩΣΕΙΣ ΜΟΝΟ ΓΙΑ ΚΙΝΗΤΑ --- */
 @media (max-width: 767.98px) {
-    #top-section-bg-text span.mobile-break {
-        display: block; /* Αλλάζει γραμμή στο κινητό */
-        margin-top: 5px; /* Μικρό κενό ανάμεσα στις γραμμές */
+    
+    /* 1. Διόρθωση για τον Τίτλο Hero (Να μην κόβεται και να σπάει σωστά) */
+    #top-section-bg-text {
+        font-size: 1.9rem !important; /* Μειώνουμε το μέγεθος για να στρώσει στο μάτι */
+        white-space: normal !important; /* Επιτρέπουμε στο κείμενο να αλλάξει γραμμή */
+        animation: none !important; /* Κλείνουμε το typing animation στο κινητό γιατί το nowrap σπάει το layout */
+        border-right: none !important; /* Αφαιρούμε τον κέρσορα που αναβοσβήνει */
+        line-height: 1.4;
     }
     
-    #top-section-bg-text {
-        font-size: 2.7rem !important; /* Μικραίνουμε λίγο το συνολικό μέγεθος για να χωράει */
-        line-height: 1.3;
+    #top-section-bg-text span.mobile-break {
+        display: block; /* Αλλάζει γραμμή στο κινητό */
+        margin-top: 5px; 
+    }
+    
+    /* 2. Εξαφανίζουμε τις τεράστιες τρύπες/κενά ανάμεσα στις λέξεις */
+    section .main-body, 
+    #home-md p,
+    .timeline-content,
+    .vibrant-card,
+    #projects-md li,
+    #publications-md li,
+    ul, 
+    li {
+        text-align: left !important; /* Γυρνάμε σε αριστερή στοίχιση στο κινητό για να κάθονται φυσικά οι λέξεις */
     }
 }
 /* Κρύβουμε το κουμπί του μενού στις μεγάλες οθόνες */
