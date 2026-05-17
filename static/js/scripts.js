@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollPerformance();
 });
 
-// 1. Σταθερό & Καθαρό Theme Management
 function initTheme() {
     const toggleButton = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
@@ -31,7 +30,6 @@ function initTheme() {
     }
 }
 
-// 2. Mobile Menu Auto-Close (Bootstrap API Compliance)
 function initMobileMenu() {
     const navLinks = document.querySelectorAll('.nav-link');
     const menuCollapse = document.getElementById('navbarResponsive');
@@ -49,10 +47,8 @@ function initMobileMenu() {
     });
 }
 
-// 3. Αρχιτεκτονική Παράλληλης Φόρτωσης (Zero Flickering)
 async function loadAllContent() {
     try {
-        // Παράλληλο fetch όλων των πηγών για μέγιστη ταχύτητα
         const configPromise = fetch(`${CONTENT_DIR}${CONFIG_FILE}`).then(res => res.text());
         const sectionPromises = SECTIONS.map(name => 
             fetch(`${CONTENT_DIR}${name}.md`).then(res => res.text().then(text => ({ name, text })))
@@ -60,31 +56,24 @@ async function loadAllContent() {
 
         const [configText, ...sectionsData] = await Promise.all([configPromise, ...sectionPromises]);
 
-        // Inject Config Data
-        // Inject Config Data (Explicit Structured Binding)
-if (typeof jsyaml !== 'undefined') {
-    const yml = jsyaml.load(configText);
-    
-    // Ρητή σύνδεση των δεδομένων με το DOM (Senior Approach)
-    if (yml.hero) {
-        const headlineEl = document.getElementById('top-section-bg-text');
-        if (headlineEl) headlineEl.innerHTML = yml.hero.headline;
-        
-        const subtitleEl = document.getElementById('home-subtitle');
-        if (subtitleEl) subtitleEl.innerHTML = yml.hero.subtitle;
-    }
-    
-    if (yml.system && yml.system.copyright) {
-        const copyrightEl = document.getElementById('copyright-text');
-        if (copyrightEl) copyrightEl.innerHTML = yml.system.copyright;
-    }
-    
-    if (yml.metadata && yml.metadata.title) {
-        document.title = yml.metadata.title;
-    }
-}
+        if (typeof jsyaml !== 'undefined') {
+            const yml = jsyaml.load(configText);
+            if (yml.hero) {
+                const headlineEl = document.getElementById('top-section-bg-text');
+                if (headlineEl) headlineEl.innerHTML = yml.hero.headline;
+                
+                const subtitleEl = document.getElementById('home-subtitle');
+                if (subtitleEl) subtitleEl.innerHTML = yml.hero.subtitle;
+            }
+            if (yml.system && yml.system.copyright) {
+                const copyrightEl = document.getElementById('copyright-text');
+                if (copyrightEl) copyrightEl.innerHTML = yml.system.copyright;
+            }
+            if (yml.metadata && yml.metadata.title) {
+                document.title = yml.metadata.title;
+            }
+        }
 
-        // Inject Markdown Sections
         if (typeof marked !== 'undefined') {
             marked.use({ mangle: false, headerIds: false });
             sectionsData.forEach(({ name, text }) => {
@@ -93,15 +82,12 @@ if (typeof jsyaml !== 'undefined') {
             });
         }
 
-        // Ενεργοποίηση 3D Tilt μόνο αφού έχει φορτώσει το avatar στο DOM
         initAvatarTilt();
-
     } catch (error) {
         console.error("Data hydration failed:", error);
     }
 }
 
-// 4. High-Performance Scroll Handling (60fps)
 function initScrollPerformance() {
     const btn = document.getElementById("scrollTop");
     const progressBar = document.getElementById("progress-bar");
