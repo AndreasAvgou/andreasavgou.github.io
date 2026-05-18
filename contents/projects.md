@@ -44,14 +44,14 @@
   * **Tech Stack:** <span class="vibrant-tag">Python</span><span class="vibrant-tag">FastAPI</span><span class="vibrant-tag">NGINX</span><span class="vibrant-tag">Grafana</span><span class="vibrant-tag">SQLite</span>
   <a href="https://github.com/AndreasAvgou/Real-time-Monitoring-System-and-Feature-Engineering">Code</a>
 
-- **Tutoring System**
-  * **The Challenge:** Architecting an intelligent, personalized data relationship structure mapping real-time learning curves.
-  * **Architecture:** Formulated a clean object-oriented data access engine deploying strict relational entity mappings for instant performance scoring.
-  * **Tech Stack:** <span class="vibrant-tag">Java 25</span><span class="vibrant-tag">Spring Boot 4</span><span class="vibrant-tag">Hibernate</span><span class="vibrant-tag">PostgreSQL</span><span class="vibrant-tag">React</span><span class="vibrant-tag">Shadcn UI</span><span class="vibrant-tag">Docker</span>
-  <a href="https://github.com/AndreasAvgou/Tutoring-System">Code</a>
-
 - **Intelligent Tax Filing**
   * **The Challenge:** Parsing intricate legal constraint trees into deterministic software rule sets safely.
   * **Architecture:** Engineered a highly secure rule engine managing state transitions with zero external side effects and verifiable validation audits.
   * **Tech Stack:** <span class="vibrant-tag">Python</span><span class="vibrant-tag">OpenAI</span><span class="vibrant-tag">PostgreSQL</span><span class="vibrant-tag">Docker</span>
   <a href="https://github.com/AndreasAvgou/Intelligent-Tax-Filing">Code</a>
+
+- **Tutoring System**
+  * **The Challenge:** Architecting an intelligent, personalized data relationship structure mapping real-time learning curves.
+  * **Architecture:** Formulated a clean object-oriented data access engine deploying strict relational entity mappings for instant performance scoring.
+  * **Tech Stack:** <span class="vibrant-tag">Java 25</span><span class="vibrant-tag">Spring Boot 4</span><span class="vibrant-tag">Hibernate</span><span class="vibrant-tag">PostgreSQL</span><span class="vibrant-tag">React</span><span class="vibrant-tag">Shadcn UI</span><span class="vibrant-tag">Docker</span>
+  <a href="https://github.com/AndreasAvgou/Tutoring-System">Code</a>
