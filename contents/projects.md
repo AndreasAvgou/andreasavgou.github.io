@@ -35,7 +35,7 @@
 - **Crypto Analytics & Prediction Platform**
   * **The Challenge:** Orchestrating real-time data streaming architectures with strict low-latency ingestion barriers.
   * **Architecture:** Designed a distributed streaming node engine linked to concurrent analytical workers executing rapid time-series predictive modeling.
-  * **Tech Stack:** <span class="vibrant-tag">Java</span><span class="vibrant-tag">Spring Boot</span><span class="vibrant-tag">Python</span><span class="vibrant-tag">FastAPI</span><span class="vibrant-tag">TimescaleDB</span><span class="vibrant-tag">React</span><span class="vibrant-tag">Tailwind CSS</span>
+  * **Tech Stack:** <span class="vibrant-tag">Java</span><span class="vibrant-tag">Spring Boot</span><span class="vibrant-tag">Python</span><span class="vibrant-tag">FastAPI</span><span class="vibrant-tag">PostgreSQL</span><span class="vibrant-tag">React</span><span class="vibrant-tag">Tailwind CSS</span>
   <a href="https://github.com/AndreasAvgou/Crypto-Analytics-Prediction-Platform">Code</a>
 
 - **Real time Monitoring System & Feature Engineering**
