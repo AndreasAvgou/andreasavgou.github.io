@@ -12,7 +12,7 @@
   * **Tech Stack:** <span class="vibrant-tag">Python</span><span class="vibrant-tag">TensorFlow</span><span class="vibrant-tag">NumPy</span><span class="vibrant-tag">Scikit-Learn</span>
   <a href="https://github.com/AndreasAvgou/Single-Cell-RNA-Seq-Classification/tree/main">Code</a>
 
-- **Healthcare Process Optimization**
+- **Optimization of healthcare process management using machine learning**
   * **The Challenge:** Managing asynchronous streaming structures inside healthcare systems without encountering data starvation bottlenecks.
   * **Architecture:** Constructed a high-throughput, non-blocking asynchronous processor leveraging virtual threads and structured data access wrappers.
   * **Tech Stack:** <span class="vibrant-tag">Python</span><span class="vibrant-tag">TensorFlow</span><span class="vibrant-tag">XGBoost</span>
@@ -24,7 +24,7 @@
   * **Tech Stack:** <span class="vibrant-tag">Python</span><span class="vibrant-tag">TensorFlow</span><span class="vibrant-tag">ObsPy</span>
   <a href="https://github.com/AndreasAvgou/Identifying-Earthquakes-in-Low-Cost-Sensor-Signals-Contaminated-with-Vehicular-Noise/tree/main">Code</a>
 
-- **Melanoma Image Classification**
+- **Dermoscopic Melanoma Image Classification**
   * **The Challenge:** Training a robust model capable of diagnosing dermoscopic images with unbalanced class distributions.
   * **Architecture:** Built an ensemble architecture using pre-trained EfficientNet and Vision Transformer (ViT) nodes with focal loss optimization layers.
   * **Tech Stack:** <span class="vibrant-tag">Python</span><span class="vibrant-tag">TensorFlow</span><span class="vibrant-tag">Computer Vision</span>
