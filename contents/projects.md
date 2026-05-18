@@ -1,6 +1,6 @@
 ### Machine & Deep Learning
 
-- **Lip Reading & Visual Speech Recognition**
+- **Models and Applications for Lip Reading and Voice Reproduction**
   * **The Challenge:** Building a multi-modal temporal model to interpret lip movements from video frames without audio.
   * **Architecture:** Utilized 3D Convolutional Neural Networks (3D-CNN) stacked with ResNet blocks and Bidirectional LSTMs for sequence modeling.
   * **Tech Stack:** <span class="vibrant-tag">Python</span><span class="vibrant-tag">PyTorch</span><span class="vibrant-tag">OpenCV</span><span class="vibrant-tag">CUDA</span>.
