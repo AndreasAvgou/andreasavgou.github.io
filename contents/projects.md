@@ -47,7 +47,7 @@
 - **Intelligent Tax Filing**
   * **The Challenge:** Parsing intricate legal constraint trees into deterministic software rule sets safely.
   * **Architecture:** Engineered a highly secure rule engine managing state transitions with zero external side effects and verifiable validation audits.
-  * **Tech Stack:** <span class="vibrant-tag">Python</span><span class="vibrant-tag">OpenAI</span><span class="vibrant-tag">PostgreSQL</span><span class="vibrant-tag">Docker</span>
+  * **Tech Stack:** <span class="vibrant-tag">Python</span><span class="vibrant-tag">OpenAI</span><span class="vibrant-tag">FastAPI</span><span class="vibrant-tag">Docker</span><span class="vibrant-tag">React</span><span class="vibrant-tag">Shadcn UI</span><span class="vibrant-tag">Tailwind CSS</span>
   <a href="https://github.com/AndreasAvgou/Intelligent-Tax-Filing">Code</a>
 
 - **Tutoring System**
