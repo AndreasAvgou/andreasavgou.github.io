@@ -20,7 +20,7 @@
   
 - **Identifying Earthquakes in Low-Cost Sensor Signals Contaminated with Vehicular Noise**
   * **The Challenge:** Filtering out heavy structural and environmental traffic noise arrays from low-cost seismic sensors to accurately classify seismic anomalies.
-  * **Architecture:** Implemented short-time Fourier transformations (STFT) coupled with customized Deep Convolutional Networks for spectral signal filtering.
+  * **Architecture:** Implemented short-time customized Deep Convolutional Networks for spectral signal filtering.
   * **Tech Stack:** <span class="vibrant-tag">Python</span><span class="vibrant-tag">TensorFlow</span><span class="vibrant-tag">ObsPy</span>
   <a href="https://github.com/AndreasAvgou/Identifying-Earthquakes-in-Low-Cost-Sensor-Signals-Contaminated-with-Vehicular-Noise/tree/main">Code</a>
 
