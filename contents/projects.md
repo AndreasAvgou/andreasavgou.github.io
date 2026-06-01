@@ -30,7 +30,7 @@
   * **Tech Stack:** <span class="vibrant-tag">Python</span><span class="vibrant-tag">TensorFlow</span><span class="vibrant-tag">Computer Vision</span>
   <a href="https://github.com/AndreasAvgou/Dermoscopic-Melanoma-Image-Classification">Code</a>
   
-### Programming & Systems
+### System Programming
 
 - **Crypto Analytics & Prediction Platform**
   * **The Challenge:** Orchestrating real-time data streaming architectures with strict low-latency ingestion barriers.
