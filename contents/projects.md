@@ -8,7 +8,7 @@
 
 - **Single Cell RNA Seq Classification**
   * **The Challenge:** Classifying brain cell lineages (such as Astrocytes, Neurons, Microglia, etc.) from high-dimensional single-cell RNA-sequencing (scRNA-seq) data.
-  * **Architecture:** Developed a deep autoencoder engine for structural dimensionality reduction combined with an optimized multi-layer neural classifier.
+  * **Architecture:** Developed a Joint Autoencoder & Classifier that operates on ~16,678-dimensional gene expression profiles.
   * **Tech Stack:** <span class="vibrant-tag">Python</span><span class="vibrant-tag">TensorFlow</span><span class="vibrant-tag">NumPy</span><span class="vibrant-tag">Scikit-Learn</span>
   <a href="https://github.com/AndreasAvgou/Single-Cell-RNA-Seq-Classification/tree/main">Code</a>
 
