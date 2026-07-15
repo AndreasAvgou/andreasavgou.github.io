@@ -203,7 +203,7 @@ body {
 
 #projects-md ul, #publications-md ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 0 !important;
     margin: 0 0 2rem 0 !important;
