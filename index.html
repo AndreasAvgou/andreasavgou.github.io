@@ -65,11 +65,133 @@
         <div id="avatar"><img src="static/assets/img/photo.png" alt="Andreas Avgoustis"></div>
     </div>
     
-    <!-- Main Content Section -->
+    <!-- Main Content Section (BiHELab Layout) -->
     <section class="py-5" id="home">
         <div class="container px-4 px-lg-5">
-            <header><h2 id="home-subtitle"></h2></header>
-            <div class="main-body" id="home-md"></div>
+            
+            <!-- Κρυφά στοιχεία για να μην "χτυπήσει" το scripts.js -->
+            <header><h2 id="home-subtitle" class="d-none"></h2></header>
+            <div class="main-body d-none" id="home-md"></div>
+
+            <!-- ΠΡΩΤΟ ΚΟΥΤΙ: Φαρδύ λευκό με μπλε γραμμή -->
+            <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-4" data-aos="fade-up">
+                <div class="card-body p-4 p-lg-5">
+                    <div class="bihelab-subtitle">OVERVIEW</div>
+                    <h3 class="bihelab-title">About Me</h3>
+                    <hr class="bihelab-divider">
+                    
+                    <div class="row">
+                        <!-- Αριστερή στήλη: Βιογραφικό -->
+                        <div class="col-md-7 pe-md-5">
+                            <p class="mb-3">AI/ML Engineer & Researcher with strong academic foundations, currently pursuing a <strong>PhD in Informatics</strong> and holding an <strong>MSc in Big Data Driven Networked Systems</strong>. I am dedicated to translating complex research innovations into production-grade systems that solve real-world challenges.</p>
+                            
+                            <p class="mb-3">My expertise lies in <strong>Deep Learning</strong> and <strong>Computer Vision</strong>, with extensive experience in designing, training, and deploying advanced neural architectures like <strong>CNNs, LSTMs, and Transformers</strong>. I specialize in building <strong>end-to-end</strong> ML pipelines and optimizing performance for real-time applications, leveraging a technical stack that includes <strong>Python, PyTorch, TensorFlow</strong> and <strong>Docker</strong>.</p>
+                            
+                            <p class="mb-4">As a published researcher, I have contributed to diverse fields such as <strong>medical image analysis</strong>, <strong>text simplification</strong>, and <strong>seismology signal processing</strong>. My work focuses on large-scale data processing and multimodal learning, specifically for <strong>healthcare-focused</strong> and <strong>real-time systems</strong>.</p>
+                            
+                            <div class="p-3 bg-light rounded shadow-sm d-inline-block">
+                                <i class="bi bi-envelope-fill me-2" style="color: var(--accent-blue);"></i>
+                                <strong>Email:</strong> <a href="mailto:andavgoustis@ionio.gr" class="text-decoration-none text-dark fw-bold">andavgoustis@ionio.gr</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Δεξιά στήλη: Ερευνητικά Ενδιαφέροντα -->
+                        <div class="col-md-5 mt-4 mt-md-0 border-start ps-md-4">
+                            <h5 class="fw-bold mb-4" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">Research Interests</h5>
+                            <ul class="bihelab-list">
+                                <li><strong>Healthcare Artificial Intelligence</strong></li>
+                                <li><strong>Bioinformatics</strong></li>
+                                <li><strong>Natural Language Processing</strong></li>
+                                <li><strong>Visual Language Models</strong></li>
+                                <li><strong>Retrieval Augmented Generation</strong></li>
+                                <li><strong>Information Retrieval</strong></li>
+                                <li><strong>Big Data Science</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ΔΕΥΤΕΡΟ ΚΑΙ ΤΡΙΤΟ ΚΟΥΤΙ -->
+            <div class="row g-4">
+                
+                <!-- ΑΡΙΣΤΕΡΟ ΚΟΥΤΙ: Σκούρο μπλε (Education & Awards) -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card bihelab-card bihelab-card-dark shadow-sm border-0 h-100">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="bihelab-subtitle">ACADEMIC BACKGROUND</div>
+                            <h3 class="bihelab-title">Education & Awards</h3>
+                            <hr class="bihelab-divider">
+                            
+                            <!-- Διακρίσεις / Βραβεία -->
+                            <div class="mb-5">
+                                <div class="p-3 mb-3 rounded" style="background: rgba(255,255,255,0.05); border-left: 4px solid var(--accent-blue);">
+                                    <i class="bi bi-trophy-fill me-2" style="color: var(--accent-blue);"></i>
+                                    <strong>Top Tier Graduate (GPA: 9.47/10)</strong> – Class of 2024
+                                </div>
+                                <div class="p-3 rounded" style="background: rgba(255,255,255,0.05); border-left: 4px solid var(--accent-blue);">
+                                    <i class="bi bi-star-fill me-2" style="color: var(--accent-blue);"></i>
+                                    <strong>Perfect Thesis Scores (10/10)</strong> – Applied ML & Healthcare AI
+                                </div>
+                            </div>
+                            
+                            <!-- Εκπαίδευση -->
+                            <ul class="bihelab-list">
+                                <li>
+                                    <span class="d-block small fw-bold" style="color: #94a3b8; letter-spacing: 1px;">2024 - PRESENT</span>
+                                    <strong style="color: var(--accent-blue); font-size: 1.1rem;">PhD Candidate in Informatics</strong>
+                                    <span class="d-block">Ionian University</span>
+                                </li>
+                                <li>
+                                    <span class="d-block small fw-bold" style="color: #94a3b8; letter-spacing: 1px;">2022 - 2024</span>
+                                    <strong style="color: var(--accent-blue); font-size: 1.1rem;">MSc in Big Data Driven Networked Systems</strong>
+                                    <span class="d-block">Ionian University</span>
+                                </li>
+                                <li>
+                                    <span class="d-block small fw-bold" style="color: #94a3b8; letter-spacing: 1px;">2015 - 2021</span>
+                                    <strong style="color: var(--accent-blue); font-size: 1.1rem;">BSc in Informatics</strong>
+                                    <span class="d-block">Ionian University</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ΔΕΞΙ ΚΟΥΤΙ: Λευκό (Skills & Tools) -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card bihelab-card shadow-sm border-0 h-100">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="bihelab-subtitle">INFRASTRUCTURE</div>
+                            <h3 class="bihelab-title">Skills & Tools</h3>
+                            <hr class="bihelab-divider">
+                            
+                            <p class="text-muted mb-4">Programming languages, frameworks, and technologies utilized in my research and software development projects.</p>
+
+                            <!-- Badges (Tech Stack) -->
+                            <div class="d-flex flex-wrap gap-2 mt-4">
+                                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" class="rounded shadow-sm" alt="Python">
+                                <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" class="rounded shadow-sm" alt="PyTorch">
+                                <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" class="rounded shadow-sm" alt="TensorFlow">
+                                <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" class="rounded shadow-sm" alt="Java">
+                                <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" class="rounded shadow-sm" alt="Spring">
+                                <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" class="rounded shadow-sm" alt="PowerShell">
+                                <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" class="rounded shadow-sm" alt="Dart">
+                                <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" class="rounded shadow-sm" alt="Flutter">
+                                <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" class="rounded shadow-sm" alt="Jupyter">
+                                <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=power-bi&logoColor=black" class="rounded shadow-sm" alt="Power BI">
+                                <img src="https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" class="rounded shadow-sm" alt="Microsoft SQL Server">
+                                <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" class="rounded shadow-sm" alt="PostgreSQL">
+                                <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" class="rounded shadow-sm" alt="Docker">
+                                <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" class="rounded shadow-sm" alt="Git">
+                                <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" class="rounded shadow-sm" alt="React">
+                                <img src="https://img.shields.io/badge/Adobe_Premiere_Pro-9999FF?style=for-the-badge&logo=adobe-premiere-pro&logoColor=white" class="rounded shadow-sm" alt="Adobe Premiere Pro">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- Τέλος γραμμής κάτω κουτιών -->
+
         </div>
     </section>
 
@@ -100,7 +222,7 @@
                     </div>
                 </div>
             </div>
-            <div id="copyright-text" class="text-center"></div>
+            <div id="copyright-text" class="text-center mt-4 border-top border-secondary pt-3 text-muted"></div>
         </div>
     </footer>
 
