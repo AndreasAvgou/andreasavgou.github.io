@@ -340,3 +340,81 @@ footer.bg-bottom a:hover {
     border-color: rgba(56, 189, 248, 0.2) !important;
     color: #38bdf8 !important;
 }
+/* ==========================================================================
+   BIHELAB HOME PAGE CARDS & LISTS
+   ========================================================================== */
+.bihelab-card {
+    border-radius: 8px !important;
+    overflow: hidden;
+    background-color: var(--bg-card) !important;
+}
+.bihelab-card-top-border {
+    border-top: 4px solid var(--accent-blue) !important;
+}
+.bihelab-subtitle {
+    color: var(--accent-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.bihelab-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-navy);
+    margin-bottom: 1rem;
+}
+[data-theme="dark"] .bihelab-title { color: #f8fafc; }
+
+.bihelab-divider {
+    width: 40px;
+    height: 3px !important;
+    background-color: #cbd5e1 !important;
+    border: none !important;
+    opacity: 1 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Dark Card Variation (Αριστερό κουτί) */
+.bihelab-card-dark {
+    background-color: var(--primary-navy) !important;
+    color: #ffffff;
+}
+.bihelab-card-dark .bihelab-subtitle { color: #94a3b8; }
+.bihelab-card-dark .bihelab-title { color: #ffffff; }
+.bihelab-card-dark .bihelab-divider { background-color: #475569 !important; }
+
+/* Custom Lists (Μπλε τελείες & διακεκομμένες γραμμές) */
+ul.bihelab-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+ul.bihelab-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    line-height: 1.6;
+    border-bottom: 1px dashed var(--border-main);
+}
+ul.bihelab-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+ul.bihelab-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--accent-blue);
+}
+.bihelab-card-dark ul.bihelab-list li {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+    color: #e2e8f0;
+}
