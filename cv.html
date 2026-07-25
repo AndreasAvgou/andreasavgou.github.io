@@ -83,23 +83,13 @@
             color: var(--text-muted);
             margin-bottom: 1rem;
         }
-        
-        .cv-progress {
-            height: 8px;
-            background-color: #e2e8f0;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-bottom: 1.5rem;
-        }
-        [data-theme="dark"] .cv-progress { background-color: #334155; }
-        
-        .cv-progress-bar {
-            height: 100%;
-            background-color: var(--accent-blue);
-            border-radius: 4px;
+
+        /* Βοηθητική κλάση για τη διαχωριστική γραμμή στην πρώτη κάρτα */
+        @media (min-width: 768px) {
+            .border-end-md { border-right: 1px solid rgba(255,255,255,0.15); }
         }
 
-        /* PRINT CSS - Εξασφαλίζει τέλεια εκτύπωση/PDF */
+        /* PRINT CSS - Εξασφαλίζει τέλεια εκτύπωση/PDF δίπλα-δίπλα */
         @media print {
             body { background: white !important; padding: 0 !important; margin: 0 !important; }
             #mainNav, .top-section, footer, .print-buttons, #scrollTop, #progress-container { 
@@ -107,22 +97,23 @@
             }
             .container { max-width: 100% !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
             
-            /* Αφαίρεση σκιών και προσαρμογή καρτών για χαρτί */
-            .card { box-shadow: none !important; border: 1px solid #e2e8f0 !important; margin-bottom: 20px !important; break-inside: avoid; }
+            .card { box-shadow: none !important; border: 1px solid #e2e8f0 !important; margin-bottom: 15px !important; break-inside: avoid; }
             .bihelab-card-dark { 
-                background-color: #0b1d3a !important; /* Force BiHELab Navy color */
+                background-color: #0b1d3a !important; 
                 color: white !important; 
                 -webkit-print-color-adjust: exact !important; 
                 print-color-adjust: exact !important; 
             }
             
-            /* Εξαναγκασμός Bootstrap στηλών να παίξουν σωστά στην εκτύπωση */
-            .row { display: flex !important; flex-wrap: nowrap !important; }
-            .col-lg-8 { width: 65% !important; padding-right: 15px !important; }
-            .col-lg-4 { width: 35% !important; padding-left: 15px !important; }
+            /* Εξαναγκασμός Bootstrap στηλών να παίξουν σωστά δίπλα δίπλα στην εκτύπωση */
+            .row { display: flex !important; flex-wrap: nowrap !important; width: 100%; }
+            .col-12 { width: 100% !important; }
+            .col-lg-6 { width: 50% !important; float: left !important; padding: 0 10px !important; }
+            .col-md-3 { width: 20% !important; float: left !important; }
+            .col-md-9 { width: 80% !important; float: left !important; }
             
-            /* Force colors for timeline and badges */
-            .cv-timeline-badge, .cv-progress-bar { 
+            /* Σωστά χρώματα για εκτύπωση */
+            .cv-timeline-badge { 
                 background-color: #0284c7 !important; 
                 -webkit-print-color-adjust: exact !important; 
                 print-color-adjust: exact !important; 
@@ -133,9 +124,13 @@
                 print-color-adjust: exact !important; 
             }
             
-            /* Typography adjustments for print */
-            .bihelab-list li { font-size: 10.5pt !important; line-height: 1.4 !important; margin-bottom: 0.6rem !important; }
-            .cv-timeline-company { font-size: 11pt !important; }
+            /* Προσαρμογή γραμματοσειρών για να χωράνε στο χαρτί */
+            .bihelab-list li { font-size: 9.5pt !important; line-height: 1.35 !important; margin-bottom: 0.4rem !important; }
+            .cv-timeline-title { font-size: 11pt !important; }
+            .cv-timeline-company { font-size: 10pt !important; margin-bottom: 0.5rem !important;}
+            p { font-size: 10pt !important; }
+            .cv-timeline-item { break-inside: avoid !important; }
+            .border-end-md { border-right: 1px solid #475569 !important; }
         }
     </style>
 
@@ -185,7 +180,7 @@
         <div class="top-section-content text-center">
             <div class="container px-4 px-lg-5">
                 <h1 class="display-5 fw-bold text-white mb-2" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Curriculum Vitae</h1>
-                <p class="lead text-white-50 mb-0">Professional Experience, Education & Technical Skills</p>
+                <p class="lead text-white-50 mb-0">Professional Experience & Academic Background</p>
             </div>
         </div>
     </section>
@@ -205,13 +200,49 @@
             </div>
 
             <div class="row g-4">
-                <!-- ΑΡΙΣΤΕΡΗ ΣΤΗΛΗ (Experiences & Education) -->
-                <div class="col-lg-8">
-                    
-                    <!-- Experiences Card -->
-                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-4" data-aos="fade-up">
+                
+                <!-- ============================================== -->
+                <!-- HEADER CARD: FULL WIDTH PROFILE INFO           -->
+                <!-- ============================================== -->
+                <div class="col-12" data-aos="fade-up">
+                    <div class="card bihelab-card bihelab-card-dark shadow-sm border-0">
                         <div class="card-body p-4 p-lg-5">
-                            <div class="bihelab-subtitle"><i class="bi bi-briefcase-fill me-1"></i> CAREER PROFILE</div>
+                            <div class="row align-items-center">
+                                
+                                <!-- Φωτογραφία & Τίτλος -->
+                                <div class="col-md-3 text-center mb-4 mb-md-0 border-end-md pe-md-4">
+                                    <img src="static/assets/img/photo.png" alt="Andreas Avgoustis" class="rounded-circle mb-3 border border-3 border-light shadow" style="width: 140px; height: 140px; object-fit: cover;">
+                                    <h4 class="text-white fw-bold mb-1">Andreas Avgoustis</h4>
+                                    <p class="text-white-50 small mb-0">AI/ML Engineer & Researcher</p>
+                                </div>
+                                
+                                <!-- Περίληψη & Επικοινωνία -->
+                                <div class="col-md-9 ps-md-4 text-white">
+                                    <div class="bihelab-subtitle mb-2" style="color: #38bdf8;">CAREER PROFILE</div>
+                                    <p style="color: #cbd5e1; line-height: 1.6; text-align: justify; font-size: 0.98rem;" class="mb-4">
+                                        AI/ML Engineer & Researcher with strong academic foundations including an MSc in Big Data Driven Networked Systems and ongoing PhD studies in Informatics. Specializing in Deep Learning, Computer Vision, and large-scale data processing. Experienced in designing, training, and deploying advanced neural architectures (CNNs, LSTMs, Transformers) for real-time and healthcare-focused applications. Strong engineering background with hands-on expertise in Python, PyTorch, TensorFlow, SQL, Spark, Docker, and cloud platforms. Published researcher with contributions in multimodal learning, text simplification, seismology signal processing, and medical image analysis. Adept at building end-to-end ML pipelines, optimizing performance, and translating research innovations into production-grade systems.
+                                    </p>
+                                    
+                                    <div class="d-flex flex-wrap gap-4 pt-3 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+                                        <span><i class="bi bi-envelope-fill me-2" style="color: #38bdf8;"></i> andavgoustis@ionio.gr</span>
+                                        <span><i class="bi bi-globe me-2" style="color: #38bdf8;"></i> andreasavgou.github.io</span>
+                                        <span><i class="bi bi-linkedin me-2" style="color: #38bdf8;"></i> andreasavgoustis</span>
+                                        <span><i class="bi bi-translate me-2" style="color: #38bdf8;"></i> Greek (Native), English (Professional)</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================== -->
+                <!-- LEFT COLUMN: EXPERIENCES                       -->
+                <!-- ============================================== -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="bihelab-subtitle"><i class="bi bi-briefcase-fill me-1"></i> PROFESSIONAL</div>
                             <h3 class="bihelab-title mt-2 mb-4">Experiences</h3>
                             <hr class="bihelab-divider">
 
@@ -227,7 +258,7 @@
                                         <li>Developing and optimizing ML architectures (CNNs, LSTMs, Transformers) using Python, TensorFlow, PyTorch, Keras.</li>
                                         <li>Managing and analyzing large-scale datasets for healthcare applications using Python, SQL, and Spark.</li>
                                         <li>Publishing peer-reviewed research in deep learning, computer vision, and visual language modeling, with work focusing on lip-reading AI, multimodal learning, and advanced neural architectures.</li>
-                                        <li>Designing experiments, benchmarking deep learning models, and evaluating performance across architectures (CNNs, LSTMs, Transformers, and emerging visual language models).</li>
+                                        <li>Designing experiments, benchmarking deep learning models, and evaluating performance across architectures.</li>
                                         <li>Collaborating with interdisciplinary teams to integrate ML solutions into practical research problems.</li>
                                     </ul>
                                 </div>
@@ -283,11 +314,15 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Education Card -->
-                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-4" data-aos="fade-up">
+                <!-- ============================================== -->
+                <!-- RIGHT COLUMN: EDUCATION                        -->
+                <!-- ============================================== -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100">
                         <div class="card-body p-4 p-lg-5">
-                            <div class="bihelab-subtitle"><i class="bi bi-mortarboard-fill me-1"></i> ACADEMIC BACKGROUND</div>
+                            <div class="bihelab-subtitle"><i class="bi bi-mortarboard-fill me-1"></i> ACADEMIC</div>
                             <h3 class="bihelab-title mt-2 mb-4">Education</h3>
                             <hr class="bihelab-divider">
 
@@ -338,105 +373,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <!-- ΔΕΞΙΑ ΣΤΗΛΗ (Profile, Skills, Languages) -->
-                <div class="col-lg-4">
-                    
-                    <!-- Profile Card -->
-                    <div class="card bihelab-card bihelab-card-dark shadow-sm border-0 mb-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-body p-4 text-center">
-                            <img src="static/assets/img/photo.png" alt="Andreas Avgoustis" class="rounded-circle mb-3 border border-3 border-light shadow" style="width: 120px; height: 120px; object-fit: cover;">
-                            <h4 class="text-white fw-bold mb-1">Andreas Avgoustis</h4>
-                            <p class="text-white-50 small mb-4">AI/ML Engineer & Researcher</p>
-                            
-                            <div class="text-start mt-4 pt-3 border-top border-secondary">
-                                <p class="mb-2 text-white"><i class="bi bi-envelope-fill me-2 text-info"></i> andavgoustis@ionio.gr</p>
-                                <p class="mb-2"><a href="https://andreasavgou.github.io/" class="text-white text-decoration-none"><i class="bi bi-globe me-2 text-info"></i> andreasavgou.github.io</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Skills Card -->
-                    <div class="card bihelab-card shadow-sm border-0 mb-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-body p-4">
-                            <div class="bihelab-subtitle"><i class="bi bi-tools me-1"></i> EXPERTISE</div>
-                            <h4 class="bihelab-title mt-2 mb-4" style="font-size: 1.3rem;">Skills & Proficiency</h4>
-                            <hr class="bihelab-divider">
-
-                            <!-- Skill 1 -->
-                            <div class="d-flex justify-content-between mb-1">
-                                <span class="fw-bold small text-muted">Python & SQL</span>
-                                <span class="small text-muted fw-bold">90%</span>
-                            </div>
-                            <div class="cv-progress"><div class="cv-progress-bar" style="width: 90%;"></div></div>
-
-                            <!-- Skill 2 -->
-                            <div class="d-flex justify-content-between mb-1">
-                                <span class="fw-bold small text-muted">Tensorflow & PyTorch</span>
-                                <span class="small text-muted fw-bold">90%</span>
-                            </div>
-                            <div class="cv-progress"><div class="cv-progress-bar" style="width: 90%;"></div></div>
-
-                            <!-- Skill 3 -->
-                            <div class="d-flex justify-content-between mb-1">
-                                <span class="fw-bold small text-muted">Excel & PowerBI</span>
-                                <span class="small text-muted fw-bold">90%</span>
-                            </div>
-                            <div class="cv-progress"><div class="cv-progress-bar" style="width: 90%;"></div></div>
-
-                            <!-- Skill 4 -->
-                            <div class="d-flex justify-content-between mb-1">
-                                <span class="fw-bold small text-muted">Apache Spark</span>
-                                <span class="small text-muted fw-bold">85%</span>
-                            </div>
-                            <div class="cv-progress"><div class="cv-progress-bar" style="width: 85%;"></div></div>
-
-                            <!-- Skill 5 -->
-                            <div class="d-flex justify-content-between mb-1">
-                                <span class="fw-bold small text-muted">Javascript & React</span>
-                                <span class="small text-muted fw-bold">75%</span>
-                            </div>
-                            <div class="cv-progress"><div class="cv-progress-bar" style="width: 75%;"></div></div>
-
-                            <!-- Skill 6 -->
-                            <div class="d-flex justify-content-between mb-1">
-                                <span class="fw-bold small text-muted">Git & Docker</span>
-                                <span class="small text-muted fw-bold">75%</span>
-                            </div>
-                            <div class="cv-progress"><div class="cv-progress-bar" style="width: 75%; margin-bottom: 0;"></div></div>
-                        </div>
-                    </div>
-
-                    <!-- Languages Card -->
-                    <div class="card bihelab-card shadow-sm border-0 mb-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-body p-4">
-                            <div class="bihelab-subtitle"><i class="bi bi-translate me-1"></i> LINGUISTICS</div>
-                            <h4 class="bihelab-title mt-2 mb-4" style="font-size: 1.3rem;">Languages</h4>
-                            <hr class="bihelab-divider">
-                            
-                            <ul class="list-unstyled mb-0">
-                                <li class="mb-3 d-flex align-items-center">
-                                    <i class="bi bi-chat-left-text-fill text-primary me-3 fs-4"></i>
-                                    <div>
-                                        <strong class="d-block" style="color: var(--primary-navy);">Greek</strong>
-                                        <span class="text-muted small">Native</span>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <i class="bi bi-chat-left-text-fill text-info me-3 fs-4"></i>
-                                    <div>
-                                        <strong class="d-block" style="color: var(--primary-navy);">English</strong>
-                                        <span class="text-muted small">Professional</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            </div> <!-- Τέλος row -->
         </div>
     </section>
 
