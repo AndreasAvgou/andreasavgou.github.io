@@ -95,6 +95,6 @@ As a published researcher, I have contributed to diverse fields such as **medica
 - **Visual Language Models**
 - **Retrieval Augmented Generation**
 - **Information Retrieval**
-- **Big Data**
+- **Big Data Science**
 
 
