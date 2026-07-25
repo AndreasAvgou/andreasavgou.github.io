@@ -418,3 +418,46 @@ ul.bihelab-list li::before {
     border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
     color: #e2e8f0;
 }
+/* ==========================================================================
+   DARK MODE FIXES (For Projects, Publications, and CV Text Visibility)
+   ========================================================================== */
+
+/* 1. Επιδιόρθωση των τίτλων "The Challenge" & "Architecture" στα Projects */
+[data-theme="dark"] .card-body h5,
+[data-theme="dark"] .card-body h5 i,
+[data-theme="dark"] .fw-bold {
+    color: #e2e8f0 !important; /* Ανοιχτό γκρι-λευκό για τέλεια αντίθεση */
+}
+
+/* Ειδικά χρώματα για τα μικρά εικονίδια στα Projects στο Dark Mode (κόκκινο/μπλε) */
+[data-theme="dark"] .card-body h5 i.text-danger { color: #f87171 !important; } /* Ανοιχτό κόκκινο */
+[data-theme="dark"] .card-body h5 i.text-primary { color: #38bdf8 !important; } /* Ανοιχτό μπλε */
+
+/* 2. Επιδιόρθωση των Links και τίτλων στα Publications */
+[data-theme="dark"] #publications .fw-bold {
+    color: #38bdf8 !important; /* Τα ονόματα των Papers γίνονται γαλάζια */
+}
+[data-theme="dark"] #publications .text-muted {
+    color: #94a3b8 !important; /* Πιο φωτεινό γκρι για τους συγγραφείς */
+}
+
+/* 3. Επιδιόρθωση κειμένων μέσα σε "σκοτεινές" κάρτες (π.χ. email box) */
+[data-theme="dark"] .bg-light {
+    background-color: #1e293b !important; /* Το λευκό background του email γίνεται σκούρο γκρι */
+}
+[data-theme="dark"] .bg-light a.text-dark {
+    color: #f8fafc !important; /* Το κείμενο του email γίνεται λευκό */
+}
+
+/* 4. Γενική επιδιόρθωση για το χρώμα της γραμματοσειράς 'primary-navy' */
+[data-theme="dark"] [style*="color: var(--primary-navy)"] {
+    color: #f8fafc !important;
+}
+
+/* 5. Επιδιόρθωση στις διακεκομμένες γραμμές και τα borders στις στήλες */
+[data-theme="dark"] .border-end-md {
+    border-right-color: #334155 !important;
+}
+[data-theme="dark"] .border-top {
+    border-top-color: #334155 !important;
+}
