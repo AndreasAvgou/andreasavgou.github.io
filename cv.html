@@ -84,53 +84,73 @@
             margin-bottom: 1rem;
         }
 
-        /* Βοηθητική κλάση για τη διαχωριστική γραμμή στην πρώτη κάρτα */
         @media (min-width: 768px) {
             .border-end-md { border-right: 1px solid rgba(255,255,255,0.15); }
         }
 
-        /* PRINT CSS - Εξασφαλίζει τέλεια εκτύπωση/PDF δίπλα-δίπλα */
+        /* ==========================================================================
+           PRINT CSS - ΑΚΡΙΒΗΣ ΕΦΑΡΜΟΓΗ ΓΙΑ 1 ΣΕΛΙΔΑ Α4 & ΔΙΟΡΘΩΣΗ ΧΡΩΜΑΤΩΝ
+           ========================================================================== */
         @media print {
-            body { background: white !important; padding: 0 !important; margin: 0 !important; }
-            #mainNav, .top-section, footer, .print-buttons, #scrollTop, #progress-container { 
-                display: none !important; 
-            }
+            /* Ρύθμιση σελίδας με μικρά περιθώρια */
+            @page { size: A4 portrait; margin: 8mm; }
+            
+            body { background: white !important; font-size: 9pt !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            
+            /* Κρύβουμε τα περιττά στοιχεία του site */
+            #mainNav, .top-section, footer, .print-buttons, #scrollTop, #progress-container { display: none !important; }
+            
+            /* Αφαιρούμε κενά από τα wrappers */
+            #cv { padding: 0 !important; margin: 0 !important; }
             .container { max-width: 100% !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
             
-            .card { box-shadow: none !important; border: 1px solid #e2e8f0 !important; margin-bottom: 15px !important; break-inside: avoid; }
-            .bihelab-card-dark { 
-                background-color: #0b1d3a !important; 
-                color: white !important; 
-                -webkit-print-color-adjust: exact !important; 
-                print-color-adjust: exact !important; 
-            }
+            /* Διόρθωση του Row: Επιτρέπουμε το wrap για να μπει το Header πάνω και οι στήλες κάτω */
+            .row { display: flex !important; flex-wrap: wrap !important; margin: 0 !important; width: 100% !important;}
+            .col-12 { width: 100% !important; flex: 0 0 100% !important; margin-bottom: 10px !important; padding: 0 !important; }
+            .col-lg-6 { width: 50% !important; flex: 0 0 50% !important; padding: 0 5px !important; }
             
-            /* Εξαναγκασμός Bootstrap στηλών να παίξουν σωστά δίπλα δίπλα στην εκτύπωση */
-            .row { display: flex !important; flex-wrap: nowrap !important; width: 100%; }
-            .col-12 { width: 100% !important; }
-            .col-lg-6 { width: 50% !important; float: left !important; padding: 0 10px !important; }
-            .col-md-3 { width: 20% !important; float: left !important; }
-            .col-md-9 { width: 80% !important; float: left !important; }
+            /* Κάρτες: Βγάζουμε σκιές, μειώνουμε padding για να χωρέσουν σε 1 σελίδα */
+            .card { box-shadow: none !important; border: 1px solid #e2e8f0 !important; margin-bottom: 0 !important; border-radius: 6px !important; break-inside: avoid; }
+            .card-body { padding: 12px 16px !important; }
             
-            /* Σωστά χρώματα για εκτύπωση */
-            .cv-timeline-badge { 
-                background-color: #0284c7 !important; 
-                -webkit-print-color-adjust: exact !important; 
-                print-color-adjust: exact !important; 
-            }
-            .bihelab-list li::before {
-                background-color: #0284c7 !important;
-                -webkit-print-color-adjust: exact !important; 
-                print-color-adjust: exact !important; 
-            }
+            /* Force Σκούρου Χρώματος στο Header */
+            .bihelab-card-dark { background-color: #0b1d3a !important; color: white !important; }
+            .bihelab-card-dark p, .bihelab-card-dark span, .bihelab-card-dark i { color: #cbd5e1 !important; }
+            .bihelab-card-dark h4 { color: white !important; }
             
-            /* Προσαρμογή γραμματοσειρών για να χωράνε στο χαρτί */
-            .bihelab-list li { font-size: 9.5pt !important; line-height: 1.35 !important; margin-bottom: 0.4rem !important; }
-            .cv-timeline-title { font-size: 11pt !important; }
-            .cv-timeline-company { font-size: 10pt !important; margin-bottom: 0.5rem !important;}
-            p { font-size: 10pt !important; }
-            .cv-timeline-item { break-inside: avoid !important; }
-            .border-end-md { border-right: 1px solid #475569 !important; }
+            /* Εσωτερικό Header: Μίκρυνση εικόνας και κειμένων */
+            .col-md-3 { width: 20% !important; flex: 0 0 20% !important; text-align: center !important; border: none !important; padding-right: 0 !important;}
+            .col-md-9 { width: 80% !important; flex: 0 0 80% !important; padding-left: 10px !important; border: none !important; }
+            img.rounded-circle { width: 75px !important; height: 75px !important; margin-bottom: 5px !important; border-width: 2px !important; }
+            .d-flex.flex-wrap.gap-4 { gap: 10px !important; margin-top: 5px !important; padding-top: 5px !important; }
+            
+            /* Τυπογραφία 1 Σελίδας */
+            h4 { font-size: 14pt !important; margin-bottom: 2px !important; }
+            .bihelab-subtitle { font-size: 8pt !important; margin-bottom: 2px !important; }
+            .bihelab-title { font-size: 12pt !important; margin-bottom: 6px !important; margin-top: 0 !important;}
+            .bihelab-divider { margin-bottom: 8px !important; height: 2px !important; }
+            p { font-size: 8.5pt !important; margin-bottom: 5px !important; line-height: 1.3 !important;}
+            
+            /* Timelines: Σμίκρυνση διάκενων */
+            .cv-timeline { margin-bottom: 0 !important; margin-top: 5px !important; padding-left: 15px !important;}
+            .cv-timeline::before { left: 0 !important; }
+            .cv-timeline-badge { left: -19px !important; width: 12px !important; height: 12px !important; top: 2px !important; border-width: 2px !important; background-color: #0284c7 !important; }
+            
+            .cv-timeline-item { margin-bottom: 10px !important; break-inside: avoid !important; }
+            .cv-timeline-date { font-size: 7.5pt !important; margin-bottom: 0 !important; }
+            .cv-timeline-title { font-size: 10pt !important; margin-bottom: 0 !important; line-height: 1.2 !important; }
+            .cv-timeline-company { font-size: 8.5pt !important; margin-bottom: 3px !important; }
+            
+            /* Λίστες: Μικρότερα κενά και μέγεθος γραμματοσειράς */
+            .bihelab-list { margin-top: 0 !important; }
+            .bihelab-list li { 
+                font-size: 8.5pt !important; 
+                line-height: 1.25 !important; 
+                margin-bottom: 3px !important; 
+                padding-bottom: 3px !important; 
+                padding-left: 10px !important; 
+            }
+            .bihelab-list li::before { top: 4px !important; width: 4px !important; height: 4px !important; background-color: #0284c7 !important;}
         }
     </style>
 
