@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title id="title">Curriculum Vitae | Andreas Avgou</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Curriculum Vitae of Andreas Avgoustis, AI/ML Engineer & PhD Candidate in Informatics. Experience, Education, and Technical Skills." />
+    <meta name="keywords" content="Andreas Avgoustis, CV, Resume, AI Engineer, Machine Learning, Deep Learning, Bioinformatics" />
+    <meta name="author" content="Andreas Avgoustis" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://andreasavgou.github.io/cv.html" />
+    <meta property="og:title" content="Andreas Avgoustis | Curriculum Vitae" />
+    <meta property="og:description" content="View my professional experience, academic background, and technical skills." />
+    <meta property="og:image" content="https://andreasavgou.github.io/static/assets/img/preview-banner.jpg" />
+
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
+    <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Custom Timeline CSS for CV */
+        .cv-timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+        .cv-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: #cbd5e1;
+            border-radius: 3px;
+        }
+        [data-theme="dark"] .cv-timeline::before { background-color: #334155; }
+        
+        .cv-timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+        .cv-timeline-item:last-child { margin-bottom: 0; }
+        
+        .cv-timeline-badge {
+            position: absolute;
+            left: -2.45rem;
+            top: 0.2rem;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: var(--accent-blue);
+            border: 4px solid var(--bg-card);
+            box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.2);
+        }
+        .cv-timeline-date {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.3rem;
+        }
+        .cv-timeline-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 0.2rem;
+        }
+        [data-theme="dark"] .cv-timeline-title { color: #f8fafc; }
+        
+        .cv-timeline-company {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        
+        .cv-progress {
+            height: 8px;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+        [data-theme="dark"] .cv-progress { background-color: #334155; }
+        
+        .cv-progress-bar {
+            height: 100%;
+            background-color: var(--accent-blue);
+            border-radius: 4px;
+        }
+    </style>
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body id="page-top">
+    <button id="scrollTop" class="btn btn-primary shadow" style="position:fixed; bottom:20px; right:20px; display:none; border-radius:50%; width:45px; height:45px; z-index:9999;">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a id="page-top-title" class="navbar-brand fw-bold" href="index.html"></a>
+            <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarResponsive" 
+                aria-controls="navbarResponsive" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects">Research & Projects</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cv.html">Curriculum Vitae</a></li>
+                    <li class="nav-item"><button id="theme-toggle" class="nav-link"><span id="theme-icon">🌙</span></button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="top-section mt-5 pt-4" style="min-height: 250px;">
+        <div id="particles-js"></div>
+        <div class="top-section-content text-center">
+            <div class="container px-4 px-lg-5">
+                <h1 class="display-5 fw-bold text-white mb-2" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Curriculum Vitae</h1>
+                <p class="lead text-white-50 mb-0">Professional Experience, Education & Technical Skills</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Content Section -->
+    <section class="py-5" id="cv">
+        <div class="container px-4 px-lg-5 mt-3">
+            
+            <div class="row g-4">
+                <!-- ΑΡΙΣΤΕΡΗ ΣΤΗΛΗ (Experiences & Education) -->
+                <div class="col-lg-8">
+                    
+                    <!-- Experiences Card -->
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-4" data-aos="fade-up">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="bihelab-subtitle"><i class="bi bi-briefcase-fill me-1"></i> CAREER PROFILE</div>
+                            <h3 class="bihelab-title mt-2 mb-4">Experiences</h3>
+                            <hr class="bihelab-divider">
+
+                            <div class="cv-timeline mt-4">
+                                <!-- Experience 1 -->
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-badge"></div>
+                                    <div class="cv-timeline-date">May 2024 - Present</div>
+                                    <div class="cv-timeline-title">Machine Learning / AI Researcher (PhD Research)</div>
+                                    <div class="cv-timeline-company">Ionian University, Department of Informatics</div>
+                                    <ul class="bihelab-list mt-3">
+                                        <li>Conducting research on deep learning, computer vision, and lip-reading AI, focusing on efficient model design and real-time inference.</li>
+                                        <li>Developing and optimizing ML architectures (CNNs, LSTMs, Transformers) using Python, TensorFlow, PyTorch, Keras.</li>
+                                        <li>Managing and analyzing large-scale datasets for healthcare applications using Python, SQL, and Spark.</li>
+                                        <li>Publishing peer-reviewed research in deep learning, computer vision, and visual language modeling, with work focusing on lip-reading AI, multimodal learning, and advanced neural architectures.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Experience 2 -->
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-badge"></div>
+                                    <div class="cv-timeline-date">Dec 2024 - Nov 2025</div>
+                                    <div class="cv-timeline-title">Computer Programmer</div>
+                                    <div class="cv-timeline-company">Research and Informatics Office, 8th Motorized Infantry Brigade</div>
+                                    <ul class="bihelab-list mt-3">
+                                        <li>Managed and supported large-scale intranet and secure information systems, ensuring high availability, confidentiality, and data integrity.</li>
+                                        <li>Administered network infrastructure, including servers, routers, switches, and Cisco devices.</li>
+                                        <li>Automated repetitive administrative tasks through PowerShell and Java scripting.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Experience 3 -->
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-badge"></div>
+                                    <div class="cv-timeline-date">Feb 2023 - Feb 2024</div>
+                                    <div class="cv-timeline-title">Business Intelligence Analyst</div>
+                                    <div class="cv-timeline-company">Association of Educational Caregivers of Corfu</div>
+                                    <ul class="bihelab-list mt-3">
+                                        <li>Collected and analyzed data from the Association’s website and social media platforms to understand audience behavior.</li>
+                                        <li>Created dashboards and reports to track communication results, event participation, and online visibility.</li>
+                                        <li>Used analytics tools to evaluate content performance and adjust strategies to increase reach.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Experience 4 -->
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-badge"></div>
+                                    <div class="cv-timeline-date">Jan 2021 - Jan 2023</div>
+                                    <div class="cv-timeline-title">Junior Data Analyst</div>
+                                    <div class="cv-timeline-company">Alfa Ekpaideutiki</div>
+                                    <ul class="bihelab-list mt-3">
+                                        <li>Collected, organized, and analyzed website performance and engagement data using Excel and SQL.</li>
+                                        <li>Collaborated with developers to implement PHP-based data tracking features.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Card -->
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-4" data-aos="fade-up">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="bihelab-subtitle"><i class="bi bi-mortarboard-fill me-1"></i> ACADEMIC BACKGROUND</div>
+                            <h3 class="bihelab-title mt-2 mb-4">Education</h3>
+                            <hr class="bihelab-divider">
+
+                            <div class="cv-timeline mt-4">
+                                <!-- Edu 1 -->
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-badge"></div>
+                                    <div class="cv-timeline-date">May 2024 - Present</div>
+                                    <div class="cv-timeline-title">PhD Candidate in Informatics</div>
+                                    <div class="cv-timeline-company">Ionian University, Department of Informatics</div>
+                                    <ul class="bihelab-list mt-3">
+                                        <li>Specializing in cutting-edge research in big data analytics and machine learning.</li>
+                                        <li>Exploring innovative models and applications for lip-reading and voice reproduction.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Edu 2 -->
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-badge"></div>
+                                    <div class="cv-timeline-date">Oct 2022 - Feb 2024</div>
+                                    <div class="cv-timeline-title">Master Degree (MSc) in Big Data Driven Networked Systems</div>
+                                    <div class="cv-timeline-company">Ionian University, Department of Informatics</div>
+                                    <ul class="bihelab-list mt-3">
+                                        <li>Led the development of a scalable healthcare process management system using machine learning.</li>
+                                        <li>Published multiple research papers in journals and conferences (AIAI, Applied Sciences, Information).</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Edu 3 -->
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-badge"></div>
+                                    <div class="cv-timeline-date">Oct 2015 - Feb 2021</div>
+                                    <div class="cv-timeline-title">Bachelor Degree (BSc) in Informatics</div>
+                                    <div class="cv-timeline-company">Ionian University, Department of Informatics</div>
+                                    <ul class="bihelab-list mt-3">
+                                        <li>Capstone Project: Led the development of an image Melanoma classification model.</li>
+                                        <li>Published research in SMAP conference (2021).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ΔΕΞΙΑ ΣΤΗΛΗ (Profile, Skills, Languages) -->
+                <div class="col-lg-4">
+                    
+                    <!-- Profile Card -->
+                    <div class="card bihelab-card bihelab-card-dark shadow-sm border-0 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-body p-4 text-center">
+                            <img src="static/assets/img/photo.png" alt="Andreas Avgoustis" class="rounded-circle mb-3 border border-3 border-light shadow" style="width: 120px; height: 120px; object-fit: cover;">
+                            <h4 class="text-white fw-bold mb-1">Andreas Avgoustis</h4>
+                            <p class="text-white-50 small mb-4">AI/ML Engineer & Researcher</p>
+                            
+                            <div class="text-start mt-4 pt-3 border-top border-secondary">
+                                <p class="mb-2 text-white"><i class="bi bi-envelope-fill me-2 text-info"></i> andavgoustis@ionio.gr</p>
+                                <p class="mb-2"><a href="https://andreasavgou.github.io/" class="text-white text-decoration-none"><i class="bi bi-globe me-2 text-info"></i> andreasavgou.github.io</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Card -->
+                    <div class="card bihelab-card shadow-sm border-0 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-body p-4">
+                            <div class="bihelab-subtitle"><i class="bi bi-tools me-1"></i> EXPERTISE</div>
+                            <h4 class="bihelab-title mt-2 mb-4" style="font-size: 1.3rem;">Skills & Proficiency</h4>
+                            <hr class="bihelab-divider">
+
+                            <!-- Skill 1 -->
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold small text-muted">Python & SQL</span>
+                                <span class="small text-muted fw-bold">90%</span>
+                            </div>
+                            <div class="cv-progress"><div class="cv-progress-bar" style="width: 90%;"></div></div>
+
+                            <!-- Skill 2 -->
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold small text-muted">Tensorflow & PyTorch</span>
+                                <span class="small text-muted fw-bold">90%</span>
+                            </div>
+                            <div class="cv-progress"><div class="cv-progress-bar" style="width: 90%;"></div></div>
+
+                            <!-- Skill 3 -->
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold small text-muted">Excel & PowerBI</span>
+                                <span class="small text-muted fw-bold">90%</span>
+                            </div>
+                            <div class="cv-progress"><div class="cv-progress-bar" style="width: 90%;"></div></div>
+
+                            <!-- Skill 4 -->
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold small text-muted">Apache Spark</span>
+                                <span class="small text-muted fw-bold">85%</span>
+                            </div>
+                            <div class="cv-progress"><div class="cv-progress-bar" style="width: 85%;"></div></div>
+
+                            <!-- Skill 5 -->
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold small text-muted">Javascript & React</span>
+                                <span class="small text-muted fw-bold">75%</span>
+                            </div>
+                            <div class="cv-progress"><div class="cv-progress-bar" style="width: 75%;"></div></div>
+
+                            <!-- Skill 6 -->
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold small text-muted">Git & Docker</span>
+                                <span class="small text-muted fw-bold">75%</span>
+                            </div>
+                            <div class="cv-progress"><div class="cv-progress-bar" style="width: 75%; margin-bottom: 0;"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Languages Card -->
+                    <div class="card bihelab-card shadow-sm border-0 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-body p-4">
+                            <div class="bihelab-subtitle"><i class="bi bi-translate me-1"></i> LINGUISTICS</div>
+                            <h4 class="bihelab-title mt-2 mb-4" style="font-size: 1.3rem;">Languages</h4>
+                            <hr class="bihelab-divider">
+                            
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-chat-left-text-fill text-primary me-3 fs-4"></i>
+                                    <div>
+                                        <strong class="d-block" style="color: var(--primary-navy);">Greek</strong>
+                                        <span class="text-muted small">Native</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <i class="bi bi-chat-left-text-fill text-info me-3 fs-4"></i>
+                                    <div>
+                                        <strong class="d-block" style="color: var(--primary-navy);">English</strong>
+                                        <span class="text-muted small">Professional</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rich Academic Footer -->
+    <footer class="bg-bottom py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="row g-4 text-start">
+                <div class="col-lg-5 mb-3">
+                    <h5 class="text-uppercase"><i class="bi bi-person-badge-fill me-2"></i>Andreas Avgoustis</h5>
+                    <p class="small text-muted mb-0">AI/ML Engineer & Researcher. Specializing in Bioinformatics, Healthcare Artificial Intelligence & Big Data Science.</p>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <h5 class="text-uppercase"><i class="bi bi-compass-fill me-2"></i>Navigation</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="publications">Publications</a></li>
+                        <li><a href="projects">Research & Projects</a></li>
+                        <li><a href="cv.html">Curriculum Vitae</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <h5 class="text-uppercase"><i class="bi bi-link-45deg me-2"></i>Profiles</h5>
+                    <div class="d-flex flex-column">
+                        <a id="github-link" href="https://github.com/AndreasAvgou" target="_blank"><i class="bi bi-github me-2"></i> GitHub</a>
+                        <a id="ORCID-link" href="https://orcid.org/0009-0004-9230-3056" target="_blank"><i class="bi bi-journal-text me-2"></i> ORCID</a>
+                        <a id="ResearchGate-link" href="https://www.researchgate.net/profile/Andreas-Avgoustis" target="_blank"><i class="bi bi-search me-2"></i> ResearchGate</a>
+                        <a id="Linkedin-link" href="https://www.linkedin.com/in/andreasavgoustis" target="_blank"><i class="bi bi-linkedin me-2"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div id="copyright-text" class="text-center mt-4 border-top border-secondary pt-3 text-muted"></div>
+        </div>
+    </footer>
+
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="static/js/marked.min.js"></script>
+    <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
+    <script type="text/javascript" src="static/js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles-config.js"></script>
+</body>
+</html>
