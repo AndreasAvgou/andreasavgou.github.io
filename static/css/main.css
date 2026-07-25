@@ -1,93 +1,98 @@
 @import "./styles.css";
 
 /* ==========================================================================
-   1. PREMIUM SAAS DESIGN SYSTEM (ZINC / INK SPEC)
+   BIHELAB ACADEMIC & RESEARCH DESIGN SYSTEM
    ========================================================================== */
 :root {
-    /* Light Theme Base */
+    /* Light Theme Base (BiHELab Academic Palette) */
     --bg-main: #f8fafc;
     --bg-card: #ffffff;
     --border-main: #e2e8f0;
     --text-main: #0f172a;
     --text-muted: #475569;
     
-    --accent: #4f46e5;
-    --accent-glow: rgba(79, 70, 229, 0.12);
+    --primary-navy: #0b1d3a;
+    --secondary-navy: #1e3a8a;
+    --accent-blue: #0284c7;
+    --accent-glow: rgba(2, 132, 199, 0.15);
     
-    --phd-color: #6366f1;
-    --msc-color: #a855f7;
-    --bsc-color: #ec4899;
+    --phd-color: #0284c7;
+    --msc-color: #2563eb;
+    --bsc-color: #0d9488;
 }
 
 [data-theme="dark"] {
-    /* Dark Theme Base (Deep Tech Ink) */
+    /* Dark Theme Base */
     --bg-main: #0b0f19;
     --bg-card: #111827;
     --border-main: #1f2937;
     --text-main: #f9fafb;
     --text-muted: #9ca3af;
     
-    --accent: #6366f1;
-    --accent-glow: rgba(99, 102, 241, 0.2);
+    --primary-navy: #0f172a;
+    --secondary-navy: #1e293b;
+    --accent-blue: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.2);
 }
 
 * {
     box-sizing: border-box;
-    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
-                border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
-                box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-                color 0.15s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.15s ease;
 }
 
 body {
     background-color: var(--bg-main) !important;
     color: var(--text-main) !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden; /* Απαγόρευση οριζόντιου scroll στην πηγή */
+    overflow-x: hidden;
 }
 
-/* Custom Minimal Scrollbar */
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-::-webkit-scrollbar-thumb {
-    background: var(--border-main);
-    border-radius: 4px;
-}
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+[data-theme="dark"] ::-webkit-scrollbar-thumb { background: #334155; }
 
 /* ==========================================================================
-   2. NAVBAR & NAVIGATION
+   NAVBAR & HEADER
    ========================================================================== */
 #mainNav {
-    min-height: 65px;
-    background-color: var(--bg-main) !important;
-    border-bottom: 1px solid var(--border-main);
+    min-height: 70px;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid var(--border-main);
     z-index: 1050;
-    box-shadow: none !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03) !important;
 }
 
-.header {
-    border-bottom: none;
+[data-theme="dark"] #mainNav {
+    background-color: rgba(17, 24, 39, 0.95) !important;
+}
+
+#page-top-title {
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -0.02em;
+    color: var(--primary-navy) !important;
+}
+[data-theme="dark"] #page-top-title {
+    color: #f8fafc !important;
 }
 
 .nav-item .nav-link {
-    background-color: transparent !important;
     color: var(--text-muted) !important;
-    padding: 6px 12px !important;
-    margin: 0 8px;
-    font-weight: 500;
-    font-size: 0.9rem;
-    text-transform: none; 
-    border: none !important;
-    letter-spacing: -0.01em;
+    padding: 8px 14px !important;
+    margin: 0 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    letter-spacing: 0.02em;
+    border-radius: 6px;
 }
 
-.nav-item .nav-link:hover {
-    color: var(--text-main) !important;
+.nav-item .nav-link:hover, .nav-item .nav-link.active {
+    color: var(--accent-blue) !important;
+    background-color: var(--accent-glow);
 }
 
 #theme-toggle {
@@ -95,43 +100,26 @@ body {
     border: none !important;
     color: var(--text-muted) !important;
     cursor: pointer;
-    padding: 8px !important;
-}
-#theme-toggle:hover {
-    color: var(--text-main) !important;
-}
-
-#page-top-title {
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: var(--text-main) !important;
-}
-#page-top-title span {
-    font-weight: 400;
-    color: var(--text-muted);
+    padding: 8px 12px !important;
 }
 
 /* ==========================================================================
-   3. HERO SECTION
+   HERO BANNER (BIHELAB STYLE)
    ========================================================================== */
 .top-section {
     position: relative;
     overflow: hidden;
-    min-height: 480px;
+    min-height: 420px;
     display: flex;
     align-items: center;
-    background-color: #030712 !important;
-    background-image: none !important;    
-    border-bottom: 1px solid var(--border-main);
-}
-.top-section::before {
-    display: none;
+    background: linear-gradient(135deg, #0b1d3a 0%, #102a56 50%, #0f172a 100%) !important;
+    border-bottom: 4px solid var(--accent-blue);
 }
 
 #particles-js {
     position: absolute;
     width: 100%; height: 100%; top: 0; left: 0;
-    opacity: 0.15;
+    opacity: 0.25;
     z-index: 1;
 }
 
@@ -142,331 +130,184 @@ body {
 }
 
 #top-section-bg-text {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     font-weight: 800;
-    letter-spacing: -0.04em;
-    line-height: 1.25 !important;
-    padding-bottom: 10px !important;
-    background: linear-gradient(to bottom right, #ffffff 40%, #94a3b8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none !important;
-    animation: none !important;
-    border-right: none !important;
-    white-space: normal;
+    letter-spacing: -0.03em;
+    line-height: 1.3 !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 #top-section-bg-text span {
     display: block;
     font-size: 0.55em;
     font-weight: 400;
-    color: #64748b;
-    letter-spacing: -0.02em;
-    margin-top: 6px;
-    background: none;
-    -webkit-text-fill-color: initial;
+    color: #93c5fd;
+    letter-spacing: 0.01em;
+    margin-top: 10px;
 }
 
 /* ==========================================================================
-   4. AVATAR CONCEPT
+   AVATAR PROFILE CARD
    ========================================================================== */
 #avatar {
     position: relative;
     height: 0;
-    top: min(-40px, max(-85px, calc(-1 * 100vw / 13)));
+    top: -75px;
     float: right;
     z-index: 10;
 }
 
 #avatar img {
-    height: max(135px, min(185px, calc(100vw / 6)));
-    border: 1px solid var(--border-main);
-    border-radius: 20px !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    border-radius: 16px !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
 }
+
 [data-theme="dark"] #avatar img {
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4) !important;
+    border-color: #1f2937;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* ==========================================================================
-   5. AUTOMATED SAAS GRID LAYOUT (FOR MARKDOWN LISTS)
+   SECTION HEADERS (ACADEMIC LAB STYLE)
+   ========================================================================== */
+section header h2, #publications-subtitle, #projects-subtitle, #home-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--primary-navy);
+    border-left: 4px solid var(--accent-blue);
+    padding-left: 14px;
+    margin-bottom: 1.75rem;
+    text-transform: uppercase;
+}
+[data-theme="dark"] section header h2, 
+[data-theme="dark"] #publications-subtitle, 
+[data-theme="dark"] #projects-subtitle, 
+[data-theme="dark"] #home-subtitle {
+    color: #f8fafc;
+}
+
+/* ==========================================================================
+   CARDS & MARKDOWN LISTS (BIHELAB GRID)
    ========================================================================== */
 #projects-md h2, #publications-md h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    letter-spacing: -0.02em;
     color: var(--text-main);
-    margin-top: 2.5rem;
-    margin-bottom: 1.25rem;
-    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-main);
+    padding-bottom: 6px;
 }
 
 #projects-md ul, #publications-md ul {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
     padding: 0 !important;
     margin: 0 0 2rem 0 !important;
     list-style: none !important;
-    width: 100%;
 }
 
 #projects-md li, #publications-md li {
     background-color: var(--bg-card) !important;
     border: 1px solid var(--border-main) !important;
-    border-radius: 12px !important;
+    border-radius: 10px !important;
     padding: 1.5rem !important;
-    margin: 0 !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: left !important;
-    overflow: hidden; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
 }
 
 #projects-md li:hover, #publications-md li:hover {
-    border-color: var(--accent) !important;
-    box-shadow: 0 0 0 3px var(--accent-glow) !important;
+    border-color: var(--accent-blue) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -3px rgba(11, 29, 58, 0.08) !important;
 }
 
 #projects-md li > strong:first-child, 
 #publications-md li > strong:first-child {
     display: block;
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: var(--text-main);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-navy);
     margin-bottom: 0.5rem;
-    line-height: 1.4;
+}
+[data-theme="dark"] #projects-md li > strong:first-child, 
+[data-theme="dark"] #publications-md li > strong:first-child {
+    color: #38bdf8;
 }
 
-#projects-md li ul {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: none;
-    gap: 0.4rem;
-    margin: 0.5rem 0 1.2rem 0 !important;
-    padding-left: 0 !important;
-}
-
-#projects-md li ul li {
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    display: block;
-}
-
-/* 🧬 AUTHORS FLOW (PUBLICATIONS) */
-#publications-md li p, #publications-md li em {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    line-height: 1.5;
-    margin: 0.25rem 0;
-    text-align: left !important;
-}
-
-#publications-md li strong {
-    display: inline !important; 
-    font-size: inherit !important;
-    color: var(--accent) !important;
-    font-weight: 600 !important;
-}
-
-/* 💎 Premium Universal SaaS Buttons */
+/* Universal Buttons */
 #projects-md li a, #publications-md li a {
-    display: block !important; 
-    width: max-content !important;
-    margin-top: 1.25rem !important;
-    padding: 6px 14px !important;
-    background-color: var(--text-main) !important;
-    color: var(--bg-main) !important;
+    display: inline-block !important; 
+    margin-top: 1rem !important;
+    padding: 6px 16px !important;
+    background-color: var(--accent-blue) !important;
+    color: #ffffff !important;
     border-radius: 6px !important;
     font-size: 0.85rem;
-    font-weight: 500;
-    border: 1px solid var(--text-main) !important;
+    font-weight: 600;
     text-decoration: none !important;
+    border: none !important;
 }
 
 #projects-md a:hover, #publications-md a:hover {
-    opacity: 0.85;
-}
-
-/* 🏷️ ΔΙΟΡΘΩΣΗ: Πλήρης αντιγραφή του στυλ των Skills (For-The-Badge) */
-.vibrant-tag {
-    display: inline-flex !important;
-    align-items: center !important;
-    background-color: #52525b !important; /* Σκούρο γκρίζο/slate φόντο όπως τα Skills */
-    color: #ffffff !important; /* Λευκά γράμματα */
-    text-transform: uppercase !important; /* Αναγκαστικά ΚΕΦΑΛΑΙΑ */
-    font-weight: 700 !important; /* Έντονα γράμματα */
-    font-size: 0.7rem !important; /* Μικρό, clean μέγεθος badge */
-    letter-spacing: 0.05em !important;
-    padding: 3px 8px !important; /* Συμπαγές padding */
-    border-radius: 2px !important; /* Σχεδόν τετράγωνες γωνίες όπως τα Skills */
-    margin: 0.4rem 6px 0.4rem 0 !important;
-    line-height: 1 !important;
-    border: none !important;
-    white-space: nowrap !important;
+    opacity: 0.9;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
 }
 
 /* ==========================================================================
-   6. MINIMALIST TIMELINE SYSTEM
+   ACADEMIC RICH FOOTER (BIHELAB STYLE)
    ========================================================================== */
-.vibrant-timeline {
-    position: relative;
-    padding: 10px 0;
-    max-width: 100%;
-}
-.vibrant-timeline:before {
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0; left: 20px;
-    width: 1px;
-    background: var(--border-main);
+footer.bg-bottom {
+    background-color: #07132b !important;
+    color: #94a3b8 !important;
+    border-top: 4px solid var(--accent-blue);
+    padding: 3rem 0 1.5rem 0 !important;
 }
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 2rem;
-    padding-left: 45px;
-}
-
-.timeline-marker {
-    position: absolute;
-    left: 20px;
-    transform: translateX(-50%);
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    border: none !important;
-    background-color: var(--text-muted) !important;
-}
-
-.timeline-item:first-child .timeline-marker {
-    background-color: var(--accent) !important;
-    width: 10px; height: 10px;
-    box-shadow: 0 0 0 3px var(--accent-glow) !important;
-}
-
-.timeline-content {
-    background: transparent !important;
-    padding: 0;
-    border: none !important;
-    color: var(--text-muted);
-}
-
-.timeline-content h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: var(--text-main);
-    margin: 2px 0 6px 0;
-}
-
-.timeline-date {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--text-muted);
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 8px;
-    margin-top: 1rem;
-}
-.skills-container p {
-    margin: 0 !important; padding: 0 !important;
-    display: inline-flex; flex-wrap: wrap; gap: 8px;
-}
-.skills-container img {
-    height: 22px;
-    width: auto;
-    filter: grayscale(100%);
-    opacity: 0.6;
-}
-.skills-container img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-}
-
-/* ==========================================================================
-   7. CORE TYPOGRAPHY & LAYOUT REPAIRS
-   ========================================================================== */
-section header h2 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: var(--text-main);
-    margin-bottom: 1.5rem;
-}
-
-section .main-body {
-    font-size: 1.05rem;
-    font-weight: 400;
-    line-height: 1.65;
-    color: var(--text-muted);
-    text-align: left;
-}
-
-.vibrant-card, .award-card {
-    background: var(--bg-card) !important;
-    border: 1px solid var(--border-main) !important;
-    border-radius: 12px !important;
-    padding: 1.5rem;
-    text-align: left;
-}
-
-/* ==========================================================================
-   8. DARK MODE OVERRIDES
-   ========================================================================== */
-[data-theme="dark"] body {
-    background-color: #0b0f19 !important;
-    color: #f9fafb !important;
-}
-
-[data-theme="dark"] section:not(.top-section) {
-    background-image: none !important;
-    background-color: #0b0f19 !important;
-}
-
-[data-theme="dark"] #mainNav, [data-theme="dark"] .navbar-collapse {
-    background-color: #111827 !important;
-}
-
-[data-theme="dark"] section header h2, 
-[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
-[data-theme="dark"] .main-body {
+footer.bg-bottom h5 {
     color: #ffffff !important;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #1e293b;
+    padding-bottom: 8px;
 }
 
-[data-theme="dark"] .top-section { background-color: transparent !important; }
+footer.bg-bottom a {
+    color: #cbd5e1 !important;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+footer.bg-bottom a:hover {
+    color: #38bdf8 !important;
+}
+
+#copyright-text {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 1.5rem;
+    border-top: 1px solid #1e293b;
+    padding-top: 1.25rem;
+}
 
 /* ==========================================================================
-   9. MOBILE RESPONSIVENESS
+   RESPONSIVE DESIGN
    ========================================================================== */
 @media (max-width: 991.98px) {
-    .navbar-toggler {
-        display: block !important;
-        background-color: transparent !important;
-        border: 1px solid var(--border-main) !important;
-        color: var(--text-main) !important;
-        padding: 6px 10px !important;
-        border-radius: 6px;
-    }
-    .navbar-collapse {
-        background-color: var(--bg-main) !important;
-        border: 1px solid var(--border-main);
-        border-radius: 8px;
-        padding: 10px;
-        margin-top: 10px;
-    }
     #avatar {
         float: none;
-        margin: 2rem auto 0 auto;
+        margin: 1.5rem auto 0 auto;
         text-align: center;
         height: auto;
         top: 0;
@@ -475,43 +316,6 @@ section .main-body {
 
 @media (max-width: 767.98px) {
     #top-section-bg-text {
-        font-size: 2.1rem !important;
-        letter-spacing: -0.03em;
-    }
-    section .main-body, #home-md p, .timeline-content, #projects-md li, #publications-md li, .award-card, ul, li {
-        text-align: left !important;
+        font-size: 2rem !important;
     }
 }
-
-@media (max-width: 576px) {
-    .vibrant-timeline:before { left: 10px !important; }
-    .timeline-marker { left: 10px !important; }
-    .timeline-item { padding-left: 28px !important; }
-}
-
-/* ==========================================================================
-   10. FOOTER
-   ========================================================================== */
-footer {
-    background-color: var(--bg-main) !important;
-    border-top: 1px solid var(--border-main);
-    padding: 1.5rem 0 !important;
-}
-
-footer a {
-    color: var(--text-muted) !important;
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin: 0 10px;
-    text-decoration: none;
-}
-footer a:hover {
-    color: var(--text-main) !important;
-}
-
-#copyright-text {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    margin-bottom: 0.4rem !important;
-}
-.mx-1 { display: none; }
