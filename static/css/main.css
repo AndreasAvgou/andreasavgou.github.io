@@ -319,3 +319,24 @@ footer.bg-bottom a:hover {
         font-size: 2rem !important;
     }
 }
+/* ==========================================================================
+   TECH STACK BADGES (BiHELab Style)
+   ========================================================================== */
+.vibrant-tag, #projects-md code {
+    display: inline-block !important;
+    background-color: var(--accent-glow) !important;
+    color: var(--accent-blue) !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    margin: 0.3rem 6px 0.3rem 0 !important;
+    border: 1px solid rgba(2, 132, 199, 0.2) !important;
+    letter-spacing: 0.02em !important;
+}
+
+[data-theme="dark"] .vibrant-tag, [data-theme="dark"] #projects-md code {
+    background-color: rgba(56, 189, 248, 0.1) !important;
+    border-color: rgba(56, 189, 248, 0.2) !important;
+    color: #38bdf8 !important;
+}
