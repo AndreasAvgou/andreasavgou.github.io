@@ -461,3 +461,16 @@ ul.bihelab-list li::before {
 [data-theme="dark"] .border-top {
     border-top-color: #334155 !important;
 }
+/* ==========================================================================
+   HERO SECTION BACKGROUND IMAGE
+   ========================================================================== */
+.top-section {
+    /* Το linear-gradient βάζει ένα σκούρο μπλε (BiHELab navy) φίλτρο πάνω από την εικόνα με 85% αδιαφάνεια */
+    background: linear-gradient(rgba(11, 29, 58, 0.85), rgba(11, 29, 58, 0.85)), url('../assets/img/background.jpeg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    
+    /* Προαιρετικό: Το παρακάτω δίνει ένα ωραίο εφέ βάθους (parallax) όταν σκρολάρεις */
+    background-attachment: fixed !important; 
+}
