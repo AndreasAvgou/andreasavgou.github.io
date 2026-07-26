@@ -55,9 +55,9 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv">Curriculum Vitae</a></li>
+                    <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Research & Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">Curriculum Vitae</a></li>
                     <li class="nav-item"><button id="theme-toggle" class="nav-link"><span id="theme-icon">🌙</span></button></li>
                 </ul>
             </div>
@@ -91,207 +91,212 @@
                 </h2>
             </div>
 
-            <!-- Project 1 -->
-            <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-5" data-aos="fade-up">
-                <div class="card-body p-4 p-lg-5">
-                    <h3 class="bihelab-title mt-2 mb-4" style="font-size: 1.6rem;">Models and Applications for Lip Reading and Voice Reproduction</h3>
-                    
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-6 border-end-md pe-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Building a multi-modal temporal model to interpret lip movements from video frames without audio.
-                            </p>
-                        </div>
-                        <div class="col-md-6 ps-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Utilized Visual Language Model (VLM) stacked with Retrieval-Augmented Generation (RAG) and Greek Large Language Model for sequence modeling.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="pt-4 mt-2 border-top">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
-                            <div class="mb-3 mb-md-0">
-                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
-                                <span class="vibrant-tag">Python</span>
-                                <span class="vibrant-tag">PyTorch</span>
-                                <span class="vibrant-tag">OpenCV</span>
-                                <span class="vibrant-tag">CUDA</span>
+            <!-- GRID ROW ΓΙΑ 2 ΚΑΡΤΕΣ ΔΙΠΛΑ ΔΙΠΛΑ -->
+            <div class="row g-4">
+                
+                <!-- Project 1 -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100 d-flex flex-column">
+                        <div class="card-body p-4 d-flex flex-column h-100">
+                            <h3 class="bihelab-title mt-1 mb-4" style="font-size: 1.4rem;">Models and Applications for Lip Reading and Voice Reproduction</h3>
+                            
+                            <div class="mb-3">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Building a multi-modal temporal model to interpret lip movements from video frames without audio.
+                                </p>
                             </div>
-                            <a href="https://github.com/AndreasAvgou/Models-and-Applications-for-lip-reading-and-voice-reproduction" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
-                                <i class="bi bi-github me-2"></i>Code
-                            </a>
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Utilized Visual Language Model (VLM) stacked with Retrieval-Augmented Generation (RAG) and Greek Large Language Model for sequence modeling.
+                                </p>
+                            </div>
+
+                            <div class="pt-4 mt-auto border-top">
+                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
+                                <div class="mb-3">
+                                    <span class="vibrant-tag">Python</span>
+                                    <span class="vibrant-tag">PyTorch</span>
+                                    <span class="vibrant-tag">OpenCV</span>
+                                    <span class="vibrant-tag">CUDA</span>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <a href="https://github.com/AndreasAvgou/Models-and-Applications-for-lip-reading-and-voice-reproduction" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
+                                        <i class="bi bi-github me-2"></i>View Code
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project 2 -->
-            <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-5" data-aos="fade-up">
-                <div class="card-body p-4 p-lg-5">
-                    <h3 class="bihelab-title mt-2 mb-4" style="font-size: 1.6rem;">Single Cell RNA Seq Classification</h3>
-                    
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-6 border-end-md pe-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Classifying brain cell lineages (such as Astrocytes, Neurons, Microglia, etc.) from high-dimensional single-cell RNA-sequencing (scRNA-seq) data.
-                            </p>
-                        </div>
-                        <div class="col-md-6 ps-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Developed a Joint Autoencoder & Classifier that operates on ~16,678-dimensional gene expression profiles.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="pt-4 mt-2 border-top">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
-                            <div class="mb-3 mb-md-0">
-                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
-                                <span class="vibrant-tag">Python</span>
-                                <span class="vibrant-tag">TensorFlow</span>
-                                <span class="vibrant-tag">NumPy</span>
-                                <span class="vibrant-tag">Scikit-Learn</span>
+                <!-- Project 2 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100 d-flex flex-column">
+                        <div class="card-body p-4 d-flex flex-column h-100">
+                            <h3 class="bihelab-title mt-1 mb-4" style="font-size: 1.4rem;">Single Cell RNA Seq Classification</h3>
+                            
+                            <div class="mb-3">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Classifying brain cell lineages (such as Astrocytes, Neurons, Microglia, etc.) from high-dimensional single-cell RNA-sequencing (scRNA-seq) data.
+                                </p>
                             </div>
-                            <a href="https://github.com/AndreasAvgou/Single-Cell-RNA-Seq-Classification/tree/main" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
-                                <i class="bi bi-github me-2"></i>Code
-                            </a>
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Developed a Joint Autoencoder & Classifier that operates on ~16,678-dimensional gene expression profiles.
+                                </p>
+                            </div>
+
+                            <div class="pt-4 mt-auto border-top">
+                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
+                                <div class="mb-3">
+                                    <span class="vibrant-tag">Python</span>
+                                    <span class="vibrant-tag">TensorFlow</span>
+                                    <span class="vibrant-tag">NumPy</span>
+                                    <span class="vibrant-tag">Scikit-Learn</span>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <a href="https://github.com/AndreasAvgou/Single-Cell-RNA-Seq-Classification/tree/main" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
+                                        <i class="bi bi-github me-2"></i>View Code
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project 3 -->
-            <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-5" data-aos="fade-up">
-                <div class="card-body p-4 p-lg-5">
-                    <h3 class="bihelab-title mt-2 mb-4" style="font-size: 1.6rem;">Optimization of Healthcare Process Management using Machine Learning</h3>
-                    
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-6 border-end-md pe-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Managing asynchronous streaming structures inside healthcare systems without encountering data starvation bottlenecks.
-                            </p>
-                        </div>
-                        <div class="col-md-6 ps-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Constructed a high-throughput, non-blocking asynchronous processor leveraging virtual threads and structured data access wrappers.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="pt-4 mt-2 border-top">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
-                            <div class="mb-3 mb-md-0">
-                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
-                                <span class="vibrant-tag">Python</span>
-                                <span class="vibrant-tag">TensorFlow</span>
-                                <span class="vibrant-tag">XGBoost</span>
+                <!-- Project 3 -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100 d-flex flex-column">
+                        <div class="card-body p-4 d-flex flex-column h-100">
+                            <h3 class="bihelab-title mt-1 mb-4" style="font-size: 1.4rem;">Optimization of Healthcare Process Management using Machine Learning</h3>
+                            
+                            <div class="mb-3">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Managing asynchronous streaming structures inside healthcare systems without encountering data starvation bottlenecks.
+                                </p>
                             </div>
-                            <a href="https://github.com/AndreasAvgou/Optimization-of-healthcare-process-management-using-machine-learning" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
-                                <i class="bi bi-github me-2"></i>Code
-                            </a>
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Constructed a high-throughput, non-blocking asynchronous processor leveraging virtual threads and structured data access wrappers.
+                                </p>
+                            </div>
+
+                            <div class="pt-4 mt-auto border-top">
+                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
+                                <div class="mb-3">
+                                    <span class="vibrant-tag">Python</span>
+                                    <span class="vibrant-tag">TensorFlow</span>
+                                    <span class="vibrant-tag">XGBoost</span>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <a href="https://github.com/AndreasAvgou/Optimization-of-healthcare-process-management-using-machine-learning" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
+                                        <i class="bi bi-github me-2"></i>View Code
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project 4 -->
-            <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-5" data-aos="fade-up">
-                <div class="card-body p-4 p-lg-5">
-                    <h3 class="bihelab-title mt-2 mb-4" style="font-size: 1.6rem;">Identifying Earthquakes in Low-Cost Sensor Signals Contaminated with Vehicular Noise</h3>
-                    
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-6 border-end-md pe-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Filtering out heavy structural and environmental traffic noise arrays from low-cost seismic sensors to accurately classify seismic anomalies.
-                            </p>
-                        </div>
-                        <div class="col-md-6 ps-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Implemented short-time customized Deep Convolutional Networks for spectral signal filtering.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="pt-4 mt-2 border-top">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
-                            <div class="mb-3 mb-md-0">
-                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
-                                <span class="vibrant-tag">Python</span>
-                                <span class="vibrant-tag">TensorFlow</span>
-                                <span class="vibrant-tag">ObsPy</span>
+                <!-- Project 4 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100 d-flex flex-column">
+                        <div class="card-body p-4 d-flex flex-column h-100">
+                            <h3 class="bihelab-title mt-1 mb-4" style="font-size: 1.4rem;">Identifying Earthquakes in Low-Cost Sensor Signals Contaminated with Vehicular Noise</h3>
+                            
+                            <div class="mb-3">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Filtering out heavy structural and environmental traffic noise arrays from low-cost seismic sensors to accurately classify seismic anomalies.
+                                </p>
                             </div>
-                            <a href="https://github.com/AndreasAvgou/Identifying-Earthquakes-in-Low-Cost-Sensor-Signals-Contaminated-with-Vehicular-Noise/tree/main" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
-                                <i class="bi bi-github me-2"></i>Code
-                            </a>
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Implemented short-time customized Deep Convolutional Networks for spectral signal filtering.
+                                </p>
+                            </div>
+
+                            <div class="pt-4 mt-auto border-top">
+                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
+                                <div class="mb-3">
+                                    <span class="vibrant-tag">Python</span>
+                                    <span class="vibrant-tag">TensorFlow</span>
+                                    <span class="vibrant-tag">ObsPy</span>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <a href="https://github.com/AndreasAvgou/Identifying-Earthquakes-in-Low-Cost-Sensor-Signals-Contaminated-with-Vehicular-Noise/tree/main" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
+                                        <i class="bi bi-github me-2"></i>View Code
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project 5 -->
-            <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-5" data-aos="fade-up">
-                <div class="card-body p-4 p-lg-5">
-                    <h3 class="bihelab-title mt-2 mb-4" style="font-size: 1.6rem;">Dermoscopic Melanoma Image Classification</h3>
-                    
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-6 border-end-md pe-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Training a robust model capable of diagnosing dermoscopic images with unbalanced class distributions.
-                            </p>
-                        </div>
-                        <div class="col-md-6 ps-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Built an ensemble architecture using pre-trained EfficientNet and Vision Transformer (ViT) nodes with focal loss optimization layers.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="pt-4 mt-2 border-top">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
-                            <div class="mb-3 mb-md-0">
-                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
-                                <span class="vibrant-tag">Python</span>
-                                <span class="vibrant-tag">TensorFlow</span>
-                                <span class="vibrant-tag">Computer Vision</span>
+                <!-- Project 5 -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100 d-flex flex-column">
+                        <div class="card-body p-4 d-flex flex-column h-100">
+                            <h3 class="bihelab-title mt-1 mb-4" style="font-size: 1.4rem;">Dermoscopic Melanoma Image Classification</h3>
+                            
+                            <div class="mb-3">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Training a robust model capable of diagnosing dermoscopic images with unbalanced class distributions.
+                                </p>
                             </div>
-                            <a href="https://github.com/AndreasAvgou/Dermoscopic-Melanoma-Image-Classification" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
-                                <i class="bi bi-github me-2"></i>Code
-                            </a>
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Built an ensemble architecture using pre-trained EfficientNet and Vision Transformer (ViT) nodes with focal loss optimization layers.
+                                </p>
+                            </div>
+
+                            <div class="pt-4 mt-auto border-top">
+                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
+                                <div class="mb-3">
+                                    <span class="vibrant-tag">Python</span>
+                                    <span class="vibrant-tag">TensorFlow</span>
+                                    <span class="vibrant-tag">Computer Vision</span>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <a href="https://github.com/AndreasAvgou/Dermoscopic-Melanoma-Image-Classification" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
+                                        <i class="bi bi-github me-2"></i>View Code
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+            </div> <!-- End Grid Row for Machine Learning -->
 
 
             <!-- ============================================== -->
@@ -303,179 +308,184 @@
                 </h2>
             </div>
 
-            <!-- Project 6 -->
-            <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-5" data-aos="fade-up">
-                <div class="card-body p-4 p-lg-5">
-                    <h3 class="bihelab-title mt-2 mb-4" style="font-size: 1.6rem;">Crypto Analytics & Prediction Platform</h3>
-                    
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-6 border-end-md pe-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Orchestrating real-time data streaming architectures with strict low-latency ingestion barriers.
-                            </p>
-                        </div>
-                        <div class="col-md-6 ps-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Designed a distributed streaming node engine linked to concurrent analytical workers executing rapid time-series predictive modeling.
-                            </p>
-                        </div>
-                    </div>
+            <!-- GRID ROW ΓΙΑ 2 ΚΑΡΤΕΣ ΔΙΠΛΑ ΔΙΠΛΑ -->
+            <div class="row g-4">
 
-                    <div class="pt-4 mt-2 border-top">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
-                            <div class="mb-3 mb-md-0">
-                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
-                                <span class="vibrant-tag">Java</span>
-                                <span class="vibrant-tag">Spring Boot</span>
-                                <span class="vibrant-tag">Python</span>
-                                <span class="vibrant-tag">FastAPI</span>
-                                <span class="vibrant-tag">PostgreSQL</span>
-                                <span class="vibrant-tag">React</span>
-                                <span class="vibrant-tag">Tailwind CSS</span>
+                <!-- Project 6 -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100 d-flex flex-column">
+                        <div class="card-body p-4 d-flex flex-column h-100">
+                            <h3 class="bihelab-title mt-1 mb-4" style="font-size: 1.4rem;">Crypto Analytics & Prediction Platform</h3>
+                            
+                            <div class="mb-3">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Orchestrating real-time data streaming architectures with strict low-latency ingestion barriers.
+                                </p>
                             </div>
-                            <a href="https://github.com/AndreasAvgou/Crypto-Analytics-Prediction-Platform" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
-                                <i class="bi bi-github me-2"></i>Code
-                            </a>
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Designed a distributed streaming node engine linked to concurrent analytical workers executing rapid time-series predictive modeling.
+                                </p>
+                            </div>
+
+                            <div class="pt-4 mt-auto border-top">
+                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
+                                <div class="mb-3">
+                                    <span class="vibrant-tag">Java</span>
+                                    <span class="vibrant-tag">Spring Boot</span>
+                                    <span class="vibrant-tag">Python</span>
+                                    <span class="vibrant-tag">FastAPI</span>
+                                    <span class="vibrant-tag">PostgreSQL</span>
+                                    <span class="vibrant-tag">React</span>
+                                    <span class="vibrant-tag">Tailwind CSS</span>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <a href="https://github.com/AndreasAvgou/Crypto-Analytics-Prediction-Platform" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
+                                        <i class="bi bi-github me-2"></i>View Code
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project 7 -->
-            <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-5" data-aos="fade-up">
-                <div class="card-body p-4 p-lg-5">
-                    <h3 class="bihelab-title mt-2 mb-4" style="font-size: 1.6rem;">Real time Monitoring System & Feature Engineering</h3>
-                    
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-6 border-end-md pe-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Executing intensive on-the-fly mathematical operations on telemetry data streams without impacting pipeline throughput.
-                            </p>
-                        </div>
-                        <div class="col-md-6 ps-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Architected a modular parallel data ingestion engine featuring dynamic windowing configurations for custom feature calculation.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="pt-4 mt-2 border-top">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
-                            <div class="mb-3 mb-md-0">
-                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
-                                <span class="vibrant-tag">Python</span>
-                                <span class="vibrant-tag">FastAPI</span>
-                                <span class="vibrant-tag">NGINX</span>
-                                <span class="vibrant-tag">Grafana</span>
-                                <span class="vibrant-tag">SQLite</span>
+                <!-- Project 7 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100 d-flex flex-column">
+                        <div class="card-body p-4 d-flex flex-column h-100">
+                            <h3 class="bihelab-title mt-1 mb-4" style="font-size: 1.4rem;">Real time Monitoring System & Feature Engineering</h3>
+                            
+                            <div class="mb-3">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Executing intensive on-the-fly mathematical operations on telemetry data streams without impacting pipeline throughput.
+                                </p>
                             </div>
-                            <a href="https://github.com/AndreasAvgou/Real-time-Monitoring-System-and-Feature-Engineering" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
-                                <i class="bi bi-github me-2"></i>Code
-                            </a>
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Architected a modular parallel data ingestion engine featuring dynamic windowing configurations for custom feature calculation.
+                                </p>
+                            </div>
+
+                            <div class="pt-4 mt-auto border-top">
+                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
+                                <div class="mb-3">
+                                    <span class="vibrant-tag">Python</span>
+                                    <span class="vibrant-tag">FastAPI</span>
+                                    <span class="vibrant-tag">NGINX</span>
+                                    <span class="vibrant-tag">Grafana</span>
+                                    <span class="vibrant-tag">SQLite</span>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <a href="https://github.com/AndreasAvgou/Real-time-Monitoring-System-and-Feature-Engineering" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
+                                        <i class="bi bi-github me-2"></i>View Code
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project 8 -->
-            <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-5" data-aos="fade-up">
-                <div class="card-body p-4 p-lg-5">
-                    <h3 class="bihelab-title mt-2 mb-4" style="font-size: 1.6rem;">Intelligent Tax Filing</h3>
-                    
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-6 border-end-md pe-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Parsing intricate legal constraint trees into deterministic software rule sets safely.
-                            </p>
-                        </div>
-                        <div class="col-md-6 ps-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Engineered a highly secure rule engine managing state transitions with zero external side effects and verifiable validation audits.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="pt-4 mt-2 border-top">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
-                            <div class="mb-3 mb-md-0">
-                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
-                                <span class="vibrant-tag">Python</span>
-                                <span class="vibrant-tag">OpenAI</span>
-                                <span class="vibrant-tag">FastAPI</span>
-                                <span class="vibrant-tag">Docker</span>
-                                <span class="vibrant-tag">React</span>
-                                <span class="vibrant-tag">Shadcn UI</span>
-                                <span class="vibrant-tag">Tailwind CSS</span>
+                <!-- Project 8 -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100 d-flex flex-column">
+                        <div class="card-body p-4 d-flex flex-column h-100">
+                            <h3 class="bihelab-title mt-1 mb-4" style="font-size: 1.4rem;">Intelligent Tax Filing</h3>
+                            
+                            <div class="mb-3">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Parsing intricate legal constraint trees into deterministic software rule sets safely.
+                                </p>
                             </div>
-                            <a href="https://github.com/AndreasAvgou/Intelligent-Tax-Filing" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
-                                <i class="bi bi-github me-2"></i>Code
-                            </a>
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Engineered a highly secure rule engine managing state transitions with zero external side effects and verifiable validation audits.
+                                </p>
+                            </div>
+
+                            <div class="pt-4 mt-auto border-top">
+                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
+                                <div class="mb-3">
+                                    <span class="vibrant-tag">Python</span>
+                                    <span class="vibrant-tag">OpenAI</span>
+                                    <span class="vibrant-tag">FastAPI</span>
+                                    <span class="vibrant-tag">Docker</span>
+                                    <span class="vibrant-tag">React</span>
+                                    <span class="vibrant-tag">Shadcn UI</span>
+                                    <span class="vibrant-tag">Tailwind CSS</span>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <a href="https://github.com/AndreasAvgou/Intelligent-Tax-Filing" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
+                                        <i class="bi bi-github me-2"></i>View Code
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project 9 -->
-            <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 mb-5" data-aos="fade-up">
-                <div class="card-body p-4 p-lg-5">
-                    <h3 class="bihelab-title mt-2 mb-4" style="font-size: 1.6rem;">Tutoring System</h3>
-                    
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-6 border-end-md pe-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Architecting an intelligent, personalized data relationship structure mapping real-time learning curves.
-                            </p>
-                        </div>
-                        <div class="col-md-6 ps-md-4">
-                            <h5 class="fw-bold mb-3" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
-                                <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
-                            </h5>
-                            <p class="text-muted" style="line-height: 1.7;">
-                                Formulated a clean object-oriented data access engine deploying strict relational entity mappings for instant performance scoring.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="pt-4 mt-2 border-top">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
-                            <div class="mb-3 mb-md-0">
-                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
-                                <span class="vibrant-tag">Java 25</span>
-                                <span class="vibrant-tag">Spring Boot 4</span>
-                                <span class="vibrant-tag">Hibernate</span>
-                                <span class="vibrant-tag">PostgreSQL</span>
-                                <span class="vibrant-tag">React</span>
-                                <span class="vibrant-tag">Shadcn UI</span>
-                                <span class="vibrant-tag">Docker</span>
+                <!-- Project 9 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100 d-flex flex-column">
+                        <div class="card-body p-4 d-flex flex-column h-100">
+                            <h3 class="bihelab-title mt-1 mb-4" style="font-size: 1.4rem;">Tutoring System</h3>
+                            
+                            <div class="mb-3">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-bullseye text-danger me-2"></i>The Challenge:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Architecting an intelligent, personalized data relationship structure mapping real-time learning curves.
+                                </p>
                             </div>
-                            <a href="https://github.com/AndreasAvgou/Tutoring-System" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
-                                <i class="bi bi-github me-2"></i>Code
-                            </a>
+                            <div class="mb-4">
+                                <h5 class="fw-bold mb-2" style="color: var(--primary-navy); font-family: 'Mulish', sans-serif;">
+                                    <i class="bi bi-diagram-3-fill text-primary me-2"></i>Architecture:
+                                </h5>
+                                <p class="text-muted" style="line-height: 1.6;">
+                                    Formulated a clean object-oriented data access engine deploying strict relational entity mappings for instant performance scoring.
+                                </p>
+                            </div>
+
+                            <div class="pt-4 mt-auto border-top">
+                                <strong class="d-block mb-2" style="color: var(--primary-navy);">Tech Stack:</strong>
+                                <div class="mb-3">
+                                    <span class="vibrant-tag">Java 25</span>
+                                    <span class="vibrant-tag">Spring Boot 4</span>
+                                    <span class="vibrant-tag">Hibernate</span>
+                                    <span class="vibrant-tag">PostgreSQL</span>
+                                    <span class="vibrant-tag">React</span>
+                                    <span class="vibrant-tag">Shadcn UI</span>
+                                    <span class="vibrant-tag">Docker</span>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <a href="https://github.com/AndreasAvgou/Tutoring-System" target="_blank" class="btn btn-sm text-white px-4 py-2 fw-bold shadow-sm" style="background-color: var(--accent-blue); border-radius: 6px;">
+                                        <i class="bi bi-github me-2"></i>View Code
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+            </div> <!-- End Grid Row for System Programming -->
 
         </div>
     </section>
@@ -491,12 +501,8 @@
                 <div class="col-lg-3 mb-3">
                     <h5 class="text-uppercase"><i class="bi bi-compass-fill me-2"></i>Research & Development</h5>
                     <ul class="list-unstyled mb-0">
-                        <!--<li><a href="index.html">Home</a></li>
-                        <li><a href="publications">Publications</a></li>
-                        <li><a href="projects">Research & Projects</a></li>
-                        <li><a href="cv">Curriculum Vitae</a></li>-->
-                        <li><a href="publications">Publications</a></li>
-                        <li><a href="projects">Projects</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="projects.html">Projects</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 mb-3">
