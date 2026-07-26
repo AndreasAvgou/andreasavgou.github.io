@@ -488,19 +488,22 @@ ul.bihelab-list li::before {
     text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5) !important;
 }
 /* ==========================================================================
-   DARK MODE FIX - BUTTON TEXT VISIBILITY (Make it exactly like Projects)
+   DARK MODE FIX - UNIVERSAL BUTTON TEXT VISIBILITY (For all pages)
    ========================================================================== */
-[data-theme="dark"] .card-body .btn {
+[data-theme="dark"] a.btn, 
+[data-theme="dark"] button.btn {
     background-color: var(--accent-blue) !important;
     color: #ffffff !important; /* Πάντα κατάλευκα γράμματα */
     border: none !important;
 }
 
-[data-theme="dark"] .card-body .btn i {
-    color: #ffffff !important; /* Πάντα κατάλευκο και το εικονίδιο */
+[data-theme="dark"] a.btn i, 
+[data-theme="dark"] button.btn i {
+    color: #ffffff !important; /* Πάντα κατάλευκα εικονίδια */
 }
 
-[data-theme="dark"] .card-body .btn:hover {
-    background-color: #026ca3 !important; /* Ένα "κλικ" πιο σκούρο μπλε όταν πάει το ποντίκι */
+[data-theme="dark"] a.btn:hover, 
+[data-theme="dark"] button.btn:hover {
+    background-color: #026ca3 !important; /* Σκουραίνει ελαφρώς στο hover */
     color: #ffffff !important;
 }
