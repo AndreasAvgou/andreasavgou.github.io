@@ -472,3 +472,18 @@ ul.bihelab-list li::before {
     background-repeat: no-repeat !important;
     background-attachment: scroll !important; 
 }
+/* ==========================================================================
+   HERO SECTION SUBTITLE FIX (Make text readable over the background)
+   ========================================================================== */
+.top-section-content p.lead {
+    color: #ffffff !important; /* Τα κάνει 100% λευκά αντί για 50% διάφανα */
+    font-weight: 500 !important; /* Τα κάνει ένα "κλικ" πιο παχιά */
+    letter-spacing: 0.5px;
+    /* Βάζει διπλή μαύρη σκιά πίσω από τα γράμματα για να ξεχωρίζουν από τα κυκλώματα */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 0, 0, 0.6) !important; 
+}
+
+/* Ας σιγουρευτούμε ότι και ο κεντρικός τίτλος έχει δυνατή σκιά */
+.top-section-content h1 {
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5) !important;
+}
