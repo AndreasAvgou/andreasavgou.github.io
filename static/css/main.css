@@ -487,3 +487,17 @@ ul.bihelab-list li::before {
 .top-section-content h1 {
     text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5) !important;
 }
+/* ==========================================================================
+   DARK MODE FIX - BUTTON TEXT VISIBILITY (Publications & Projects)
+   ========================================================================== */
+[data-theme="dark"] .card-body .btn,
+[data-theme="dark"] .card-body .btn i {
+    color: #0b1d3a !important; /* Σκούρο μπλε (σχεδόν μαύρο) για τέλεια ανάγνωση */
+    font-weight: 800 !important; /* Πιο παχιά γράμματα */
+}
+
+/* Προαιρετικά: Μια μικρή αλλαγή όταν το ποντίκι πάει πάνω στο κουμπί */
+[data-theme="dark"] .card-body .btn:hover {
+    background-color: #7dd3fc !important; /* Γίνεται ένα κλικ πιο φωτεινό */
+    color: #000000 !important;
+}
