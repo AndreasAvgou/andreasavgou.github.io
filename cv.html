@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title id="title">Curriculum Vitae | Andreas Avgoustis</title>
-    
+
     <!-- SEO Tags -->
-    <meta name="description" content="Curriculum Vitae of Andreas Avgoustis, AI/ML Engineer & PhD Candidate in Informatics. Experience, Education, and Technical Skills." />
-    <meta name="keywords" content="Andreas Avgoustis, CV, Resume, AI Engineer, Machine Learning, Deep Learning, Bioinformatics" />
+    <meta name="description" content="Curriculum Vitae of Andreas Avgoustis, PhD Candidate in Informatics working on visual speech recognition and multimodal learning. Research, publications, and experience." />
+    <meta name="keywords" content="Andreas Avgoustis, CV, PhD Candidate, visual speech recognition, lip reading, vision-language models, multimodal learning, Ionian University, BiHELab" />
     <meta name="author" content="Andreas Avgoustis" />
     <meta name="robots" content="index, follow" />
 
@@ -15,7 +15,7 @@
     <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://andreasavgou.github.io/cv.html" />
     <meta property="og:title" content="Andreas Avgoustis | Curriculum Vitae" />
-    <meta property="og:description" content="View my professional experience, academic background, and scientific publications." />
+    <meta property="og:description" content="PhD candidate working on visual speech recognition for patients who have lost their voice after tracheostomy. Research, publications, and experience." />
     <meta property="og:image" content="https://andreasavgou.github.io/static/assets/img/preview-banner.jpg" />
 
     <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
@@ -24,9 +24,9 @@
     <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
     <link type="text/css" href="static/css/main.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <style>
-        
+
         .cv-timeline {
             position: relative;
             padding-left: 2rem;
@@ -43,13 +43,13 @@
             border-radius: 3px;
         }
         [data-theme="dark"] .cv-timeline::before { background-color: #334155; }
-        
+
         .cv-timeline-item {
             position: relative;
             margin-bottom: 2.5rem;
         }
         .cv-timeline-item:last-child { margin-bottom: 0; }
-        
+
         .cv-timeline-badge {
             position: absolute;
             left: -2.45rem;
@@ -76,12 +76,53 @@
             margin-bottom: 0.2rem;
         }
         [data-theme="dark"] .cv-timeline-title { color: #f8fafc; }
-        
+
         .cv-timeline-company {
             font-size: 0.95rem;
             font-weight: 600;
             color: var(--text-muted);
             margin-bottom: 1rem;
+        }
+
+        /* --- Publications --- */
+        .pub-venue {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .pub-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 0.12rem 0.45rem;
+            border-radius: 4px;
+            background-color: rgba(2, 132, 199, 0.12);
+            color: var(--accent-blue);
+            border: 1px solid rgba(2, 132, 199, 0.35);
+            vertical-align: middle;
+            margin-left: 0.35rem;
+        }
+        .pub-doi { font-size: 0.82rem; word-break: break-all; }
+
+        /* --- Technical skills --- */
+        .skill-row { margin-bottom: 0.85rem; }
+        .skill-row:last-child { margin-bottom: 0; }
+        .skill-label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-blue);
+            margin-bottom: 0.15rem;
+        }
+        .skill-value {
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
         }
 
         @media (min-width: 768px) {
@@ -90,66 +131,70 @@
 
         @media print {
             @page { size: A4 portrait; margin: 8mm; }
-            
-            body { 
-                background: white !important; 
-                -webkit-print-color-adjust: exact !important; 
-                print-color-adjust: exact !important; 
+
+            body {
+                background: white !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
-            
-            
+
             * { opacity: 1 !important; transform: none !important; transition: none !important; animation: none !important; }
             [data-aos] { opacity: 1 !important; transform: none !important; }
-            
+
             #mainNav, .top-section, footer, .print-buttons, #scrollTop, #progress-container { display: none !important; }
-            
+
             #cv { padding: 0 !important; margin: 0 !important; }
             .container { max-width: 100% !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
-            
-            
+
             .row { display: block !important; width: 100% !important; margin: 0 !important; }
             .row::after { content: ""; clear: both; display: table; }
-            
+
             .col-12 { width: 100% !important; display: block !important; margin-bottom: 8px !important; padding: 0 !important; }
             .col-lg-6 { width: 50% !important; float: left !important; display: block !important; padding: 0 6px !important; }
-            
+
             .card { box-shadow: none !important; border: 1px solid #e2e8f0 !important; margin-bottom: 0 !important; border-radius: 6px !important; }
             .card-body { padding: 10px 14px !important; }
-            
+
             .bihelab-card-dark { background-color: #0b1d3a !important; color: white !important; }
-            .bihelab-card-dark p, .bihelab-card-dark span, .bihelab-card-dark i { color: #cbd5e1 !important; }
+            .bihelab-card-dark p, .bihelab-card-dark span, .bihelab-card-dark i, .bihelab-card-dark a { color: #cbd5e1 !important; }
             .bihelab-card-dark h4 { color: white !important; }
-            
+
             .bihelab-card-dark .row { display: flex !important; align-items: center !important; }
             .col-md-3 { width: 22% !important; flex: 0 0 22% !important; text-align: center !important; padding: 0 !important; }
             .col-md-9 { width: 78% !important; flex: 0 0 78% !important; padding-left: 10px !important; }
             img.rounded-circle { width: 75px !important; height: 75px !important; margin-bottom: 4px !important; border-width: 2px !important; }
             .d-flex.flex-wrap.gap-4 { gap: 10px !important; margin-top: 5px !important; padding-top: 5px !important; }
-            
+
             h4 { font-size: 14pt !important; margin-bottom: 2px !important; }
             .bihelab-subtitle { font-size: 8pt !important; margin-bottom: 2px !important; }
             .bihelab-title { font-size: 13pt !important; margin-bottom: 6px !important; margin-top: 0 !important;}
             .bihelab-divider { margin-bottom: 8px !important; height: 2px !important; }
             p { font-size: 8.5pt !important; margin-bottom: 4px !important; line-height: 1.3 !important;}
-            
+
             .cv-timeline { margin-bottom: 0 !important; margin-top: 4px !important; padding-left: 12px !important;}
             .cv-timeline::before { left: 0 !important; }
             .cv-timeline-badge { left: -16px !important; width: 10px !important; height: 10px !important; top: 3px !important; border-width: 2px !important; background-color: #0284c7 !important; border-color: white !important;}
-            
+
             .cv-timeline-item { margin-bottom: 10px !important; break-inside: avoid !important; }
             .cv-timeline-date { font-size: 7.5pt !important; margin-bottom: 0 !important; }
             .cv-timeline-title { font-size: 10pt !important; margin-bottom: 0 !important; line-height: 1.15 !important; }
             .cv-timeline-company { font-size: 8.5pt !important; margin-bottom: 2px !important; }
-           
+
             .bihelab-list { margin-top: 0 !important; }
-            .bihelab-list li { 
-                font-size: 8pt !important; 
-                line-height: 1.25 !important; 
-                margin-bottom: 3px !important; 
-                padding-bottom: 3px !important; 
-                padding-left: 8px !important; 
+            .bihelab-list li {
+                font-size: 8pt !important;
+                line-height: 1.25 !important;
+                margin-bottom: 3px !important;
+                padding-bottom: 3px !important;
+                padding-left: 8px !important;
             }
             .bihelab-list li::before { top: 4px !important; width: 4px !important; height: 4px !important; background-color: #0284c7 !important;}
+
+            .skill-row { margin-bottom: 4px !important; }
+            .skill-label { font-size: 7pt !important; margin-bottom: 0 !important; }
+            .skill-value { font-size: 8pt !important; line-height: 1.25 !important; }
+            .pub-venue, .pub-doi { font-size: 7.5pt !important; }
+            .pub-badge { font-size: 6.5pt !important; padding: 0 3px !important; }
 
             .mt-5.pt-3 { margin-top: 15px !important; padding-top: 10px !important; }
         }
@@ -167,7 +212,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+
       gtag('config', 'G-9KP8BZ11J3');
     </script>
 </head>
@@ -184,11 +229,11 @@
     <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a id="page-top-title" class="navbar-brand fw-bold" href="index.html"></a>
-            <button class="navbar-toggler" type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#navbarResponsive" 
-                aria-controls="navbarResponsive" 
-                aria-expanded="false" 
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -210,7 +255,7 @@
         <div class="top-section-content text-center">
             <div class="container px-4 px-lg-5">
                 <h1 class="display-5 fw-bold text-white mb-2" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Curriculum Vitae</h1>
-                <p class="lead text-white-50 mb-0">Professional Experience & Academic Background</p>
+                <p class="lead text-white-50 mb-0">Research, Publications &amp; Experience</p>
             </div>
         </div>
     </section>
@@ -218,36 +263,41 @@
     <!-- Content Section -->
     <section class="py-5 position-relative" id="cv">
         <div class="container px-4 px-lg-5 mt-3">
-            
+
             <div class="print-buttons d-flex justify-content-end mb-4 gap-2">
+                <a href="static/assets/Andreas_Avgoustis_CV_Research.pdf" target="_blank" rel="noopener"
+                   class="btn fw-bold shadow-sm" style="background-color: var(--accent-blue); color: #fff; border-radius: 6px;">
+                    <i class="bi bi-file-earmark-pdf-fill me-1"></i> Download PDF
+                </a>
                 <button onclick="window.print()" class="btn text-white fw-bold shadow-sm" style="background-color: var(--primary-navy); border-radius: 6px;">
                     <i class="bi bi-printer-fill me-1"></i> Print
                 </button>
             </div>
 
             <div class="row g-4">
-                
-                <!-- PROFILE INFO -->
+
+                <!-- ============ RESEARCH PROFILE ============ -->
                 <div class="col-12" data-aos="fade-up">
                     <div class="card bihelab-card bihelab-card-dark shadow-sm border-0">
                         <div class="card-body p-4 p-lg-5">
                             <div class="row align-items-center">
-                                
+
                                 <div class="col-md-3 text-center mb-4 mb-md-0 border-end-md pe-md-4">
                                     <img src="static/assets/img/photo.png" alt="Andreas Avgoustis" class="rounded-circle mb-3 border border-3 border-light shadow" style="width: 140px; height: 140px; object-fit: cover;">
                                     <h4 class="text-white fw-bold mb-1">Andreas Avgoustis</h4>
-                                    <p class="text-white-50 small mb-0">AI/ML Engineer & Researcher</p>
+                                    <p class="text-white-50 small mb-0">PhD Candidate &mdash; Visual Speech Recognition &amp; Multimodal Learning</p>
                                 </div>
-                                
-                                
+
                                 <div class="col-md-9 ps-md-4 text-white">
-                                    <div class="bihelab-subtitle mb-2" style="color: #38bdf8;">CAREER PROFILE</div>
+                                    <div class="bihelab-subtitle mb-2" style="color: #38bdf8;">RESEARCH PROFILE</div>
                                     <p style="color: #cbd5e1; line-height: 1.6; text-align: justify; font-size: 0.98rem;" class="mb-4">
-                                        AI/ML Engineer & Researcher with strong academic foundations including a MSc in Big Data Driven Networked Systems and ongoing PhD studies in Informatics. Specializing in Deep Learning, Computer Vision, and large-scale data processing. Experienced in designing, training, and deploying advanced neural architectures (CNNs, LSTMs, Transformers) for real-time and healthcare-focused applications. Strong engineering background with hands-on expertise in Python, PyTorch, TensorFlow, SQL, Spark, Docker, and cloud platforms. Published researcher with contributions in multimodal learning, text simplification, seismology signal processing, and medical image analysis. Adept at building end-to-end ML pipelines, optimizing performance, and translating research innovations into production-grade systems.
+                                        PhD candidate working on visual speech recognition for people who have lost their voice after tracheostomy or laryngectomy. My research asks whether a vision&ndash;language model, rather than a conventional video classifier, can recognise Greek speech from lip movement alone with enough accuracy to be usable at the bedside. I built the first Greek viseme-level dataset for this population, designed a deterministic preprocessing pipeline that encodes a video segment as a single image a VLM can ingest, and combined parameter-efficient fine-tuning with dense retrieval and a Greek language model as a correction layer. My interests are multimodal representation learning, efficient adaptation of large pretrained models, and evaluation of these systems under the atypical articulation that real patients present.
                                     </p>
-                                    
+
                                     <div class="d-flex flex-wrap gap-4 pt-3 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
-                                        <span><i class="bi bi-translate me-2" style="color: #38bdf8;"></i> Greek (Native), English (Professional)</span>
+                                        <span><i class="bi bi-building me-2" style="color: #38bdf8;"></i> BiHELab, Ionian University</span>
+                                        <span><i class="bi bi-person-video3 me-2" style="color: #38bdf8;"></i> Supervisor: Prof. Themis Exarchos</span>
+                                        <span><i class="bi bi-translate me-2" style="color: #38bdf8;"></i> Greek (Native), English (C2)</span>
                                     </div>
                                 </div>
 
@@ -256,89 +306,25 @@
                     </div>
                 </div>
 
-                <!-- EXPERIENCES -->
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100">
+                <!-- ============ RESEARCH ============ -->
+                <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0">
                         <div class="card-body p-4 p-lg-5">
-                            <div class="bihelab-subtitle"><i class="bi bi-briefcase-fill me-1"></i> Experiences</div>
+                            <div class="bihelab-subtitle"><i class="bi bi-eye-fill me-1"></i> Research</div>
                             <hr class="bihelab-divider">
 
                             <div class="cv-timeline mt-4">
-                                
-                                <!-- Experience 1 -->
                                 <div class="cv-timeline-item">
                                     <div class="cv-timeline-badge"></div>
                                     <div class="cv-timeline-date">May 2024 - Present</div>
-                                    <div class="cv-timeline-title">Machine Learning / AI Researcher (PhD Research)</div>
-                                    <div class="cv-timeline-company">Ionian University, Department of Informatics</div>
+                                    <div class="cv-timeline-title">Doctoral Researcher &mdash; Visual Speech Recognition</div>
+                                    <div class="cv-timeline-company">BiHELab (Bioinformatics &amp; Human Electrophysiology Laboratory), Ionian University</div>
                                     <ul class="bihelab-list mt-3">
-                                        <li>Conducting research on deep learning, computer vision, and lip-reading AI, focusing on efficient model design and real-time inference.</li>
-                                        <li>Developing and optimizing ML architectures (CNNs, LSTMs, Transformers) using Python, TensorFlow, PyTorch, Keras.</li>
-                                        <li>Managing and analyzing large-scale datasets for healthcare applications using Python, SQL, and Spark.</li>
-                                        <li>Publishing peer-reviewed research in deep learning, computer vision, and visual language modeling, with work focusing on lip-reading AI, multimodal learning, and advanced neural architectures.</li>
-                                        <li>Designing experiments, benchmarking deep learning models, and evaluating performance across architectures.</li>
-                                        <li>Collaborating with interdisciplinary teams to integrate ML solutions into practical research problems.</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="cv-timeline-item">
-                                    <div class="cv-timeline-badge"></div>
-                                    <div class="cv-timeline-date">April 2026 - June 2026</div>
-                                    <div class="cv-timeline-title">Adult Education Teacher</div>
-                                    <div class="cv-timeline-company">APOPSI IT, Consulting & Training Services S.A.</div>
-                                    <ul class="bihelab-list mt-3">
-                                        <li>Delivered 140 hours of in-person training for the national program "Digital education and empowerment of older people and persons with disabilities" (MIS 5223341).</li>
-                                        <li>Instructed senior citizens on essential digital skills, including smart device usage, secure internet navigation, and online communication.</li>
-                                        <li>Trained participants in utilizing e-government services, online banking, and digital applications to foster digital inclusion and everyday independence.</li>
-                                        <li>Conducted all educational sessions and adapted teaching methodologies at the Open Care Center for the Elderly (KAPI) of Central Corfu and Diapontia Islands.</li>
-                                    </ul>
-                                </div>
-                                <!-- Experience 2 -->
-                                <div class="cv-timeline-item">
-                                    <div class="cv-timeline-badge"></div>
-                                    <div class="cv-timeline-date">Dec 2024 - Nov 2025</div>
-                                    <div class="cv-timeline-title">Computer Programmer</div>
-                                    <div class="cv-timeline-company">Research and Informatics Office, 8th Motorized Infantry Brigade</div>
-                                    <ul class="bihelab-list mt-3">
-                                        <li>Managed and supported large-scale intranet and secure information systems, ensuring high availability, confidentiality, and data integrity.</li>
-                                        <li>Administered network infrastructure, including servers, routers, switches, and Cisco devices.</li>
-                                        <li>Installed, configured, and maintained computer systems and virtualized environments (VMware ESXi, VirtualBox).</li>
-                                        <li>Implemented and monitored information security policies, data backup strategies, and disaster recovery procedures.</li>
-                                        <li>Designed and deployed structured cabling and improved local network topology.</li>
-                                        <li>Provided 24/7 technical support to end-users, including hardware maintenance, troubleshooting, and issue resolution.</li>
-                                        <li>Deployed and supported IT systems during joint operations and large-scale exercises.</li>
-                                        <li>Automated repetitive administrative tasks through PowerShell and Java scripting.</li>
-                                        <li>Managed file servers, network shares, and secure data transfer processes.</li>
-                                        <li>Collaborated with multiple teams to ensure smooth IT operations and compliance with security standards.</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Experience 3 -->
-                                <div class="cv-timeline-item">
-                                    <div class="cv-timeline-badge"></div>
-                                    <div class="cv-timeline-date">Feb 2023 - Feb 2024</div>
-                                    <div class="cv-timeline-title">Business Intelligence Analyst</div>
-                                    <div class="cv-timeline-company">Association of Educational Caregivers of Corfu</div>
-                                    <ul class="bihelab-list mt-3">
-                                        <li>Collected and analyzed data from the Association’s website and social media platforms to understand audience behavior and improve engagement.</li>
-                                        <li>Created simple dashboards and reports to help the team track communication results, event participation, and online visibility.</li>
-                                        <li>Set up an organized system for storing and updating information, making it easier to monitor activities and measure progress.</li>
-                                        <li>Worked closely with the management team to define goals and key metrics, turning data into insights that supported everyday decisions.</li>
-                                        <li>Used analytics tools to evaluate which types of content performed best and adjusted strategies to increase reach and effectiveness.</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Experience 4 -->
-                                <div class="cv-timeline-item">
-                                    <div class="cv-timeline-badge"></div>
-                                    <div class="cv-timeline-date">Jan 2021 - Jan 2023</div>
-                                    <div class="cv-timeline-title">Junior Data Analyst</div>
-                                    <div class="cv-timeline-company">Alfa Ekpaideutiki</div>
-                                    <ul class="bihelab-list mt-3">
-                                        <li>Collected, organized, and analyzed website performance and engagement data using Excel and SQL to support content optimization decisions.</li>
-                                        <li>Collaborated with developers to implement PHP-based data tracking features and automate website updates.</li>
-                                        <li>Generated periodic analytical reports summarizing key performance metrics and trends for management review.</li>
-                                        <li>Developed insights to enhance user engagement and improve SEO strategy based on traffic analysis.</li>
+                                        <li>Built the first Greek viseme-level video dataset for silent speech after tracheostomy &mdash; over 1,000 distinct words recorded across multiple speakers, with ethics approval obtained for the clinical evaluation phase.</li>
+                                        <li>Designed a deterministic preprocessing pipeline &mdash; MediaPipe FaceLandmarker for mouth-region localisation, fixed 16-frame temporal sampling, and composition into a 4&times;4 spatial grid &mdash; so that a video segment becomes a single image that an image-only vision&ndash;language model can consume.</li>
+                                        <li>Developed a hybrid recognition architecture: a BakLLaVA/LLaVA backbone fine-tuned with 4-bit QLoRA, FAISS dense retrieval over the viseme corpus, and the Greek LLM Krikri as a linguistic correction layer on top of the visual prediction.</li>
+                                        <li>Ran a held-out evaluation on 830 samples: 67.23% top-1 accuracy and 92.94% ROC-AUC. Isolated the dominant failure mode &mdash; atypical articulation in post-operative speakers &mdash; and made speaker-level adaptation the next objective of the thesis.</li>
+                                        <li>Managed training on cloud GPU infrastructure, including quantised fine-tuning under constrained memory, experiment tracking, and ablation studies isolating the contribution of the retrieval and language-correction components.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -346,90 +332,194 @@
                     </div>
                 </div>
 
-                
-                <!-- EDUCATION & PUBLICATIONS         -->
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <!-- ============ LEFT COLUMN: PUBLICATIONS + SKILLS ============ -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
                     <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100">
                         <div class="card-body p-4 p-lg-5">
-                            
-                            <!-- EDUCATION -->
-                            <div class="bihelab-subtitle"><i class="bi bi-mortarboard-fill me-1"></i> Education</div>
+
+                            <!-- PUBLICATIONS -->
+                            <div class="bihelab-subtitle"><i class="bi bi-journal-bookmark-fill me-1"></i> Publications</div>
                             <hr class="bihelab-divider">
 
-                            <div class="cv-timeline mt-4">
-                                <!-- Edu 1 -->
-                                <div class="cv-timeline-item">
-                                    <div class="cv-timeline-badge"></div>
-                                    <div class="cv-timeline-date">May 2024 - Present</div>
-                                    <div class="cv-timeline-title">PhD Candidate in Informatics</div>
-                                    <div class="cv-timeline-company">Ionian University, Department of Informatics</div>
-                                    <ul class="bihelab-list mt-3">
-                                        <li>Pursuing a PhD in Informatics, specializing in cutting-edge research in big data analytics and machine learning.</li>
-                                        <li><strong>Research Focus:</strong> Enhancing the efficiency of algorithms and exploring innovative models and applications for lip-reading and voice reproduction.</li>
-                                        <li>Collaborating with interdisciplinary teams to foster innovative research.</li>
-                                        <li>Aiming to publish impactful papers and present findings at premier conferences.</li>
-                                        <li><strong>Skills Honed:</strong> Big data and deep learning analysis. Proficient in managing and analyzing extensive datasets to derive meaningful insights and drive innovations.</li>
-                                    </ul>
-                                </div>
+                            <ul class="bihelab-list mt-4">
+                                <li>
+                                    <strong style="color: var(--primary-navy);">Visual Speech Recognition for Enhancing Communication Post-Tracheostomy Patients</strong><span class="pub-badge">Under review</span>
+                                    <span class="d-block text-muted small fst-italic mt-1">Avgoustis, A.; Pezoulas, V.; Exarchos, T.</span>
+                                    <span class="pub-venue">Submitted to GeNeDis 2026 &mdash; World Congress on Genetics, Geriatrics and Neurodegenerative Diseases Research</span>
+                                </li>
+                                <li>
+                                    <strong style="color: var(--primary-navy);">Bridging Linguistic Gaps: Developing a Greek Text Simplification Dataset</strong>
+                                    <span class="d-block text-muted small fst-italic mt-1">Agathos, L.; Avgoustis, A.; Kryelesi, X.; Makridou, A.; Tzanis, I.; Mouratidis, D.; Kermanidis, K.L.; Kanavos, A.</span>
+                                    <span class="pub-venue">Information, 15(8), 500 (2024)</span>
+                                    <a class="pub-doi" href="https://doi.org/10.3390/info15080500" target="_blank" rel="noopener">doi.org/10.3390/info15080500</a>
+                                </li>
+                                <li>
+                                    <strong style="color: var(--primary-navy);">Optimization of Healthcare Process Management Using Machine Learning</strong>
+                                    <span class="d-block text-muted small fst-italic mt-1">Avgoustis, A.; Exarchos, T.; Vrahatis, A.G.; Vlamos, P.</span>
+                                    <span class="pub-venue">Artificial Intelligence Applications and Innovations (AIAI 2024), IFIP AICT vol. 711, Springer</span>
+                                    <a class="pub-doi" href="https://doi.org/10.1007/978-3-031-63211-5_15" target="_blank" rel="noopener">doi.org/10.1007/978-3-031-63211-5_15</a>
+                                </li>
+                                <li>
+                                    <strong style="color: var(--primary-navy);">Identifying Earthquakes in Low-Cost Sensor Signals Contaminated with Vehicular Noise</strong>
+                                    <span class="d-block text-muted small fst-italic mt-1">Agathos, L.; Avgoustis, A.; Avgoustis, N.; Vlachos, I.; Karydis, I.; Avlonitis, M.</span>
+                                    <span class="pub-venue">Applied Sciences, 13(19), 10884 (2023)</span>
+                                    <a class="pub-doi" href="https://doi.org/10.3390/app131910884" target="_blank" rel="noopener">doi.org/10.3390/app131910884</a>
+                                </li>
+                                <li>
+                                    <strong style="color: var(--primary-navy);">Applied Deep Learning for Categorizing Dermoscopic Images</strong>
+                                    <span class="d-block text-muted small fst-italic mt-1">Avgoustis, A.; Exarchos, T.; Kermanidis, K.L.; Mylonas, P.</span>
+                                    <span class="pub-venue">IEEE SMAP (2021), pp. 1&ndash;4</span>
+                                    <a class="pub-doi" href="https://doi.org/10.1109/SMAP53521.2021.9610798" target="_blank" rel="noopener">doi.org/10.1109/SMAP53521.2021.9610798</a>
+                                </li>
+                            </ul>
 
-                                <!-- Edu 2 -->
-                                <div class="cv-timeline-item">
-                                    <div class="cv-timeline-badge"></div>
-                                    <div class="cv-timeline-date">Oct 2022 - Feb 2024</div>
-                                    <div class="cv-timeline-title">Master Degree (MSc) in Big Data Driven Networked Systems</div>
-                                    <div class="cv-timeline-company">Ionian University, Department of Informatics</div>
-                                    <ul class="bihelab-list mt-3">
-                                        <li>Completed a Master’s degree with a strong focus on big data technologies and networked systems.</li>
-                                        <li><strong>Key courses included:</strong> Big Data Technologies, Network Systems and Security, Advanced Data Mining and Machine Learning, Stochastic Analysis.</li>
-                                        <li><strong>Capstone Project:</strong> Led the development of a scalable healthcare process management system using machine learning and deep learning with Python. Enhanced data handling capabilities significantly.</li>
-                                        <li><strong>Achievements:</strong> Published research in "Information" Journal, "Artificial Intelligence Applications and Innovations (AIAI)", and "Applied Sciences".</li>
-                                        <li><strong>Skills Acquired:</strong> Proficient in big data frameworks, advanced expertise in machine and deep learning, deep understanding of stochastic analysis, and practical experience through hands-on projects in ML healthcare systems.</li>
-                                    </ul>
-                                </div>
+                            <!-- TECHNICAL SKILLS -->
+                            <div class="mt-5 pt-3 border-top">
+                                <div class="bihelab-subtitle"><i class="bi bi-cpu-fill me-1"></i> Technical Skills</div>
+                                <hr class="bihelab-divider">
 
-                                <!-- Edu 3 -->
-                                <div class="cv-timeline-item">
-                                    <div class="cv-timeline-badge"></div>
-                                    <div class="cv-timeline-date">Oct 2015 - Feb 2021</div>
-                                    <div class="cv-timeline-title">Bachelor Degree (BSc) in Informatics</div>
-                                    <div class="cv-timeline-company">Ionian University, Department of Informatics</div>
-                                    <ul class="bihelab-list mt-3">
-                                        <li>Earned a Bachelor’s degree in Informatics with a broad learning experience in: Data Structures, Algorithms, Database Management, Computer Networks, Artificial Intelligence, and Web Development.</li>
-                                        <li><strong>Capstone Project:</strong> Led the development of an image Melanoma classification model. Demonstrated advanced skills in machine learning applications.</li>
-                                        <li><strong>Achievements:</strong> Published research on conference "2021 16th International Workshop on Semantic and Social Media Adaptation & Personalization (SMAP)".</li>
-                                        <li><strong>Skills Acquired:</strong> Proficiency in full-stack Python development, strong foundation in ML/DL principles, advanced data visualization techniques, and enhanced analytical skills.</li>
-                                    </ul>
+                                <div class="mt-4">
+                                    <div class="skill-row">
+                                        <span class="skill-label">Vision &amp; multimodal</span>
+                                        <p class="skill-value">Vision&ndash;language models (LLaVA, BakLLaVA), QLoRA / parameter-efficient fine-tuning, CNNs, 3D-CNN&ndash;LSTM, Transformers, MediaPipe FaceLandmarker, OpenCV.</p>
+                                    </div>
+                                    <div class="skill-row">
+                                        <span class="skill-label">Language &amp; retrieval</span>
+                                        <p class="skill-value">Retrieval-augmented generation, FAISS dense retrieval, sentence embeddings, Greek LLMs (Krikri), Hugging Face Transformers, PEFT, bitsandbytes.</p>
+                                    </div>
+                                    <div class="skill-row">
+                                        <span class="skill-label">Frameworks</span>
+                                        <p class="skill-value">PyTorch, TensorFlow, Keras, scikit-learn, NumPy, pandas, Apache Spark.</p>
+                                    </div>
+                                    <div class="skill-row">
+                                        <span class="skill-label">Infrastructure</span>
+                                        <p class="skill-value">Python, SQL, Git, Docker, cloud GPU training (Google Cloud Platform, Microsoft Azure, Colab), Linux.</p>
+                                    </div>
+                                    <div class="skill-row">
+                                        <span class="skill-label">Also</span>
+                                        <p class="skill-value">R, PHP, PowerShell, Power BI, Tableau, React, Django.</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- PUBLICATIONS (Προστέθηκε κάτω από το Education) -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ RIGHT COLUMN: EXPERIENCE + EDUCATION ============ -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card bihelab-card bihelab-card-top-border shadow-sm border-0 h-100">
+                        <div class="card-body p-4 p-lg-5">
+
+                            <!-- PROFESSIONAL EXPERIENCE -->
+                            <div class="bihelab-subtitle"><i class="bi bi-briefcase-fill me-1"></i> Professional Experience</div>
+                            <hr class="bihelab-divider">
+
+                            <div class="cv-timeline mt-4">
+
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-badge"></div>
+                                    <div class="cv-timeline-date">April 2026 - June 2026</div>
+                                    <div class="cv-timeline-title">Adult Education Instructor</div>
+                                    <div class="cv-timeline-company">APOPSI IT, Consulting &amp; Training Services S.A.</div>
+                                    <ul class="bihelab-list mt-3">
+                                        <li>Delivered 140 hours of in-person training for the national programme "Digital education and empowerment of older people and persons with disabilities" (MIS 5223341), at the Open Care Centre for the Elderly (KAPI) of Central Corfu and the Diapontia Islands.</li>
+                                        <li>Taught digital skills to senior citizens: device use, safe internet navigation, online communication, e-government services and online banking.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-badge"></div>
+                                    <div class="cv-timeline-date">Dec 2024 - Nov 2025</div>
+                                    <div class="cv-timeline-title">Computer Programmer &mdash; Compulsory Military Service</div>
+                                    <div class="cv-timeline-company">Research and Informatics Office, 8th Motorized Infantry Brigade, Hellenic Army</div>
+                                    <ul class="bihelab-list mt-3">
+                                        <li>Administered intranet servers, virtualised environments (VMware ESXi) and network infrastructure, with responsibility for availability, backup and disaster recovery.</li>
+                                        <li>Automated recurring administrative workflows through PowerShell and Java scripting. Served concurrently with ongoing doctoral research.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-badge"></div>
+                                    <div class="cv-timeline-date">Feb 2023 - Feb 2024</div>
+                                    <div class="cv-timeline-title">Business Intelligence Analyst</div>
+                                    <div class="cv-timeline-company">Association of Educational Caregivers of Corfu</div>
+                                    <ul class="bihelab-list mt-3">
+                                        <li>Built reporting pipelines and dashboards over web and social engagement data, and designed the organisation's data storage and update process.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-badge"></div>
+                                    <div class="cv-timeline-date">Jan 2021 - Jan 2023</div>
+                                    <div class="cv-timeline-title">Junior Data Analyst</div>
+                                    <div class="cv-timeline-company">Alfa Ekpaideutiki</div>
+                                    <ul class="bihelab-list mt-3">
+                                        <li>Analysed web performance data with SQL and Excel, implemented PHP-based tracking with the development team, and produced recurring analytical reports for management.</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <!-- EDUCATION -->
                             <div class="mt-5 pt-3 border-top">
-                                <div class="bihelab-subtitle"><i class="bi bi-journal-bookmark-fill me-1"></i> Publications</div>
-                                 
+                                <div class="bihelab-subtitle"><i class="bi bi-mortarboard-fill me-1"></i> Education</div>
                                 <hr class="bihelab-divider">
-    
-                                <ul class="bihelab-list mt-4">
-                                    <li>
-                                        <strong style="color: var(--primary-navy);">Optimization of Healthcare Process Management Using Machine Learning</strong>
-                                        <span class="d-block text-muted small fst-italic mt-1">Avgoustis, A.; Exarchos, T.; Vrahatis, A.G.; Vlamos, P.</span>
-                                        <span class="d-block text-muted" style="font-size: 0.85rem;">IFIP AIAI (2024)</span>
-                                    </li>
-                                    <li>
-                                        <strong style="color: var(--primary-navy);">Bridging Linguistic Gaps: Developing a Greek Text Simplification Dataset</strong>
-                                        <span class="d-block text-muted small fst-italic mt-1">Agathos, L.; Avgoustis, A.; Kryelesi, X.; Makridou, A.; Tzanis, I.; Mouratidis, D.; Kermanidis, K.L.; Kanavos, A.</span>
-                                        <span class="d-block text-muted" style="font-size: 0.85rem;">Information Journal (2024)</span>
-                                    </li>
-                                    <li>
-                                        <strong style="color: var(--primary-navy);">Identifying Earthquakes in Low-Cost Sensor Signals Contaminated with Vehicular Noise</strong>
-                                        <span class="d-block text-muted small fst-italic mt-1">Agathos, L.; Avgoustis, A.; Avgoustis, N.; Vlachos, I.; Karydis, I.; Avlonitis, M</span>
-                                        <span class="d-block text-muted" style="font-size: 0.85rem;">Applied Sciences (2023)</span>
-                                    </li>
-                                    <li>
-                                        <strong style="color: var(--primary-navy);">Applied Deep learning for categorizing dermoscopic images</strong>
-                                        <span class="d-block text-muted small fst-italic mt-1">A. Avgoustis; T. Exarchos; K. L. Kermanidis & P. Mylonas</span>
-                                        <span class="d-block text-muted" style="font-size: 0.85rem;">IEEE SMAP (2021)</span>
-                                    </li>
-                                </ul>
+
+                                <div class="cv-timeline mt-4">
+                                    <div class="cv-timeline-item">
+                                        <div class="cv-timeline-badge"></div>
+                                        <div class="cv-timeline-date">May 2024 - Present</div>
+                                        <div class="cv-timeline-title">PhD in Informatics (in progress)</div>
+                                        <div class="cv-timeline-company">Ionian University, Department of Informatics, Corfu</div>
+                                        <ul class="bihelab-list mt-3">
+                                            <li><strong>Thesis:</strong> Lip-reading and personalised voice reproduction for patients with impaired speech using vision&ndash;language models.</li>
+                                            <li>Supervisor: Prof. Themis Exarchos. Thesis language: English.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="cv-timeline-item">
+                                        <div class="cv-timeline-badge"></div>
+                                        <div class="cv-timeline-date">Oct 2022 - Feb 2024</div>
+                                        <div class="cv-timeline-title">MSc in Big Data Driven Networked Systems</div>
+                                        <div class="cv-timeline-company">Ionian University, Department of Informatics, Corfu</div>
+                                        <ul class="bihelab-list mt-3">
+                                            <li>Grade 9.47 / 10. Thesis on machine learning for healthcare process optimisation, published at AIAI 2024.</li>
+                                            <li>Coursework: big data technologies, advanced data mining and machine learning, stochastic analysis, network systems and security.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="cv-timeline-item">
+                                        <div class="cv-timeline-badge"></div>
+                                        <div class="cv-timeline-date">Oct 2015 - Feb 2021</div>
+                                        <div class="cv-timeline-title">BSc in Informatics</div>
+                                        <div class="cv-timeline-company">Ionian University, Department of Informatics, Corfu</div>
+                                        <ul class="bihelab-list mt-3">
+                                            <li>Thesis on deep learning for melanoma classification from dermoscopic images, published at SMAP 2021.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ADDITIONAL -->
+                            <div class="mt-5 pt-3 border-top">
+                                <div class="bihelab-subtitle"><i class="bi bi-info-circle-fill me-1"></i> Additional Information</div>
+                                <hr class="bihelab-divider">
+
+                                <div class="mt-4">
+                                    <div class="skill-row">
+                                        <span class="skill-label">Conference presentations</span>
+                                        <p class="skill-value">Oral presentations at SMAP 2021 (online) and AIAI 2024 (Corfu, Greece).</p>
+                                    </div>
+                                    <div class="skill-row">
+                                        <span class="skill-label">Teaching support</span>
+                                        <p class="skill-value">Exam invigilation duties, Department of Informatics, Ionian University (2025&ndash;2026).</p>
+                                    </div>
+                                    <div class="skill-row">
+                                        <span class="skill-label">Certifications</span>
+                                        <p class="skill-value">Data Engineering, Full-Stack Python Developer, and Business Analyst Career Track &mdash; IT &amp; Engineering School.</p>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -446,12 +536,12 @@
             <div class="row g-4 text-start">
                 <div class="col-lg-5 mb-3">
                     <h5 class="text-uppercase"><i class="bi bi-person-badge-fill me-2"></i>Andreas Avgoustis</h5>
-                    <p class="small text-muted mb-0">AI/ML Engineer & Researcher. Specializing in Bioinformatics, Healthcare Artificial Intelligence & Big Data Science.</p>
+                    <p class="small text-muted mb-0">PhD candidate at Ionian University working on visual speech recognition and multimodal learning for patients with impaired speech.</p>
                 </div>
                 <div class="col-lg-3 mb-3">
-                    <h5 class="text-uppercase"><i class="bi bi-compass-fill me-2"></i>Research & Development</h5>
+                    <h5 class="text-uppercase"><i class="bi bi-compass-fill me-2"></i>Research &amp; Development</h5>
                     <ul class="list-unstyled mb-0">
-                        
+
                         <li><a href="publications">Publications</a></li>
                         <li><a href="projects">Projects</a></li>
                     </ul>
